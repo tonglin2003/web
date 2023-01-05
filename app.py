@@ -37,7 +37,7 @@ def main():  # put application's code here
     return render_template("base.html")
 
 #function for pulling
-#@app.route('/pull/success')
+#@app.route('/pull/success'
 
 
 
