@@ -4,30 +4,6 @@ from flask import Flask, render_template, request, redirect, url_for, session
 
 app = Flask(__name__)
 
-#function to pull data out of the json file, and return data as a list of dictionaries
-def pullData():
-    with open("/Users/tonglin/PycharmProjects/webProject/static/mockData.json", mode="r") as file:
-        data = json.load(file)
-        return data
-
-
-#adds/update Data into JSON, takes in price(double), discount(double), productType(string)
-# and doesn't return anything
-def writeData(productName, price, discount, productType):
-    listObj = pullData()
-
-    listObj.append(
-        {
-            "productID": listObj[len(listObj)-1]["productID"] + 1,
-            "productName": productName,
-            "price": price,
-            "discount": discount,
-            "productType": productType
-        }
-    )
-    with open("/Users/tonglin/PycharmProjects/webProject/static/mockData.json",'w') as file:
-        json.dump(listObj, file, indent=4, separators=(',', ': '))
-
 
 # --------------- FLASK Route -------------------- #
 
@@ -62,14 +38,14 @@ if __name__ == '__main__':
 #------------------------------------------------------------------------
 #                      LOGIN
 #------------------------------------------------------------------------
-@app.route('/login')
+""" @app.route('/login')
 def login():
     return render_template("login.html")
 
 @app.route('/profile', methods=['POST'])
 def login_input():
     username = request.form['username']
-    return render_template("profile.html", _username=username)
+    return render_template("profile.html", _username=username) """
 
 
 #if login == true, show upload info/profile
