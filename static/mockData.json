@@ -16,6 +16,12 @@
         "price": 150,
         "discount": 50,
         "productType": "Clothing"
+    },
+    {
+        "productID": 4,
+        "productName": "Cool Sweater",
+        "price": "23",
+        "discount": "3",
+        "productType": "Clothing"
     }
-
 ]
