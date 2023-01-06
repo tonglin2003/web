@@ -71,7 +71,7 @@ def login():
         password= request.form['password']
     #return render_template("login.html")
 
-#if login is true set
+#if login == true, show upload info/profile
 #use dictionary to store user data
 #if username == certainUser then pull info from that dictionary to get
 
