@@ -8,8 +8,7 @@
 </head>
 <body>
     <h1>JustWorks Marketplace</h1>
-    <h2 id="name">{{name}}</h2>
-    <p>Profile</p>
+    <h2 id="name"></h2>
     <img id="image" style="max-height:300px;"><br><br>
     <input id="upload_img" onchange="loadFile()" accept="image/jpeg, image/png" type="file" >    
 <br>
@@ -34,16 +33,21 @@
 </body>
 
 <script>
+
+    //get the name of organizatiion
+    var name=localStorage.getItem("user");
+    document.getElementById('name').innerHTML= name;
+
+    //setup default profile picture
     if(document.getElementById("image").src == ""){
         document.getElementById("image").src ="../img/default-avatar.jpg";
     }
+
+    //load profile image when uploaded
     var loadFile = function(){
 
         img = document.getElementById("upload_img").value;
         var filename = img.match(/[^\\/]*$/)[0];
-
-     
-        console.log(filename);
         document.getElementById("image").src = "../img/"+filename;
 
     }
