@@ -1,5 +1,5 @@
 import json
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for, session
 
 
 app = Flask(__name__)
@@ -60,14 +60,15 @@ if __name__ == '__main__':
 #------------------------------------------------------------------------
 #                      LOGIN
 #------------------------------------------------------------------------
-
-@app.route('/login',methods=['GET','POST'])
+@app.route('/login')
 def login():
-    message=''
-    if request.method=='POST':
-        username= request.form['username']
-        password= request.form['password']
-    #return render_template("login.html")
+    return render_template("login.html")
+
+@app.route('/profile', methods=['POST'])
+def login_input():
+    username = request.form['username']
+    return render_template("profile.html", _username=username)
+
 
 #if login == true, show upload info/profile
 #use dictionary to store user data
