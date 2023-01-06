@@ -10,7 +10,7 @@
     <h1>JustWorks Marketplace</h1>
     <h2 id="name">{{name}}</h2>
     <p>Profile</p>
-    <img id="image" src="">
+    <img id="image" style="max-height:300px;"><br><br>
     <input id="upload_img" type="file">
 
 
@@ -21,12 +21,12 @@
 </body>
 
 <script>
-    if(document.getElementById("image").src ==""){
-        document.getElementById("image").src =="img/default-avatar.jpg"
+
+
+    if(document.getElementById("image").src == ""){
+        document.getElementById("image").src ="../img/default-avatar.jpg";
     }
-    else{
-        document.getElementById("image").src == document.getElementById("upload_img").value;
-    }
+  
 </script>
 
 </html>
