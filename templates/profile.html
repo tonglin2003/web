@@ -8,12 +8,23 @@
 <body>
 <div>
     <h1>JustWorks Marketplace</h1>
-    <h2>Profile</h2>
-    <h3> Hello, {{_username}}!</h3>
-    <label>Products</label><br>
+    <h2>Profile</h2><br>
+    <h3 id="greeting"></h3><br>
+    <label>Your Products</label>
+
+    <button onclick="location.href = 'post_page.html'">Upload New Product</button>
+
+    <p id="message">You currently have no products.</p>
+
 
     </form>
 </div>
     
 </body>
+
+<script>
+   var name=localStorage.getItem("user");
+   document.getElementById('greeting').innerHTML= "Welcome back, " + name + "!";
+</script>
+
 </html>

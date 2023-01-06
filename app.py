@@ -62,14 +62,14 @@ if __name__ == '__main__':
 #------------------------------------------------------------------------
 #                      LOGIN
 #------------------------------------------------------------------------
-@app.route('/login')
+""" @app.route('/login')
 def login():
     return render_template("login.html")
 
 @app.route('/profile', methods=['POST'])
 def login_input():
     username = request.form['username']
-    return render_template("profile.html", _username=username)
+    return render_template("profile.html", _username=username) """
 
 
 #if login == true, show upload info/profile
