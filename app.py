@@ -1,5 +1,4 @@
 import json
-import mysql.connector
 from flask import Flask, render_template, request
 
 
@@ -51,9 +50,6 @@ if __name__ == '__main__':
 #                      LOGIN
 #------------------------------------------------------------------------
 
-connection = mysql.connector(host='localhost', port ='3306',
-            database='login',user='admin',password='0000')
-
 @app.route('/login',methods=['GET','POST'])
 def login(): 
     message=''
@@ -62,6 +58,9 @@ def login():
         password= request.form['password']
     #return render_template("login.html")
 
+#if login is true set
+#use dictionary to store user data
+#if username == certainUser then pull info from that dictionary to get
 
 #------------------------------------------------------------------------
 
