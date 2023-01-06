@@ -1,0 +1,14 @@
+html, body {
+    height: 100%;
+    width: 100%; 
+    background-color: white;
+}
+
+h1 { 
+    font-weight: bold;
+    font-family:'Lucida Sans';
+}
+
+.btn {
+background-color: #df5931;
+}
