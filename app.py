@@ -1,5 +1,7 @@
 import json
-from flask import Flask, render_template
+import mysql.connector
+from flask import Flask, render_template, request
+
 
 app = Flask(__name__)
 
@@ -43,3 +45,23 @@ def main():  # put application's code here
 
 if __name__ == '__main__':
     app.run()
+
+
+#------------------------------------------------------------------------
+#                      LOGIN
+#------------------------------------------------------------------------
+
+connection = mysql.connector(host='localhost', port ='3306',
+            database='login',user='admin',password='0000')
+
+@app.route('/login',methods=['GET','POST'])
+def login(): 
+    message=''
+    if request.method=='POST':
+        username= request.form['username']
+        password= request.form['password']
+    #return render_template("login.html")
+
+
+#------------------------------------------------------------------------
+
