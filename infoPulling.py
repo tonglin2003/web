@@ -2,7 +2,7 @@ import json
 
 #function to pull data out of the json file, and return data as a list of dictionaries
 def pullData():
-    with open("/Users/tonglin/PycharmProjects/webProject/static/mockData.json", mode="r") as file:
+    with open("/static/mockData.json", mode="r") as file:
         data = json.load(file)
         return data
 
@@ -20,6 +20,6 @@ def writeData(productName, price, discount, productType):
             "productType": productType
         }
     )
-    with open("/Users/tonglin/PycharmProjects/webProject/static/mockData.json",'w') as file:
+    with open("/static/mockData.json",'w') as file:
         json.dump(listObj, file, indent=4, separators=(',', ': '))
 
