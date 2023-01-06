@@ -13,20 +13,18 @@ def pullData():
 
 #adds/update Data into JSON, takes in price(double), discount(double), productType(string)
 # and doesn't return anything
-def writeData(price, discount, productType):
-    # with open("/Users/tonglin/PycharmProjects/webProject/static/mockData.json", )as file:
-    #     listObj = json.load(file)
+def writeData(productName, price, discount, productType):
     listObj = pullData()
 
     listObj.append(
         {
             "productID": listObj[len(listObj)-1]["productID"] + 1,
+            "productName": productName,
             "price": price,
             "discount": discount,
             "productType": productType
         }
     )
-
     with open("/Users/tonglin/PycharmProjects/webProject/static/mockData.json",'w') as file:
         json.dump(listObj, file, indent=4, separators=(',', ': '))
 
@@ -37,13 +35,26 @@ def writeData(price, discount, productType):
 def main():  # put application's code here
     return render_template("index.html")
 
-#function for pulling
-#@app.route('/pull/success'
+@app.route('/post')
+def post_page():
+    return render_template("post_page.html")
 
+#When user fill out all the information and click on the post button, it will return the below function
+# the function takes the user's input and add to the mockData.json and go back to main page
+@app.route('/post/success', methods=["POST"])
+def add_new_product():
+    if request.method == "POST":
+        product_name = request.form['productName']
+        product_price = request.form['price']
+        product_discount = request.form['discount']
+        product_type = request.form['productType']
+        writeData(product_name, product_price, product_discount, product_type)
+    return render_template("index.html")
 
 
 if __name__ == '__main__':
     app.run()
+
 
 
 #------------------------------------------------------------------------
@@ -51,7 +62,7 @@ if __name__ == '__main__':
 #------------------------------------------------------------------------
 
 @app.route('/login',methods=['GET','POST'])
-def login(): 
+def login():
     message=''
     if request.method=='POST':
         username= request.form['username']
