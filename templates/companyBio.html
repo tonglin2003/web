@@ -22,7 +22,14 @@
         document.getElementById("image").src ="../img/default-avatar.jpg";
     }
     var loadFile = function(){
-        document.getElementById("image").src =document.getElementById("upload_img").value;
+
+        img = document.getElementById("upload_img").value;
+        var filename = img.match(/[^\\/]*$/)[0];
+
+     
+        console.log(filename);
+        document.getElementById("image").src = "../img/"+filename;
+
     }
   
 </script>
