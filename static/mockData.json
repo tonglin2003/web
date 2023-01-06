@@ -1,13 +1,21 @@
-{
-  "product":
-  {
-    "productID": 1,
-    "price": 15.99,
-    "productType": "Subscription",
-    ""
+[
+    {
+        "productID": 1,
+        "price": 15.99,
+        "discount": 3.99,
+        "productType": "Subscription"
+    },
+    {
+        "productID": 2,
+        "price": 200,
+        "discount": 50,
+        "productType": "Electronic"
+    },
+    {
+        "productID": 3,
+        "price": 150,
+        "discount": 50,
+        "productType": "Clothing"
+    }
 
-
-
-  }
-}
-
+]
