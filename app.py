@@ -34,7 +34,7 @@ def writeData(price, discount, productType):
 # it loads data from file and returns to the base.html
 @app.route('/')
 def main():  # put application's code here
-    return render_template("base.html")
+    return render_template("index.html")
 
 #function for pulling
 #@app.route('/pull/success'
