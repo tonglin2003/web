@@ -8,30 +8,49 @@
 <body>
 <div>
     <h1>JustWorks Marketplace</h1>
-    <h2>Login</h2>
-    <p id="message"></p>
-    <form action="." method="post">
-        <label>username</label><br>
-        <input type="text" name="username" id="username" required><br>
-        <br>
-        <label>password</label><br>
-        <input type="password" name="password" id="password" required><br>
-        <br>
-        <input type="submit" value="Login">
+    <h2>Login Debug</h2>
+    <h4>Choose Account</h4>
 
-    </form>
+    <button onclick="login(0)">Jane Doe</button><br><br>
+    <button onclick="login(1)">John Smith</button>
+
+    
 </div>
     
 </body>
-  <!--
-    if username does not exist in py dictionary, do not submit
-        
-        -->
+ 
 <script>
-  
-
-
+    var login= function(user){
+        if(user==0){
+            localStorage.setItem("user", "Jane Doe");
+        }
+        else if(user==1){
+            localStorage.setItem("user", "John Smith");
+        }
+        return document.location.href="profile.html"
+    }
 </script>
+
+
+<!-- <form>
+        <label>username</label><br>
+        <input type="text" name="username" id="username" required value="JaneDoe"><br>
+        <br>
+        <label>password</label><br>
+        <input type="password" name="password" id="password" required value="00000000"><br>
+        <br>
+        <input type="submit" value="Login" onclick="login()">
+
+    </form> -->
+
+<!-- <script>
+    var username=document.getElementById("username");
+    localStorage.setItem("user", username.val());
+
+    var login= function(){
+        document.location.href="profile.html"
+    }
+</script> -->
 
 
 </html>
