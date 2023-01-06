@@ -20,12 +20,14 @@
 </body>
  
 <script>
-    var login= function(user){
-        if(user==0){
+    var login= function(userid){
+        if(userid==0){
             localStorage.setItem("user", "Jane Doe");
+            localStorage.setItem("userid", 0);
         }
-        else if(user==1){
+        else if(userid==1){
             localStorage.setItem("user", "John Smith");
+            localStorage.setItem("userid", 1);
         }
         return document.location.href="profile.html"
     }
