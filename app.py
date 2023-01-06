@@ -1,4 +1,4 @@
-import infoPulling
+import postingFunction
 from flask import Flask, render_template, request, redirect, url_for, session
 
 
@@ -26,7 +26,7 @@ def add_new_product():
         product_price = request.form['price']
         product_discount = request.form['discount']
         product_type = request.form['productType']
-        infoPulling.writeData(product_name, product_price, product_discount, product_type)
+        postingFunction.writeData(product_name, product_price, product_discount, product_type)
     return render_template("index.html")
 
 
