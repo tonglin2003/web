@@ -29,10 +29,12 @@ def writeData(productName, price, discount, productType):
         json.dump(listObj, file, indent=4, separators=(',', ': '))
 
 
+# --------------- FLASK Route -------------------- #
+
 #Main/base page will show all the products from the JSON file
-# it loads data from file and returns to the base.html
+# it loads data from file and returns to the index.html or main page
 @app.route('/')
-def main():  # put application's code here
+def main():
     return render_template("index.html")
 
 @app.route('/post')
