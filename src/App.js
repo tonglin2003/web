@@ -7,8 +7,6 @@ function App() {
     <>
       {/* <main-header></main-header> */}
       <Header />
-      hi
-      <button>ji</button>
       
     </>
     
