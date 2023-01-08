@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>JustWorks Marketplace</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 <div>
@@ -16,6 +16,13 @@
 
     
 </div>
+
+<div id="like_button_container"></div>
+
+  <!-- Load React. -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="like_button.js"></script>
     
 </body>
  
@@ -24,10 +31,12 @@
         if(userid==0){
             localStorage.setItem("user", "Jane Doe");
             localStorage.setItem("userid", 0);
+            localStorage.setItem("phone", "212-157-3244");
         }
         else if(userid==1){
             localStorage.setItem("user", "John Smith");
             localStorage.setItem("userid", 1);
+            localStorage.setItem("phone", "432-503-4535");
         }
         return document.location.href="profile.html"
     }
