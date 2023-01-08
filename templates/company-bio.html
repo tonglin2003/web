@@ -16,6 +16,9 @@
 <ul class="list-group list-group-flush">
     <li class="list-group-item">Bio</li>
     <li class="list-group-item">Phone: 322-789-0093</li>
+
+    <li id="phone" class="list-group-item"></li>
+
     <li class="list-group-item">Email: test@gmail.com </li>
     <li class="list-group-item">Linkedin: </li>
     <li class="list-group-item"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
@@ -72,6 +75,10 @@
     //get the name of organizatiion
     var name=localStorage.getItem("user");
     document.getElementById('name').innerHTML= name;
+
+    //get the phone of organizatiion
+    var phone=localStorage.getItem("phone");
+    document.getElementById('phone').innerHTML= "Phone: " + phone;
 
     //setup default profile picture
     if(document.getElementById("image").src == ""){
