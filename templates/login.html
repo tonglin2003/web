@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< Updated upstream
 <head>
     <meta charset="UTF-8">
     <title>JustWorks Marketplace</title>
@@ -10,11 +11,34 @@
     <h1>JustWorks Marketplace</h1>
     <h2>Login Debug</h2>
     <h4>Choose Account</h4>
+=======
+    <head>
+        <meta charset="UTF-8">
+        <title>JustWorks Marketplace</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <script src="../static/script.js"></script>
+        <!-- Load React. -->
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <!-- Load React component. -->
+        <script src="../static/XXX.js"></script>
+>>>>>>> Stashed changes
 
-    <button onclick="login(0)">Jane Doe</button><br><br>
-    <button onclick="login(1)">John Smith</button>
+    </head>
+    <body>
+        <main-header></main-header>
 
+        <div>
+            <h1>Login Debug</h1>
+            <br>
+            <h4>Choose an Account</h4>
+            <br>
+            <button onclick="login(0)">Jane Doe</button><br><br>
+            <button onclick="login(1)">John Smith</button>
+        </div>
+    </body>
     
+<<<<<<< Updated upstream
 </div>
 
 <div id="like_button_container"></div>
@@ -37,31 +61,42 @@
             localStorage.setItem("user", "John Smith");
             localStorage.setItem("userid", 1);
             localStorage.setItem("phone", "432-503-4535");
+=======
+    <script>
+        var login= function(userid){
+            if(userid==0){
+                localStorage.setItem("user", "Jane Doe");
+                localStorage.setItem("userid", 0);
+            }
+            else if(userid==1){
+                localStorage.setItem("user", "John Smith");
+                localStorage.setItem("userid", 1);
+            }
+            return document.location.href="profile.html"
+>>>>>>> Stashed changes
         }
-        return document.location.href="profile.html"
-    }
-</script>
+    </script>
 
 
-<!-- <form>
-        <label>username</label><br>
-        <input type="text" name="username" id="username" required value="JaneDoe"><br>
-        <br>
-        <label>password</label><br>
-        <input type="password" name="password" id="password" required value="00000000"><br>
-        <br>
-        <input type="submit" value="Login" onclick="login()">
+    <!-- <form>
+            <label>username</label><br>
+            <input type="text" name="username" id="username" required value="JaneDoe"><br>
+            <br>
+            <label>password</label><br>
+            <input type="password" name="password" id="password" required value="00000000"><br>
+            <br>
+            <input type="submit" value="Login" onclick="login()">
 
-    </form> -->
+        </form> -->
 
-<!-- <script>
-    var username=document.getElementById("username");
-    localStorage.setItem("user", username.val());
+    <!-- <script>
+        var username=document.getElementById("username");
+        localStorage.setItem("user", username.val());
 
-    var login= function(){
-        document.location.href="profile.html"
-    }
-</script> -->
+        var login= function(){
+            document.location.href="profile.html"
+        }
+    </script> -->
 
 
 </html>
