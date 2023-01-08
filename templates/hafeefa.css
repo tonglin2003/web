@@ -1,0 +1,7 @@
+body{
+    font-family: emoji;
+}
+.container-logo{
+    justify-content: right;
+    padding: 15px;
+}
