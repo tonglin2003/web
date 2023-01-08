@@ -1,12 +1,12 @@
-import template from './template';
-import Header from './components/Header';
-
+import Header from './components/Header'
+import CompanyBio from './CompanyBio'
 
 function App() {
   return (
     <>
       {/* <main-header></main-header> */}
       <Header />
+      <CompanyBio />
       
     </>
     

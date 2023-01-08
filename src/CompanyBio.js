@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function CompanyBio() {
+function CompanyBio() {
     return (
         <div>
             Hello 
         </div>
     )
 }
+
+export default CompanyBio;
