@@ -1,10 +1,14 @@
 import React from 'react'
+import Header from './components/Header'
 
 function CompanyBio() {
     return (
-        <div>
-            Hello 
-        </div>
+        <>
+            <Header />
+            <div>
+                Bio 
+            </div>
+        </>
     )
 }
 

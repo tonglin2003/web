@@ -1,14 +1,15 @@
-import Header from './components/Header'
+import Home from './Home'
 import CompanyBio from './CompanyBio'
+import PostPage from './PostPage'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <>
-      {/* <main-header></main-header> */}
-      <Header />
-      <CompanyBio />
-      
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route exact path="/bio" element={<CompanyBio />} />
+      <Route exact path="/post" element={<PostPage />} />
+    </Routes>
     
 
 
