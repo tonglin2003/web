@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <header>
             <nav class="navbar navbar-expand-lg navbar-light" style={{borderBottom: "solid"}} id="nav">
-                <Link class="navbar-brand" to="/"></Link>
+                <Link style={{marginLeft: "20px"}} class="navbar-brand" to="/">Justworks Market</Link>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

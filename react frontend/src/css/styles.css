@@ -1,10 +1,8 @@
-/* html{
+html{
     height: 100%;
     width: 100%; 
 }
-body{
-    background-color: #710313;
-}
+
 
 h1 { 
     font-weight: bold;
@@ -35,7 +33,7 @@ background-color: #df5931;
 .collapse navbar-collapse{
     justify-content: space-between;
 }
-/* 
+
 body{
     background-color: springgreen;
-} */
+}

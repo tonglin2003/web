@@ -2,12 +2,8 @@ import React from 'react'
 import Header from './components/Header'
 
 function PostPage() {
-    return (
-        <>
-            <Header />
-            post
-        </>
-    )
+    return <Header />;
+    
 }
 
 export default PostPage;

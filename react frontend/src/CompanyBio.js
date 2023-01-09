@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import Header from './components/Header'
+import Footer from './components/Footer'
 import ProfileImage from './components/ProfileImage';
 
 function CompanyBio() {
+
     const [isEditMode, setIsEditMode] = useState(false);
+    
     return (
         <>
             <Header />
@@ -55,6 +58,9 @@ function CompanyBio() {
                 </form>
                 {!(isEditMode) &&<button onClick={() => setIsEditMode(!isEditMode)} class="btn btn-primary" type="button">Edit Information</button>}
             </div> 
+
+            <Footer />
+
         </>
     )
 }
