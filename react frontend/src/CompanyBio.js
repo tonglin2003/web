@@ -54,22 +54,10 @@ function CompanyBio() {
                     {isEditMode && <button onClick={() => setIsEditMode(!isEditMode)} type='submit'>Save</button>}
                 </form>
                 {!(isEditMode) &&<button onClick={() => setIsEditMode(!isEditMode)} class="btn btn-primary" type="button">Edit Information</button>}
-
             </div> 
-
         </>
     )
 }
-const image = document.getElementById("image");
-
-function replaceEmptySrc(imageFile) {
-    if (image.getAttribute('src') === '') {
-       image.src = './img/default-avatar.jpg"';
-    }
-}
-
-
-//setup default profile picture
 
 //load profile image upon upload
 function loadImage(){
