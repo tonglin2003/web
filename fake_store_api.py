@@ -1,6 +1,7 @@
 import requests
 from pprint import pprint
 
+
 # organizing products into list
 
 class AllProducts():
@@ -62,24 +63,22 @@ class AllProducts():
 
     def get_product_info(self):
         '''
-        :return: returns dictionary of product_id as keys, each key contains another dictionary:
+        :return: returns list of dictionaries, each key contains another dictionary:
             product_title: title of the project in type of String
             product_image: image of the product show as a website link (example: https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg)
             product_price: price of the product in type double
         '''
 
         products = self.get_all_products()
-        product_dictionary = {}
+        product_list = []
 
         for product in products:
-            product_dictionary[product['id']] = {"product_title": product['title'],
-                                                 "product_image": product['image'],
-                                                 "product_price": product['price']
-                                                 }
-        return product_dictionary
+            product_list.append({"product_title": product['title'],
+                                 "product_image": product['image'],
+                                 "product_price": product['price']
+                                 })
+        return product_list
 
 
 class Users():
     pass
-
-

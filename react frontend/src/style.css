@@ -1,0 +1,18 @@
+.title_font {
+    font-family: "Oswald", serif;
+    font-size: 4em;
+    color: #ffffff;
+}
+
+.font {
+    font-family: "Source Sans Pro", serif ;
+    color: #ffffff;
+}
+
+.new_btn {
+    background: #3295e5 !important;
+}
+
+#home_head {
+    background: #00446b;
+}
