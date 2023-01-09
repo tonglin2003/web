@@ -3,31 +3,32 @@ import Header from './components/Header'
 import { Link } from 'react-router-dom'
 //import cssStyle from "./css/styles.css"
 import './style.css'
+import axios from "axios"
+
+
+
 
 function Home() {
-    const [data, setData] = useState([])
 
-    // useEffect(() => {
-    //     fetch("/main").then(
-    //         res => res.json()
-    //     ).then (
-    //         data => {
-    //             setData(data)
-    //             console.log(data)
-    //         }
-    //     )
-    //     }
-    // )
+    const [products, setProduct] = useState([]);
+    const fetchData = () => {
+        return axios.get("https://fakestoreapi.com/products/categories")
+            .then((response) => setProduct(response.data));
+    }
 
-    item = fetch('https://fakestoreapi.com/products/categories')
-            .then(res=>res.json())
-            .then(json=>console.log(json))
+    const img_links=["https://static.swappa.com/static/images/categories/retro/category_iphones_600x600.png", "https://oceanside-jewelers.com/wp-content/uploads/2019/01/gold-reworked3-1024x768.jpg"]
 
-    console.log(item)
+    useEffect(() =>{
+        fetchData();
+    }, [])
+
+    const items = [
+        {id: 1, category: products[0], image: img_links[0]}
+    ]
 
     return (
         <>
-            <Header />
+            <Header/>
             <div className="p-5 text-center" id="home_head">
                 <h1 className="title_font mb-5 fw-bold">
                     JUSTWORKS
@@ -44,6 +45,10 @@ function Home() {
             </div>
 
             <p>Going to put categories here!</p>
+            <div className={"d-flex flex-row"}>
+
+
+            </div>
         </>
     )
 }
