@@ -54,9 +54,7 @@ function CompanyBio() {
                     {isEditMode && <button onClick={() => setIsEditMode(!isEditMode)} type='submit'>Save</button>}
                 </form>
                 {!(isEditMode) &&<button onClick={() => setIsEditMode(!isEditMode)} class="btn btn-primary" type="button">Edit Information</button>}
-
             </div> 
-
         </>
     )
 }

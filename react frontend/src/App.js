@@ -10,9 +10,6 @@ function App() {
       <Route exact path="/bio" element={<CompanyBio />} />
       <Route exact path="/post" element={<PostPage />} />
     </Routes>
-    
-
-
   );
 }
 
