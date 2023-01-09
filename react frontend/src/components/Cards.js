@@ -2,12 +2,29 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 var image = "";
+// const Cards = ({size, image}) => {
+//
+//
+//
+//     if(image===1){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp'}
+//     else if(image===2){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp'}
+//     else if(image===3){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp'}
+//     else if(image===4){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/050.webp'}
+//     console.log(image);
+//
+//     if(size === 1){ return <SmallCard image = {image} /> }
+//     else if(size === 2){ return <MediumCard image = {image} />}
+//     else if (size === 3) {return <LargeCard image ={image} /> }
+// }
+
 const Cards = ({size, image}) => {
-    if(image===1){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp'}
-    else if(image===2){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp'}
-    else if(image===3){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp'}
-    else if(image===4){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/050.webp'}
-    console.log(image);
+
+    // if(image===1){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp'}
+    // else if(image===2){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp'}
+    // else if(image===3){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp'}
+    // else if(image===4){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/050.webp'}
+    if(image){image =`${image}`}
+    // console.log(image);
 
     if(size === 1){ return <SmallCard image = {image} /> }
     else if(size === 2){ return <MediumCard image = {image} />}

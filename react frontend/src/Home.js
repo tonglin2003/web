@@ -44,11 +44,6 @@ function Home() {
 
             </div>
 
-            <p>Going to put categories here!</p>
-            <div className={"d-flex flex-row"}>
-
-
-            </div>
         </>
     )
 }
