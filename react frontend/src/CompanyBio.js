@@ -60,16 +60,6 @@ function CompanyBio() {
         </>
     )
 }
-const image = document.getElementById("image");
-
-function replaceEmptySrc(imageFile) {
-    if (image.getAttribute('src') === '') {
-       image.src = './img/default-avatar.jpg"';
-    }
-}
-
-
-//setup default profile picture
 
 //load profile image upon upload
 function loadImage(){
