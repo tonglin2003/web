@@ -1,4 +1,4 @@
-html{
+/* html{
     height: 100%;
     width: 100%; 
 }
@@ -9,7 +9,7 @@ body{
 h1 { 
     font-weight: bold;
     font-family:"Lucida Sans";
-}
+} */
 
 .btn {
 background-color: #df5931;
@@ -107,6 +107,6 @@ footer{
 .collapse navbar-collapse{
     justify-content: space-between;
 }
-body{
+/* body{
     background-color: springgreen;
-}
+} */

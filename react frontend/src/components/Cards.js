@@ -7,7 +7,6 @@ const Cards = ({size, image}) => {
     else if(image===2){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp'}
     else if(image===3){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp'}
     else if(image===4){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/050.webp'}
-    console.log(image);
 
     if(size === 1){ return <SmallCard image = {image} /> }
     else if(size === 2){ return <MediumCard image = {image} />}
@@ -15,7 +14,6 @@ const Cards = ({size, image}) => {
 }
 
 const LargeCard = ({image}) => {
-    console.log(image);
     return(
     <>
         <div class="col text-center">
@@ -46,7 +44,6 @@ const LargeCard = ({image}) => {
             </li>
             <p><br></br></p>
             check out more products below
-            <p><br></br></p>
         </div>
         </>
     )

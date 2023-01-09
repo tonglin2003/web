@@ -1,12 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import css from "../css/styles.css"
+
 
 const Footer = () => {
     return (
         <footer>
             <div class="footer-content">
                 <h3>JustWorks Market</h3>
-                <p>meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow</p>
+                <p>This is the footer. This is placeholder text. Work Fearlessly.</p>
                 <ul class="socials">
                     <li><Link to="#"><i class="fa fa-facebook"></i></Link></li>
                     <li><Link to="#"><i class="fa fa-twitter"></i></Link></li>
