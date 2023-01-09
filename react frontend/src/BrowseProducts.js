@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import Header from './components/Header'
 import Cards from './components/Cards';
+import Spacer from './components/Spacer'
 import Search from './components/Search';
 import axios from "axios"
 
@@ -28,7 +29,7 @@ function BrowseProducts() {
     return (
         <>
             <Header />
-            <br></br> <br></br>
+            <Spacer />
 
             <h1 style={{marginLeft: '50px'}}>Browse Products</h1>
 
@@ -36,15 +37,9 @@ function BrowseProducts() {
                 <Search />
             </div>
 
-            <p><br></br> <br></br></p> <p></p>
+            <Spacer />
 
             <div className="row row-cols-3 g-3" style={{marginLeft: '50px', marginRight: '50px' }}>
-
-                {/* Small Cards */}
-                {/*<Cards size={1} image={"https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"} />*/}
-                {/*<Cards size={1} image={2} />*/}
-                {/*<Cards size={1} image={3} />*/}
-                {/*<Cards size={1} image={4} />*/}
 
                 {
                     products.map(product => (
@@ -65,24 +60,9 @@ function BrowseProducts() {
 {/*    ))}*/}
 
 
-
             </div>
 
-
-            {/*<p><br></br> <br></br></p> <p></p>*/}
-
-            {/*   <div className="row row-cols-3 g-3" style={{marginLeft: '50px', marginRight: '50px' }}>*/}
-
-            {/*    /!* Small Cards *!/*/}
-            {/*    <Cards size={1} image={1} />*/}
-            {/*    <Cards size={1} image={2} />*/}
-            {/*    <Cards size={1} image={3} />*/}
-            {/*    <Cards size={1} image={4} />*/}
-
-            {/*</div>*/}
-            <p><br></br> <br></br></p> <p></p>
-
-
+            <Spacer />
         </>
     )
 }

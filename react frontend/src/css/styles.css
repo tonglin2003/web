@@ -1,19 +1,29 @@
-/* html{
-    height: 100%;
-    width: 100%; 
-}
-body{
-    background-color: #710313;
+
+/* ----------------------------------------------------------- */
+
+.title_font {
+    font-family: "Oswald", serif;
+    font-size: 4em;
+    color: #ffffff;
 }
 
-h1 { 
-    font-weight: bold;
-    font-family:"Lucida Sans";
+.font {
+    font-family: "Source Sans Pro", serif ;
+    color: #ffffff;
 }
-.btn {
-background-color: #df5931;
+
+.new_btn {
+    background: #3295e5 !important;
 }
-*/
+
+#home_head {
+    background: #00446b;
+}
+
+
+/* ----------------------------------------------------------- */
+
+/* Navigtion & Home */
 
 .btn {
     margin: 2px;
@@ -35,7 +45,11 @@ background-color: #df5931;
     justify-content: space-between;
 }
 
+
+/* ----------------------------------------------------------- */
+
 /* footer css start */
+
 /* *{
     margin: 0;
     padding: 0;
@@ -118,3 +132,4 @@ footer{
 }
 
 /* footer css end */
+/* ----------------------------------------------------------- */
