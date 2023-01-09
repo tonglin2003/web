@@ -1,12 +1,14 @@
-html, body {
+html{
     height: 100%;
     width: 100%; 
-    background-color: white;
+}
+body{
+    background-color: #710313;
 }
 
 h1 { 
     font-weight: bold;
-    font-family:'Lucida Sans';
+    font-family:"Lucida Sans";
 }
 
 .btn {
@@ -94,3 +96,17 @@ footer{
 }
 
 /* footer css end */
+
+.container-logo{
+    justify-content: right;
+    padding: 20px;
+}
+#navbarNav{
+    justify-content:space-between;
+}
+.collapse navbar-collapse{
+    justify-content: space-between;
+}
+body{
+    background-color: springgreen;
+}
