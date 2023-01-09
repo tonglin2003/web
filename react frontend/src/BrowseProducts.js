@@ -48,7 +48,7 @@ function BrowseProducts() {
 
                 {
                     products.map(product => (
-                        <Cards size={1} image={product['image']} />
+                        <Cards size={1} image={product['image']} title={product['title']} price={product['price']} />
                     ))
                 }
 

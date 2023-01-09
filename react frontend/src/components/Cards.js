@@ -17,21 +17,23 @@ var image = "";
 //     else if (size === 3) {return <LargeCard image ={image} /> }
 // }
 
-const Cards = ({size, image}) => {
+const Cards = ({size, image, title, price}) => {
 
     // if(image===1){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp'}
     // else if(image===2){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp'}
     // else if(image===3){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp'}
     // else if(image===4){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/050.webp'}
     if(image){image =`${image}`}
+
+
     // console.log(image);
 
-    if(size === 1){ return <SmallCard image = {image} /> }
+    if(size === 1){ return <SmallCard image = {image} title={title} price={price}/> }
     else if(size === 2){ return <MediumCard image = {image} />}
     else if (size === 3) {return <LargeCard image ={image} /> }
 }
 
-const LargeCard = ({image}) => {
+const LargeCard = ({image, title, price}) => {
     console.log(image);
     return(
     <>
@@ -43,8 +45,8 @@ const LargeCard = ({image}) => {
                     <div class="card" style={{width: '45 rem'}}>
                         <img src={image} class="card-img-top" alt="Hollywood Sign on The Hill" />
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Write samething as it was in the last page</p>
+                            <h5 class="card-title">{title}</h5>
+                            <p class="card-text">${price}</p>
                         </div>
                     </div>
                 </div>
@@ -69,17 +71,16 @@ const LargeCard = ({image}) => {
     )
 }
 
-const MediumCard = ({image}) => {
+const MediumCard = ({image, title, price}) => {
     return(
         <>
             <div class="col-sm">
                 <div class="card">
                     <img src={image} class="card-img-top" alt="Palm Springs Road" />
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">{title}</h5>
                         <p class="card-text">
-                            This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.
+                            ${price}
                         </p>
                         <div class="col text-center">
                             <Link to="/" class="btn btn-primary">Go somewhere</Link>
@@ -91,16 +92,15 @@ const MediumCard = ({image}) => {
     )
 }
 
-const SmallCard = ({image}) => {
+const SmallCard = ({image, title, price}) => {
     return(
         <>
             <div class="col-sm">
                 <div class="card">
                     <img src={image} class="card-img-top" alt="Los Angeles Skyscrapers" />
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content.</p>
+                        <h5 class="card-title">{title}</h5>
+                        <p class="card-text">${price}</p>
                         <div class="col text-center">
                             <div class="col text-center">
                                 <Link to="/" class="btn btn-primary">Go somewhere</Link>
