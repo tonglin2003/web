@@ -1,8 +1,10 @@
 import postingFunction
 from flask import Flask, render_template, request, redirect, url_for, session
+from fake_store_api import AllProducts
 
 
 app = Flask(__name__)
+product_access = AllProducts()
 
 
 # --------------- FLASK Route -------------------- #
@@ -11,6 +13,12 @@ app = Flask(__name__)
 # it loads data from file and returns to the index.html or main page
 @app.route('/')
 def main():
+    # products = product_access.get_product_info()
+    # product_titles = [product['product_title'] for product in products]
+    # product_images = [product['product_image'] for product in products]
+    # product_price = [product['product_price'] for product in products]
+    #return render_template("index.html", title=product_titles, image=product_images, price=product_price)
+
     return render_template("index.html")
 
 @app.route('/post')

@@ -1,0 +1,41 @@
+/* html{
+    height: 100%;
+    width: 100%; 
+}
+body{
+    background-color: #710313;
+}
+
+h1 { 
+    font-weight: bold;
+    font-family:"Lucida Sans";
+}
+.btn {
+background-color: #df5931;
+}
+*/
+
+.btn {
+    margin: 2px;
+}
+
+.btn.signup {
+    color: white;
+    background-color: #ff8d47;
+}
+
+
+.container-logo{
+    justify-content: right;
+    padding: 20px;
+}
+#navbarNav{
+    justify-content:space-between;
+}
+.collapse navbar-collapse{
+    justify-content: space-between;
+}
+/* 
+body{
+    background-color: springgreen;
+} */
