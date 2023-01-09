@@ -13,7 +13,7 @@ function SingleProduct() {
 
             <p> <br></br></p>
 
-            <div class="row row-cols-3 g-2" style={{marginLeft: '50px', marginRight: '50px' }}>
+            <div className="row row-cols-3 g-2" style={{marginLeft: '50px', marginRight: '50px' }}>
 
                 {/* Medium Cards */}
                 <Cards size={2} image={2} />
@@ -24,7 +24,7 @@ function SingleProduct() {
 
             <p><br></br> <br></br></p> <p></p>
 
-            <div class="row row-cols-3 g-3" style={{marginLeft: '50px', marginRight: '50px' }}>
+            <div className="row row-cols-3 g-3" style={{marginLeft: '50px', marginRight: '50px' }}>
 
                 {/* Small Cards */}
                 <Cards size={1} image={1} />

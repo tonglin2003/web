@@ -18,7 +18,7 @@ function BrowseProducts() {
 
             <p><br></br> <br></br></p> <p></p>
 
-            <div class="row row-cols-3 g-3" style={{marginLeft: '50px', marginRight: '50px' }}>
+            <div className="row row-cols-3 g-3" style={{marginLeft: '50px', marginRight: '50px' }}>
 
                 {/* Small Cards */}
                 <Cards size={1} image={1} />
@@ -29,7 +29,7 @@ function BrowseProducts() {
             </div>
             <p><br></br> <br></br></p> <p></p>
 
-               <div class="row row-cols-3 g-3" style={{marginLeft: '50px', marginRight: '50px' }}>
+               <div className="row row-cols-3 g-3" style={{marginLeft: '50px', marginRight: '50px' }}>
 
                 {/* Small Cards */}
                 <Cards size={1} image={1} />
