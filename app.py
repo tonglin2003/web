@@ -11,15 +11,10 @@ product_access = AllProducts()
 
 #Main/base page will show all the products from the JSON file
 # it loads data from file and returns to the index.html or main page
-@app.route('/')
+@app.route('/main')
 def main():
-    # products = product_access.get_product_info()
-    # product_titles = [product['product_title'] for product in products]
-    # product_images = [product['product_image'] for product in products]
-    # product_price = [product['product_price'] for product in products]
-    #return render_template("index.html", title=product_titles, image=product_images, price=product_price)
 
-    return render_template("index.html")
+    return product_access.get_product_categories_tag()
 
 @app.route('/post')
 def post_page():
