@@ -1,5 +1,7 @@
 import React from 'react'
 import Header from './components/Header'
+import Footer from './components/Footer'
+import Spacer from './components/Spacer'
 import Cards from './components/Cards';
 import Search from './components/Search';
 
@@ -8,7 +10,7 @@ function BrowseProducts() {
     return (
         <>
             <Header />
-            <br></br> <br></br>
+            <Spacer />
 
             <h1 style={{marginLeft: '50px'}}>Browse Products</h1>
             
@@ -16,7 +18,7 @@ function BrowseProducts() {
                 <Search />
             </div>
 
-            <p><br></br> <br></br></p> <p></p>
+            <Spacer />
 
             <div className="row row-cols-3 g-3" style={{marginLeft: '50px', marginRight: '50px' }}>
 
@@ -27,7 +29,7 @@ function BrowseProducts() {
                 <Cards size={1} image={4} />
 
             </div>
-            <p><br></br> <br></br></p> <p></p>
+            <Spacer />
 
                <div className="row row-cols-3 g-3" style={{marginLeft: '50px', marginRight: '50px' }}>
 
@@ -38,9 +40,8 @@ function BrowseProducts() {
                 <Cards size={1} image={4} />
 
             </div>
-            <p><br></br> <br></br></p> <p></p>
-
-
+            <Spacer />
+            <Footer />
         </>
     )
 }

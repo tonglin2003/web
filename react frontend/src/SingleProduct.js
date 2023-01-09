@@ -1,5 +1,7 @@
 import React from 'react'
 import Header from './components/Header'
+import Footer from './components/Footer'
+import Spacer from './components/Spacer'
 import Cards from './components/Cards';
 
 
@@ -7,11 +9,12 @@ function SingleProduct() {
     return (
         <>
             <Header />
+            <Spacer />
 
             {/* Big Card */}
             <Cards size={3} image={1} />
 
-            <p> <br></br></p>
+            <Spacer />
 
             <div className="row row-cols-3 g-2" style={{marginLeft: '50px', marginRight: '50px' }}>
 
@@ -22,7 +25,7 @@ function SingleProduct() {
 
             </div>
 
-            <p><br></br> <br></br></p> <p></p>
+            <Spacer />
 
             <div className="row row-cols-3 g-3" style={{marginLeft: '50px', marginRight: '50px' }}>
 
@@ -33,8 +36,9 @@ function SingleProduct() {
                 <Cards size={1} image={4} />
 
             </div>
-            <p><br></br> <br></br></p> <p></p>
-
+            <Spacer />
+            <Spacer />
+            <Footer />
 
         </>
     )
