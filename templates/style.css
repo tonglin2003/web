@@ -1,0 +1,40 @@
+#center{
+    text-align: center;
+}
+.container-logo{
+    justify-content: right;
+    padding: 20px;
+}
+#navbarNav{
+    justify-content:space-between;
+}
+h1{
+    font-family: initial;
+}
+#navv{
+    background-color: white;
+    font-family: initial;
+    font-size: large;
+}
+.mb-3{
+    font-size: 20px;
+    font-family: emoji;
+}
+#signUp{
+    background:darkorange;
+}
+#back{
+    background-color: white;
+}
+/*.navbar navbar-expand-lg navbar-light bg-light{*/
+/*    border-bottom-style: solid;*/
+/* note:^^ how do i put this here in the css file instead of html?
+/* also, how do i change the background color to white?
+ */
+/*
+.collapse navbar-collapse{
+    justify-content: space-between;
+}
+body{
+    background-color: white;
+}
