@@ -55,7 +55,7 @@ const LargeCard = ({image}) => {
 const MediumCard = ({image}) => {
     return(
         <>
-            <div class="col">
+            <div class="col-sm">
                 <div class="card">
                     <img src={image} class="card-img-top" alt="Palm Springs Road" />
                     <div class="card-body">
@@ -77,7 +77,7 @@ const MediumCard = ({image}) => {
 const SmallCard = ({image}) => {
     return(
         <>
-            <div class="col">
+            <div class="col-sm">
                 <div class="card">
                     <img src={image} class="card-img-top" alt="Los Angeles Skyscrapers" />
                     <div class="card-body">
