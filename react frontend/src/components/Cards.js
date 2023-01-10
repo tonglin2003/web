@@ -1,32 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../style.css'
 
 var image = "";
-// const Cards = ({size, image}) => {
-//
-//
-//
-//     if(image===1){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp'}
-//     else if(image===2){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp'}
-//     else if(image===3){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp'}
-//     else if(image===4){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/050.webp'}
-//     console.log(image);
-//
-//     if(size === 1){ return <SmallCard image = {image} /> }
-//     else if(size === 2){ return <MediumCard image = {image} />}
-//     else if (size === 3) {return <LargeCard image ={image} /> }
-// }
 
 const Cards = ({size, image, title, price}) => {
 
-    // if(image===1){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp'}
-    // else if(image===2){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp'}
-    // else if(image===3){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp'}
-    // else if(image===4){image ='https://mdbcdn.b-cdn.net/img/new/standard/city/050.webp'}
     if(image){image =`${image}`}
 
-
-    // console.log(image);
 
     if(size === 1){ return <SmallCard image = {image} title={title} price={price}/> }
     else if(size === 2){ return <MediumCard image = {image} />}
@@ -37,23 +18,23 @@ const LargeCard = ({image, title, price}) => {
     console.log(image);
     return(
     <>
-        <div class="col text-center">
-            <div class="col text-center">
+        <div className="col text-center">
+            <div className="col text-center">
                 <h1>Write the product / subsciption name here</h1>
                 <p> <br></br></p>
-                <div class="col d-flex justify-content-center"><div class="card"></div>.
-                    <div class="card" style={{width: '45 rem'}}>
-                        <img src={image} class="card-img-top" alt="Hollywood Sign on The Hill" />
-                        <div class="card-body">
-                            <h5 class="card-title">{title}</h5>
-                            <p class="card-text">${price}</p>
+                <div className="col d-flex justify-content-center"><div className="card"></div>.
+                    <div className="card" style={{width: '45 rem'}}>
+                        <img src={image} className="card-img-top" alt="Hollywood Sign on The Hill" />
+                        <div className="card-body">
+                            <h5 className="card-title">{title}</h5>
+                            <p className="card-text">${price}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="col text-center">
+        <div className="col text-center">
 
             <p> <br></br> </p>
             <p> Write discrption of product. for example:</p>
@@ -74,15 +55,15 @@ const LargeCard = ({image, title, price}) => {
 const MediumCard = ({image, title, price}) => {
     return(
         <>
-            <div class="col-sm">
-                <div class="card">
-                    <img src={image} class="card-img-top" alt="Palm Springs Road" />
-                    <div class="card-body">
-                        <h5 class="card-title">{title}</h5>
-                        <p class="card-text">
+            <div className="col-sm">
+                <div className="card">
+                    <img src={image} className="card-img-top" alt="Palm Springs Road" />
+                    <div className="card-body">
+                        <h5 className="card-title">{title}</h5>
+                        <p className="card-text">
                             ${price}
                         </p>
-                        <div class="col text-center">
+                        <div className="col text-center">
                             <Link to="/" class="btn btn-primary">Go somewhere</Link>
                         </div>
                     </div>
@@ -95,15 +76,15 @@ const MediumCard = ({image, title, price}) => {
 const SmallCard = ({image, title, price}) => {
     return(
         <>
-            <div class="col-sm">
-                <div class="card">
-                    <img src={image} class="card-img-top" alt="Los Angeles Skyscrapers" />
-                    <div class="card-body">
-                        <h5 class="card-title">{title}</h5>
-                        <p class="card-text">${price}</p>
-                        <div class="col text-center">
-                            <div class="col text-center">
-                                <Link to="/" class="btn btn-primary">Go somewhere</Link>
+            <div className="col-md-4 col-sm-6 col-xs-6 d-block mx-auto">
+                <div className="card px-5 text-center position-relative">
+                    <img src={image} className="card-img-top d-block mx-auto overflow-auto" alt="Los Angeles Skyscrapers" />
+                    <div className="card-body">
+                        <h5 className="card-title" >{title}</h5>
+                        <p className="card-text">${price}</p>
+                        <div className="col text-center">
+                            <div className="col text-center">
+                                <Link to="/" class="button-6 position-absolute" style={{fontSize: "1.5vw", left:"30%", bottom: "10%"}}>Add to cart</Link>
                             </div>
                         </div>
                     </div>
