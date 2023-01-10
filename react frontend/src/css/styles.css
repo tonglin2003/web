@@ -3,13 +3,14 @@
 
 .title_font {
     font-family: "Oswald", serif;
-    font-size: 4em;
-    color: #ffffff;
+    font-size: 4.5vw;
+    color: #0b2d3b;
 }
 
 .font {
     font-family: "Source Sans Pro", serif ;
-    color: #ffffff;
+    color: #0b2d3b;
+    font-size: 1.5vw;
 }
 
 .new_btn {
@@ -164,7 +165,7 @@ footer{
 /* CSS */
 .button-6 {
   align-items: center;
-  background-color: #00446b;
+  background-color: #3480e8;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: .25rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
@@ -172,7 +173,7 @@ footer{
   color: rgba(255, 255, 255, 0.85);
   cursor: pointer;
   display: inline-flex;
-  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 1.5vw;
   font-weight: 600;
   justify-content: center;
@@ -194,7 +195,8 @@ footer{
 .button-6:focus {
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-  color: rgba(0, 0, 0, 0.65);
+  color: rgb(255, 255, 255);
+    background: #000e6b;
 }
 
 .button-6:hover {

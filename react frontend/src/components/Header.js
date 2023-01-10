@@ -25,7 +25,7 @@ const Header = () => {
                             <Link to="/" class="nav-link">Pricing</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/post"><button type="button" className="btn btn-primary">Post Product</button></Link>
+                            <Link to="/post" style={{textDecoration: "none"}}><button type="button" className="button-6">Post Product</button></Link>
                         </li>
                     </ul>
                     <div className="container-logo">
