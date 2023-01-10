@@ -15,7 +15,7 @@ function App() {
       <Route exact path="/bio" element={<CompanyBio />} />
       <Route exact path="/post" element={<PostPage />} />
       <Route exact path="/product" element={<SingleProduct />} />
-      <Route exact path="briefbio" element={<BriefBio />} />
+      <Route exact path="/briefbio" element={<BriefBio />} />
       <Route exact path="/browse" element={<BrowseProducts />} />
 
     </Routes>    
