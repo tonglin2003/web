@@ -61,7 +61,7 @@ html, body {
     box-sizing: border-box;
 }
 body{
-    background: #fcfcfc;
+    background: #ffffff;
 }
 footer{
     /*position: absolute;*/
@@ -108,7 +108,7 @@ form {
 /* Add some padding and a grey background color to containers */
 .container{
   padding: 15px;
-  background-color: #e9ecef;
+  background-color: #ffffff;
 }
 /* Style the input elements and the submit button */
 input[type=text], input[type=submit] {
@@ -260,7 +260,7 @@ footer .content .link-boxes{
   border-radius: .25rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
   box-sizing: border-box;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255);
   cursor: pointer;
   display: inline-flex;
   font-family: "Source Sans Pro", sans-serif;
