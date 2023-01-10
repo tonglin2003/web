@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import css from "../css/styles.css"
 
-
 const Footer = () => {
     return (
         <footer>
@@ -11,10 +10,10 @@ const Footer = () => {
                 <h4> Join Our Newsletter</h4>
             </div>
 
-            <div className="flex-container">
+            <div>
 
                 {/*Sub Button*/}
-                <form action="action_page.php">
+                <form action="/action_page.php">
                     <div className="container" style={{backgroundColor:"white"}}>
                         <input type="text" placeholder="Name" name="name" required/>
                             <input type="text" placeholder="Email address" name="mail" required/>
@@ -25,7 +24,7 @@ const Footer = () => {
 
 
                 {/*Footer Content*/}
-                    <div className="container">
+                    <div className="container-botrad">
                         <input type="submit" value="Subscribe"/>
                     </div>
                 </form>
@@ -79,6 +78,5 @@ const Footer = () => {
         </footer>
     )
 }
-
 
 export default Footer

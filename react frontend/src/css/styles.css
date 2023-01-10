@@ -24,7 +24,7 @@
 
 /* ----------------------------------------------------------- */
 
-/* Navigtion & Home */
+/* Navigation & Home */
 
 .btn {
     margin: 2px;
@@ -42,7 +42,7 @@
 #navbarNav{
     justify-content:space-between;
 }
-.collapse navbar-collapse{
+.collapse .navbar-collapse {
     justify-content: space-between;
 }
 
@@ -70,7 +70,7 @@ footer{
     right: 0;
     background: #4287f5;
     height: auto;
-    font-family: "Ariel";
+    font-family: "Ariel", sans-serif;
     padding-top: 30px;
 }
 
@@ -82,65 +82,65 @@ footer{
     text-align: center;
 }
 .footer-content h4{
-    font-size: 1.8rem;
+    font-size: 24px;
     font-weight: 400;
     text-transform: capitalize;
+    font-family: "Ariel", sans-serif;
+    color: white;
     line-height: 3rem;
 }
 
 /* sub code start */
 
-/* Style the form element with a border around it */
+/* Style the form element  */
 form {
  /* border: 20px solid #0a3c8c;*/
-  width: 500px;
-  align-items: center;
-  justify-content: center;
-  padding-left: 120px;
-  padding-right: 120px;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 100px 20px 120px;
+}.toprad{
+  border-radius: 10px 10px 0 0;
 }
-
-
+.container-botrad{
+  border-radius: 0 0 10px 10px;
+}
 /* Add some padding and a grey background color to containers */
 .container{
-  padding: 30px;
-  background-color: #f1f1f1;
+  padding: 15px;
+  background-color: #e9ecef;
 }
-
 /* Style the input elements and the submit button */
 input[type=text], input[type=submit] {
   width: 100%;
-  padding: 12px;
+  padding: 5px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
-
 /* Add margins to the checkbox */
 input[type=checkbox] {
-  margin-top: 16px;
+    margin-bottom: 5px;
+    margin-top: 14px;
 }
-
 /* Style the submit button */
 input[type=submit] {
   background-color: #5edef7;
   color: white;
   border: none;
 }
-
 input[type=submit]:hover {
   opacity: 0.8;
 }
-
 /* sub code end */
 
 .socials{
     list-style: none;
     display: flex;
-    align-items: center;
+    /*align-items: center;*/
     justify-content: center;
-    margin: 1rem 0 3rem 0;
+    margin: 1rem 0 1rem 0;
 }
 .socials li{
     margin: 0 10px;
@@ -158,40 +158,21 @@ input[type=submit]:hover {
     color: #5edef7;
 }
 
-.footer-bottom{
-    background: #0a3c8c;
-    width: 100vw;
-    padding: 20px 0;
-    text-align: center;
 
-}
-.footer-bottom p{
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-    color: #ffffff;
-}
-.footer-bottom span{
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: normal;
-    color: #ffffff;
-}
 
 /*Footer content stuff */
 /*flex!*/
 footer .content .link-boxes{
-  width: 95%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
 }
 /*css for category thing*/
 .content .link-boxes .box .link_name{
   color: #fff;
-  font-size: 22px;
-  margin-top: 20px;
+  font-size: 18px;
+  margin-top: 5px;
   margin-bottom: 10px;
-  padding-left: 35px;
   position: relative;
 }
 /*the line under each thing*/
@@ -212,7 +193,7 @@ footer .content .link-boxes{
 .content .link-boxes .box li a{
   color: #fff;
   padding-left: 50px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
   text-decoration: none;
   opacity: 0.8;
@@ -222,6 +203,26 @@ footer .content .link-boxes{
 .content .link-boxes .box li a:hover{
   opacity: 1;
   text-decoration: underline;
+}
+
+.footer-bottom{
+    background: #0a3c8c;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 1px;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .5;
+    font-weight: normal;
+    color: #ffffff;
 }
 
 /* footer css end */
