@@ -29,7 +29,11 @@ const Header = () => {
                         </li>
                     </ul>
                     <div className="container-logo">
-                        <img src="https://jwassets.justworks.com/assets/logos/og-logo-icon-37f2f3dec5838014e66c4ca492c2bed24e6f0119c8a9428e63c2bc5802f034f7.png" alt="Payroll, Benefits, HR Software, and Compliance | Justworks | Justworks" width="50" height="50"/>
+                        <Link to={"/"}>
+                            <a href={""}>
+                                <img src="https://jwassets.justworks.com/assets/logos/og-logo-icon-37f2f3dec5838014e66c4ca492c2bed24e6f0119c8a9428e63c2bc5802f034f7.png" alt="Payroll, Benefits, HR Software, and Compliance | Justworks | Justworks" width="50" height="50" />
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </nav>

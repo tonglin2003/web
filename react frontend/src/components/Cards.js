@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../css/styles.css'
+// import '../css/productStyle.css'
+
+
 
 var image = "";
 
@@ -15,47 +18,72 @@ const Cards = ({size, image, title, price}) => {
 }
 
 const LargeCard = ({image, title, price}) => {
-    console.log(image);
     return(
     <>
-        <div className="col text-center">
-            <div className="col text-center">
-                <h1>Write the product / subsciption name here</h1>
-                <p> <br></br></p>
-                <div className="col d-flex justify-content-center"><div className="card"></div>.
-                    <div className="card" style={{width: '45 rem'}}>
-                        <img src={image} className="card-img-top" alt="Hollywood Sign on The Hill" />
-                        <div className="card-body">
-                            <h5 className="card-title">{title}</h5>
-                            <p className="card-text">${price}</p>
+       {/*<div class="col text-center">*/}
+            <div class="container" id="theBack">
+                <div class="row">
+                      <div class="col-sm">
+                         <div class="card" style={{width: "45rem"}}>
+
+<img src ="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg" class="card-img-top" id="braceletimg"
+        alt="Hollywood Sign on The Hill" />
                         </div>
                     </div>
-                </div>
+
+
+
+        <div className="col-sm">
+            <p id="theBracelet">Silver Dragon Bracelet (womens) </p>
+            <div id="diff">Color: Silver</div>
+            <div id="diff">Material: Zinc Alloy</div>
+            <div id="diff">Details:	Dragon</div>
+            <div id="diff">Style: Fashionable </div>
+
+            <div id ="Colors"> Available sizes: </div>
+            <button type="button" className="btn btn-light" id="Onesize">One size</button>
+
+            {/*<button type="button" className="btn btn-secondary">Silver</button>*/}
+            {/*<button type="button" className="btn btn-success">Green</button>*/}
+            {/*<button type="button" className="btn btn-danger">Red</button>*/}
+            {/*<button type="button" className="btn btn-warning">Yellow</button>*/}
+            {/*<button type="button" className="btn btn-info">Blue</button>*/}
+
+            <p id="costofbracelet"> $10.05 </p>
+
+            <div className="d-grid gap-2">
+                <button className="btn btn-primary" type="button" id="addtobag">Buy Now </button>
+                <button className="btn btn-primary" type="button" id="addtobag">Add to bag</button>
+                {/**/}
+                <p id="prodMeasurement"> Product Measurements </p>
+                <table className="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Size</th>
+                        <th scope="col">one-size</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Diameter</td>
+                        <td>2.6in | 6.5cm</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-
-        <div className="col text-center">
-
-            <p> <br></br> </p>
-            <p> Write discrption of product. for example:</p>
-
-            <li>
-                <ul id="center">Imported</ul>
-                <ul id="center">Length: 10.25in / 26cm</ul>
-                <ul id="center">Height: 6.25in / 16cm</ul>
-            </li>
-            <p><br></br></p>
-            check out more products below
-            <p><br></br></p>
-        </div>
+     </div>
+ </div>
         </>
     )
 }
 
+
+
 const MediumCard = ({image, title, price}) => {
     return(
         <>
-            <div className="col-sm">
+            {/*<div className="col-sm">*/}
                 <div className="card">
                     <img src={image} className="card-img-top" alt="Palm Springs Road" />
                     <div className="card-body">
@@ -68,7 +96,7 @@ const MediumCard = ({image, title, price}) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            {/*</div>*/}
         </>
     )
 }

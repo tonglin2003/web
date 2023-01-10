@@ -303,3 +303,53 @@ footer .content .link-boxes{
   color: rgba(0, 0, 0, 0.65);
   transform: translateY(0);
 }
+.card-img-top{
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    padding-top: 10px;
+
+}
+.col-sm{
+    padding-bottom:10px;
+    color: #0b2d3b;
+    padding-left: 20px;
+}
+#diff {
+    padding-left: 2px;
+    font-family: Helvetica Neue;
+    font-size: 20px;
+}
+#theBack{
+    background: white;
+}
+#theBracelet{
+    font-size: 30px;
+    font-weight: bold;
+}
+#Colors{
+    padding-top:40px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight:bold;
+}
+#costofbracelet{
+    font-size: 25px;
+    padding: 10px;
+    padding-top:25px;
+    font-weight:bold;
+    padding-bottom: 15px;
+}
+#addtobag{
+
+}
+.checked {
+  color: orange;
+}
+#prodMeasurement{
+    padding-top:10px;
+    padding-left: 10px;
+}
+#braceletimg{
+    padding-top:20px;
+}

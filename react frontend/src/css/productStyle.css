@@ -1,0 +1,51 @@
+body{
+    font-family: emoji;
+}
+.container-logo{
+    justify-content: right;
+    padding: 15px;
+}
+#cards{
+    display: inline-table;
+}
+.card{
+    width:10px;
+}
+.container{
+    padding:20px;
+    display: inline-flex;
+}
+#tables{
+    padding:90px;
+    font-size:large;
+}
+#checkMore{
+    padding-top:50px;
+    font-size: large;
+}
+h1{
+    padding-top:30px;
+    padding-bottom: 50px;
+}
+
+#prodName{
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.card-img-top{
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+
+}
+.col-sm{
+    font-family: "Oswald", serif;
+    font-size: 4.5vw;
+    color: #0b2d3b;
+    padding-left: 20px;
+}
+#diff{
+    padding-left:20px;
+    font-family: "Oswald", serif;
+    font-size: 3.5vw;
+}
