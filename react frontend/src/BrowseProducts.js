@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import Spacer from './components/Spacer'
 import Header from './components/Header'
 import Cards from './components/Cards';
 import Search from './components/Search';
@@ -56,7 +57,7 @@ function BrowseProducts() {
                 <Search />
             </div>
 
-            <p><br></br> <br></br></p> <p></p>
+            <Spacer />
 
 
 
@@ -71,7 +72,7 @@ function BrowseProducts() {
             </div>
 
 
-            <p><br></br> <br></br></p> <p></p>
+            <Spacer />
 
 
         </>
