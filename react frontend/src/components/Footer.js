@@ -4,7 +4,7 @@ import css from "../css/styles.css"
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className={"text-center"}>
 
             <div className="footer-content">
                 <h4> Join Our Newsletter</h4>
@@ -12,9 +12,8 @@ const Footer = () => {
 
             <div>
 
-                {/*Sub Button*/}
                 <form action="/action_page.php">
-                    <div className="container" style={{backgroundColor:"white"}}>
+                    <div className="container" style={{backgroundColor:"white", width: "200%"}}>
                         <input type="text" placeholder="Name" name="name" required/>
                             <input type="text" placeholder="Email address" name="mail" required/>
                                 <label>
@@ -22,12 +21,15 @@ const Footer = () => {
                                 </label>
                     </div>
 
-
-                {/*Footer Content*/}
                     <div className="container-botrad">
                         <input type="submit" value="Subscribe"/>
                     </div>
                 </form>
+
+
+
+                {/*Footer Content*/}
+
 
                 <div className="content">
                     <div className="link-boxes">
