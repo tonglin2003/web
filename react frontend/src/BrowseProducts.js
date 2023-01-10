@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import Header from './components/Header'
 import Cards from './components/Cards';
-import Spacer from './components/Spacer'
 import Search from './components/Search';
 import axios from "axios"
 
@@ -29,17 +28,39 @@ function BrowseProducts() {
     return (
         <>
             <Header />
-            <Spacer />
 
-            <h1 style={{marginLeft: '50px'}}>Browse Products</h1>
+
+            {/*<div className="">*/}
+            {/*    <img src={"https://retaildesignblog.net/wp-content/uploads/2021/07/Justworks-Headquarters-by-Unispace-01.png"} width={"1000px"} height={"500px"}/>*/}
+            {/*</div>*/}
+
+            {/*<div style={{background:"#1d2138"}}>*/}
+            {/*    <div className="row">*/}
+            {/*        <div className="col">*/}
+            {/*            <div>*/}
+            {/*                <p>The deals you can only find on</p>*/}
+            {/*                <h3>Justworks</h3>*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*        <div className="col">*/}
+            {/*            <img src={"https://retaildesignblog.net/wp-content/uploads/2021/07/Justworks-Headquarters-by-Unispace-01.png"} className="img-fluid"/>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
+
+
+
+            <h1 style={{margin: "10vh 0 0 50px"}}>Browse Products</h1>
 
             <div style={{marginLeft: '50px'}} >
                 <Search />
             </div>
 
-            <Spacer />
+            <p><br></br> <br></br></p> <p></p>
 
-            <div className="row row-cols-3 g-3" style={{marginLeft: '50px', marginRight: '50px' }}>
+
+
+            <div className="row row-cols-3 g-3 mx-5" style={{margin: "0 5vw 0 5vw"}}>
 
                 {
                     products.map(product => (
@@ -47,22 +68,12 @@ function BrowseProducts() {
                     ))
                 }
 
-{/*                {(typeof products === 'undefined') ? (*/}
-{/*    <p>loading...</p>*/}
-{/*) : (*/}
-{/*    products.map(item => (*/}
-{/*            <div className={"m-5"}>*/}
-{/*                    <a href={"/"}>{item}</a>*/}
-{/*                    <img src={"https://static.swappa.com/static/images/categories/retro/category_iphones_600x600.png"} className={"img-thumbnail"}/>*/}
-
-{/*            </div>*/}
-{/*        )*/}
-{/*    ))}*/}
-
-
             </div>
 
-            <Spacer />
+
+            <p><br></br> <br></br></p> <p></p>
+
+
         </>
     )
 }
