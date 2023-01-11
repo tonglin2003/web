@@ -112,7 +112,7 @@ const SmallCard = ({image, title, price}) => {
                         <p className="card-text">${price}</p>
                         <div className="col text-center">
                             <div className="col text-center">
-                                <Link to="/" class="button-6 position-absolute" style={{fontSize: "1.5vw", left:"30%", bottom: "10%"}}>Add to cart</Link>
+                                <Link to="/" class="button-6" style={{fontSize: "1.5vw"}}>Add to cart</Link>
                             </div>
                         </div>
                     </div>
