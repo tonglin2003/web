@@ -12,8 +12,10 @@ const Footer = () => {
 
             <div>
 
-                <form action="/action_page.php">
-                    <div className="container" style={{backgroundColor:"white", width: "200%"}}>
+
+                <div style={{justifyContent: "center", display: "flex"}}>
+                <form action="/action_page.php" >
+                    <div className="subButton-container" >
                         <input type="text" placeholder="Name" name="name" required/>
                             <input type="text" placeholder="Email address" name="mail" required/>
                                 <label>
@@ -25,6 +27,7 @@ const Footer = () => {
                         <input type="submit" value="Subscribe"/>
                     </div>
                 </form>
+                </div>
 
 
 
