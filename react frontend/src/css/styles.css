@@ -241,8 +241,27 @@ footer .content .link-boxes{
 
 }
 
+.card.medium{
+  /* padding-top: 10px; */
+  height: 100% !important;
+  width: 100% !important;
+  overflow: scroll;
+  /*max-width: 300px;*/
+  max-height: 500px;
+
+}
+
 .card-title{
     font-size: 1.5vw !important;
+}
+
+.card-title.medium{
+  font-size: 100% !important;
+  max-width: 100%;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .designed_btn {
@@ -300,6 +319,7 @@ footer .content .link-boxes{
   color: rgba(0, 0, 0, 0.65);
   transform: translateY(0);
 }
+
 .card-img-top{
     width: 100% !important;
     height: 100% !important;
@@ -350,3 +370,31 @@ footer .content .link-boxes{
 #braceletimg{
     padding-top:20px;
 }
+
+/* ----------------------------------------------------------- */
+
+/* BIO/Profile Page */
+
+.profile.center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: flex !important;
+}
+
+.profile.container {
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #D1D8DE;
+  
+}
+
+.profile.products {
+  background-color: #F0F8FF !important;
+  border: None !important;
+  
+}
+
+
+/* ----------------------------------------------------------- */

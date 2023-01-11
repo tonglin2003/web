@@ -13,8 +13,8 @@ const Cards = ({size, image, title, price}) => {
 
 
     if(size === 1){ return <SmallCard image = {image} title={title} price={price}/> }
-    else if(size === 2){ return <MediumCard image = {image} />}
-    else if (size === 3) {return <LargeCard image ={image} /> }
+    else if(size === 2){ return <MediumCard image = {image} title={title} price={price} />}
+    else if (size === 3) {return <LargeCard image ={image} title={title} price={price} /> }
 }
 
 const LargeCard = ({image, title, price}) => {
@@ -83,20 +83,18 @@ const LargeCard = ({image, title, price}) => {
 const MediumCard = ({image, title, price}) => {
     return(
         <>
-            {/*<div className="col-sm">*/}
-                <div className="card">
-                    <img src={image} className="card-img-top" alt="Palm Springs Road" />
+            <div className="col-sm">
+                <div className="card medium profile products">
+                    <img src={image} className="card-img-top profile center" alt="Palm Springs Road" />
                     <div className="card-body">
-                        <h5 className="card-title">{title}</h5>
-                        <p className="card-text">
-                            ${price}
-                        </p>
+                    <p className="card-title medium">{title}</p>
+                        <p className="card-text">${price}</p>
                         <div className="col text-center">
-                            <Link to="/" class="btn btn-primary">Go somewhere</Link>
+                            <Link to="/" class="btn btn-primary">Purchase</Link>
                         </div>
                     </div>
                 </div>
-            {/*</div>*/}
+            </div>
         </>
     )
 }
