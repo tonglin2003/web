@@ -244,8 +244,27 @@ footer .content .link-boxes{
 
 }
 
+.card.medium{
+  /* padding-top: 10px; */
+  height: 100% !important;
+  width: 100% !important;
+  overflow: scroll;
+  /*max-width: 300px;*/
+  max-height: 500px;
+
+}
+
 .card-title{
     font-size: 1.5vw !important;
+}
+
+.card-title.medium{
+  font-size: 100% !important;
+  max-width: 100%;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .designed_btn {
@@ -319,7 +338,13 @@ footer .content .link-boxes{
   padding-right: 50px;
   background-color: white;
   border-radius: 15px;
-  box-shadow: 5px 5px 5px rgb(173, 173, 173);
+  box-shadow: 5px 5px 5px #D1D8DE;
+  
+}
+
+.profile.products {
+  background-color: #F0F8FF !important;
+  border: None !important;
   
 }
 
