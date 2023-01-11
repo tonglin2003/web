@@ -402,7 +402,7 @@ footer .content .link-boxes{
 .profile.products {
   background-color: #F0F8FF !important;
   border: None !important;
-  
+  min-width: 150px;
 }
 
 .profile.background {

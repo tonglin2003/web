@@ -100,7 +100,7 @@ function CompanyBio({ }) {
                         {/* BROWSE PRODUCTS section --------------------------------------------------*/}
                         {!(isEditMode) && <Spacer/>}
                         {!(isEditMode) && <><h4 style={{display: "inline"}}>Latest Products</h4> <Link to="#" style={{textDecoration: "none", display: "inline"}}>Browse all</Link></>}
-                        {!(isEditMode) && <div className="row row-cols-3 g-3 mx-0" style={{margin: "0 5vw 0 5vw"}}>
+                        {!(isEditMode) && <div className="row row-cols-3 g-3 mx-0" >
 
                             {
                                 products.slice(0,3).map(product => (
