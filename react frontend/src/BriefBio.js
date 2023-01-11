@@ -55,7 +55,7 @@ function BriefBio() {
     )
   }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<BriefBio />);
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(<BriefBio />);
             
 export default BriefBio;

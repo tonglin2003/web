@@ -15,7 +15,7 @@ function CompanyBio({ }) {
     //saved variables --------------------------------------------------
     const [name, setName] = useState("Jane Doe");
     const [image, setImage] = useState(require('./img/default-avatar.jpg'));
-    const [bio, setBio] = useState("Marketing specialist from the Big Apple. Helping businesses thrive since 2002.");
+    const [bio, setBio] = useState("Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.");
     const [phone, setPhone] = useState("212-123-4567");
     const [email, setEmail] = useState("support@jdoe.com");
     const [website, setWebsite] = useState("jdoe.com");
@@ -60,7 +60,7 @@ function CompanyBio({ }) {
                 <Spacer />
 
                 <form className="profile center" style={{ width: "100%" }}>
-                    <fieldset style={{ maxWidth: "800px" }} className=" profile container">
+                    <fieldset style={{ maxWidth: "800px", paddingTop: "30px" }} className=" profile contain">
 
                         {/* EDIT MODE button --------------------------------------------------*/}
                         {!(isEditMode) && <p onClick={() => setIsEditMode(!isEditMode)}

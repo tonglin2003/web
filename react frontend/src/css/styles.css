@@ -373,21 +373,12 @@ footer .content .link-boxes{
 
 /* ----------------------------------------------------------- */
 
-/* BIO/Profile Page */
+/* BIO/Profile Page  */
 
 .profile.center {
   margin-left: auto !important;
   margin-right: auto !important;
   display: flex !important;
-}
-
-.profile.container {
-  padding-left: 50px;
-  padding-right: 50px;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 5px 5px 5px #D1D8DE;
-  
 }
 
 .profile.contain {
