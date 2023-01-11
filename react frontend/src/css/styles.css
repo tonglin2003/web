@@ -1,5 +1,5 @@
 
-/* ----------------------------------------------------------- */
+/* ----------------------------- Tong ------------------------------ */
 
 .title_font {
     font-family: "Oswald", serif;
@@ -22,7 +22,7 @@
 }
 
 
-/* ----------------------------------------------------------- */
+/* -----------------------------  ------------------------------ */
 
 /* Navigation & Home */
 
@@ -223,7 +223,7 @@ footer .content .link-boxes{
 }
 
 /* footer css end */
-/* ----------------------------------------------------------- */
+/* -------------------------- Tong --------------------------------- */
 
 .card-img-top {
     width: 100%;
@@ -240,6 +240,14 @@ footer .content .link-boxes{
     max-height: 600px;
 
 }
+
+.designed_btn {
+    background: #11557C !important;
+    color: white !important;
+}
+
+/* -------------------------- Naomi --------------------------------- */
+
 
 .card.medium{
   /* padding-top: 10px; */
@@ -264,14 +272,12 @@ footer .content .link-boxes{
   text-overflow: ellipsis;
 }
 
-.designed_btn {
-    background: #11557C !important;
-    color: white !important;
-}
 
 
 
-/* CSS */
+
+/* -------------------------- Tong (button-6) Please don't edit any--------------------------------- */
+
 .button-6 {
   align-items: center;
   background-color: #3480e8;
@@ -319,6 +325,9 @@ footer .content .link-boxes{
   color: rgba(0, 0, 0, 0.65);
   transform: translateY(0);
 }
+
+/* -------------------------- Hafeefa --------------------------------- */
+
 
 .card-img-top{
     width: 100% !important;
@@ -371,7 +380,7 @@ footer .content .link-boxes{
     padding-top:20px;
 }
 
-/* ----------------------------------------------------------- */
+/* ---------------------------- Naomi ------------------------------- */
 
 /* BIO/Profile Page */
 
