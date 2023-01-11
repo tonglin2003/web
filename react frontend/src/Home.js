@@ -5,8 +5,8 @@ import Footer from './components/Footer'
 import Spacer from './components/Spacer'
 import './css/styles.css'
 import Carousel from 'react-bootstrap/Carousel';
-// import CarouselItem from "./components/Category_Cards";
-// import RecommendDisplay from "./components/recommendDisplay"
+import CarouselItem from "./components/Category_Cards";
+import RecommendDisplay from "./components/recommendDisplay"
 
 
 
@@ -53,12 +53,12 @@ function Home() {
 
             <Spacer/>
 
-    {/* <div className={"py-5 my-5"} style={{borderBottom: "0.1vh #9facbf solid", borderTop: "0.1vh #9facbf solid", background: "#ebedf0"}}>
-        <Carousel variant={"dark"}> */}
+     <div className={"py-5 my-5"} style={{borderBottom: "0.1vh #9facbf solid", borderTop: "0.1vh #9facbf solid", background: "#ebedf0"}}>
+        <Carousel variant={"dark"}>
 
-            {/*<CarouselItem  image={"https://media.istockphoto.com/id/916092484/photo/women-clothes-hanging-on-hangers-clothing-rails-fashion-design.jpg?s=612x612&w=0&k=20&c=fUpcbOITkQqitglZfgJkWO3py-jsbuhc8eZfb4sdrfE="} category={"Something"}/>*/}
-           
-            {/* <CarouselItem image={"https://www.classcentral.com/report/wp-content/uploads/2021/06/udemy-sidebar.jpg"} category={"Online Courses"}/>
+            <CarouselItem  image={"https://media.istockphoto.com/id/916092484/photo/women-clothes-hanging-on-hangers-clothing-rails-fashion-design.jpg?s=612x612&w=0&k=20&c=fUpcbOITkQqitglZfgJkWO3py-jsbuhc8eZfb4sdrfE="} category={"Something"}/>
+
+             <CarouselItem image={"https://www.classcentral.com/report/wp-content/uploads/2021/06/udemy-sidebar.jpg"} category={"Online Courses"} />
         </Carousel>
     </div>
 
@@ -85,7 +85,7 @@ function Home() {
 
 
         </div>
-    </div> */}
+    </div>
 
 
             <Spacer />
