@@ -38,11 +38,12 @@ function CompanyBio({}) {
     return (
         <>
             <Header />
-            <Spacer />
 
-            <div>
+            <div style={{background: "rgb(235, 235, 235)"}}>
+                <Spacer />
+
                 <form className="profile center" style={{width: "100%"}}>
-                <fieldset style={{maxWidth: "600px"}}>
+                <fieldset style={{maxWidth: "800px"}} className=" profile container">
                     {/* EDIT MODE button */}
                     {!(isEditMode) &&<p onClick={() => setIsEditMode(!isEditMode)} 
                                             type="button"
@@ -58,8 +59,8 @@ function CompanyBio({}) {
                                             onChange={(e) => setNewName(e.target.value) }/>}<br></br><br></br>
                     
                         {/* IMAGE field */}
-                        {!(isEditMode) && <p><img src={image} style={{maxHeight:"300px", maxWidth:"600px"}} className="profile center"/></p> }
-                        {isEditMode && <><p><img src={newImage} style={{maxHeight:"300px", maxWidth:"600px"}} className="profile center"/></p> 
+                        {!(isEditMode) && <p><img src={image} style={{maxHeight:"300px", maxWidth:"100%"}} className="profile center"/></p> }
+                        {isEditMode && <><p><img src={newImage} style={{maxHeight:"300px", maxWidth:"100%"}} className="profile center"/></p> 
                                             <label>Edit Image</label>
                                             <br></br>
                                             <input 
@@ -73,8 +74,8 @@ function CompanyBio({}) {
                         {isEditMode && <label>Bio</label>}<br></br>
                         {isEditMode && <textarea 
                                             type="text"
-                                            cols="70" rows="15"
-                                            style={{whiteSpace: "pre-wrap"}}
+                                            rows="15"
+                                            style={{whiteSpace: "pre-wrap", width: "100%"}}
                                             value={newBio} 
                                             onChange={(e) => setNewBio(e.target.value) }/>}
 
@@ -145,9 +146,10 @@ function CompanyBio({}) {
                     </fieldset>
 
                 </form>
+                <Spacer />
+
             </div> 
 
-            <Spacer />
             <Footer />
 
         </>
