@@ -103,8 +103,8 @@ function CompanyBio({ }) {
                         {!(isEditMode) && <div className="row row-cols-3 g-3 mx-0" style={{margin: "0 5vw 0 5vw"}}>
 
                             {
-                                products.slice(0,2).map(product => (
-                                    <Cards size={2} image={product['image']} title={product['title']} price={product['price']} />
+                                products.slice(0,3).map(product => (
+                                    <Cards size={4} image={product['image']} title={product['title']} price={product['price']} />
                                 ))
                             }
                         </div>}
