@@ -4,6 +4,7 @@ import CompanyBio from './CompanyBio'
 import PostPage from './PostPage'
 import SingleProduct from './SingleProduct'
 import BrowseProducts from './BrowseProducts'
+import Login from './Login'
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
       <Route exact path="/bio" element={<CompanyBio />} />
       <Route exact path="/post" element={<PostPage />} />
       <Route exact path="/product" element={<SingleProduct />} />

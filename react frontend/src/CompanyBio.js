@@ -1,65 +1,113 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Spacer from './components/Spacer'
-import ProfileImage from './components/ProfileImage';
+import UploadImage from './components/UploadImage';
+import css from './css/styles.css'
 
-function CompanyBio() {
+function CompanyBio({}) {
 
     const [isEditMode, setIsEditMode] = useState(false);
+
+    const [name, setName] =useState("Jane Doe");
+    const [image, setImage] =useState(require('./img/default-avatar.jpg'));
+    const [bio, setBio] =useState("Marketing specialist from the Big Apple. Helping businesses thrive since 2002.");
+    const [phone, setPhone] =useState("212-123-4567");
+    const [email, setEmail] =useState("support@jdoe.com");
+    const [website, setWebsite] =useState("jdoe.com");
+    const [location, setLocation] =useState("New York");
+
     
     return (
         <>
             <Header />
             <Spacer />
 
-            <div className='wrapper'>
-                <form>
-                    <fieldset>
-                        {!(isEditMode) && <h1>Name</h1> }
-                        {isEditMode && <p>Company Name</p>}
-                        {isEditMode && <input type="text" />}
-            
-                        <ProfileImage />
-                        {isEditMode && <p>Profile Image</p>}
-                        {isEditMode && <input id="upload_img" onChange="loadImage()" accept="image/jpeg, image/png" type="file" />}
-        
+            <div>
+                <form className="profile center" style={{width: "100%"}}>
+                <fieldset>
+                    {/* EDIT MODE button */}
+                    {!(isEditMode) &&<p onClick={() => setIsEditMode(!isEditMode)} 
+                                            type="button"
+                                            style={{color: "#3295e5"}}>
+                                            Edit Profile</p>}<p></p>
+                        {/* NAME field */}
+                        {!(isEditMode) && <h1>{name}</h1> }
+                        {isEditMode && <label>Company Name</label>}
+                        {isEditMode && <input 
+                                            type="text" 
+                                            value={name} 
+                                            onChange={(e) => setName(e.target.value) }/>}
+                    
+                        {/* IMAGE field */}
+                        {!(isEditMode) && <p><img src={image} height={300} className="profile center"/></p> }
+                        {isEditMode && <UploadImage image={image} />}<br></br><br></br>
 
-                        <ul className="list-group list-group-flush">
-                            <li className="list-group-item">
-                            {!(isEditMode) && <p>hi dsjhcbdsjh cdscdc
-                                sdcjdscjdscsdcndsjncjdsc
-                                dscdsncdscdscdsncjdsncsndcjdsncjn</p>}
-                            {isEditMode && <p>Bio</p>}
-                            {isEditMode && <textarea type="text" />}
+    
+                        {/* BIO field */}
+                        {!(isEditMode) && <p>{bio}</p>}
+                        {isEditMode && <label>Bio</label>}<br></br>
+                        {isEditMode && <textarea 
+                                            type="text"
+                                            cols="50" rows="10"
+                                            value={bio} 
+                                            onChange={(e) => setBio(e.target.value) }/>}
 
-                            </li>
-                            <li className="list-group-item">Phone:
-                            {!(isEditMode) && ' 322-789-0093' }
-                            {isEditMode && <input type="text" />}
-                            </li>
+                        <Spacer/>
 
-                            <li className="list-group-item">Email:
-                            {!(isEditMode) && ' test@gmail.com'}
-                            {isEditMode && <input type="text" />}
-                             </li>
+                        {/* CONTACT section */}
+                        <h2>Contact</h2>
+                        <hr></hr>
 
-                            <li className="list-group-item">
-                            {!(isEditMode) && 'test.com'}
-                            {isEditMode && 'Website or Linkedin: '}
-                            {isEditMode && <input type="text" />}
+                        <label>Phone: </label>
+                        {!(isEditMode) && " " + phone}
+                        {isEditMode && " "}
+                        {isEditMode &&  <input 
+                                            type="text"
+                                            value={phone} 
+                                            onChange={(e) => setPhone(e.target.value) }/>}<br></br><br></br>
 
-                            </li>
+                        <label>Email: </label>
+                        {!(isEditMode) && " " + email}
+                        {isEditMode && <input 
+                                            type="text"
+                                            value={email} 
+                                            onChange={(e) => setEmail(e.target.value) }/>}<br></br><br></br>
 
-                            <li className="list-group-item"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-                        </svg> <a href="https://www.google.com/maps/place/New+York,+NY/data=!4m2!3m1!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62?sa=X&ved=2ahUKEwj3yOq79LP8AhWqEVkFHZjvCI0Q8gF6BAgIEAE"> New York </a> 
-                            </li>
-                        </ul>    
+                        <label>{!(isEditMode) && " " + website}</label>
+                        {isEditMode && "Website or Linkedin: "}
+                        {isEditMode && <input 
+                                            type="text"
+                                            value={website} 
+                                            onChange={(e) => setWebsite(e.target.value) }/>}<br></br><br></br>
+
+
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg> 
+                            <Link to="https://www.google.com/maps/place/New+York,+NY/data=!4m2!3m1!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62?sa=X&ved=2ahUKEwj3yOq79LP8AhWqEVkFHZjvCI0Q8gF6BAgIEAE">
+                            {location}</Link></p> 
+
+
+                    <Spacer/>
+
+                    {/* EXIT EDIT MODE buttons */}
+                    <div className='row'>
+                        <div className='col-sm' style={{paddingTop: "15px"}}>
+                        {(isEditMode) &&<p onClick={() => setIsEditMode(!isEditMode)} 
+                                                type="button"
+                                                style={{color: "#3295e5", textAlign:"center"}}>
+                                                Cancel Edit</p>}
+                        </div>
+                        <div className='col-sm'>
+                        {isEditMode && <input type='submit' 
+                                                value="Save"
+                                                onClick={() => setIsEditMode(!isEditMode)}/>}
+                        </div>
+
+                    </div>
                     </fieldset>
-                    {isEditMode && <button onClick={() => setIsEditMode(!isEditMode)} type='submit'>Save</button>}
+
                 </form>
-                {!(isEditMode) &&<button onClick={() => setIsEditMode(!isEditMode)} className="btn btn-primary" type="button">Edit Information</button>}
             </div> 
 
             <Spacer />
@@ -69,12 +117,12 @@ function CompanyBio() {
     )
 }
 
-//load profile image upon upload
-function loadImage(){
-    var img = document.getElementById("upload_img").value;
-    var filename = img.match(/[^\\/]*$/)[0];
-    document.getElementById("image").src = "../img/"+filename;
-}
+// //load profile image upon upload
+// function loadImage(image){
+//     image = image.match(/[^\\/]*$/)[0];
+//     image = "./img/"+image;
+//     return image;
+// }
 
 
 export default CompanyBio;
