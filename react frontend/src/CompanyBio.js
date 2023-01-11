@@ -18,6 +18,15 @@ function CompanyBio({}) {
     const [website, setWebsite] =useState("jdoe.com");
     const [location, setLocation] =useState("New York");
 
+    const [newName, setNewName] =useState(name);
+    const [newImage, setNewImage] =useState(image);
+    const [newBio, setNewBio] =useState(bio);
+    const [newPhone, setNewPhone] =useState(phone);
+    const [newEmail, setNewEmail] =useState(email);
+    const [newWebsite, setNewWebsite] =useState(website);
+    const [newLocation, setNewLocation] =useState(location);
+
+
     
     return (
         <>
@@ -26,7 +35,7 @@ function CompanyBio({}) {
 
             <div>
                 <form className="profile center" style={{width: "100%"}}>
-                <fieldset>
+                <fieldset style={{maxWidth: "600px"}}>
                     {/* EDIT MODE button */}
                     {!(isEditMode) &&<p onClick={() => setIsEditMode(!isEditMode)} 
                                             type="button"
@@ -37,8 +46,8 @@ function CompanyBio({}) {
                         {isEditMode && <label>Company Name</label>}
                         {isEditMode && <input 
                                             type="text" 
-                                            value={name} 
-                                            onChange={(e) => setName(e.target.value) }/>}
+                                            value={newName} 
+                                            onChange={(e) => setNewName(e.target.value) }/>}
                     
                         {/* IMAGE field */}
                         {!(isEditMode) && <p><img src={image} height={300} className="profile center"/></p> }
@@ -46,13 +55,14 @@ function CompanyBio({}) {
 
     
                         {/* BIO field */}
-                        {!(isEditMode) && <p>{bio}</p>}
+                        {!(isEditMode) && <p style={{whiteSpace: "pre-wrap"}}>{bio}</p>}
                         {isEditMode && <label>Bio</label>}<br></br>
                         {isEditMode && <textarea 
                                             type="text"
-                                            cols="50" rows="10"
-                                            value={bio} 
-                                            onChange={(e) => setBio(e.target.value) }/>}
+                                            cols="70" rows="15"
+                                            style={{whiteSpace: "pre-wrap"}}
+                                            value={newBio} 
+                                            onChange={(e) => setNewBio(e.target.value) }/>}
 
                         <Spacer/>
 
@@ -65,22 +75,22 @@ function CompanyBio({}) {
                         {isEditMode && " "}
                         {isEditMode &&  <input 
                                             type="text"
-                                            value={phone} 
-                                            onChange={(e) => setPhone(e.target.value) }/>}<br></br><br></br>
+                                            value={newPhone} 
+                                            onChange={(e) => setNewPhone(e.target.value) }/>}<br></br><br></br>
 
                         <label>Email: </label>
                         {!(isEditMode) && " " + email}
                         {isEditMode && <input 
                                             type="text"
-                                            value={email} 
-                                            onChange={(e) => setEmail(e.target.value) }/>}<br></br><br></br>
+                                            value={newEmail} 
+                                            onChange={(e) => setNewEmail(e.target.value) }/>}<br></br><br></br>
 
                         <label>{!(isEditMode) && " " + website}</label>
                         {isEditMode && "Website or Linkedin: "}
                         {isEditMode && <input 
                                             type="text"
-                                            value={website} 
-                                            onChange={(e) => setWebsite(e.target.value) }/>}<br></br><br></br>
+                                            value={newWebsite} 
+                                            onChange={(e) => setNewWebsite(e.target.value) }/>}<br></br><br></br>
 
 
                         <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg> 
@@ -101,7 +111,13 @@ function CompanyBio({}) {
                         <div className='col-sm'>
                         {isEditMode && <input type='submit' 
                                                 value="Save"
-                                                onClick={() => setIsEditMode(!isEditMode)}/>}
+                                                onClick={() => 
+                                                    {setIsEditMode(!isEditMode);
+                                                    setName(newName);
+                                                    setBio(newBio);
+                                                    setPhone(newPhone);
+                                                    setEmail(newEmail);
+                                                    setWebsite(newWebsite);}}/>}
                         </div>
 
                     </div>
@@ -123,6 +139,11 @@ function CompanyBio({}) {
 //     image = "./img/"+image;
 //     return image;
 // }
+
+//Save user input
+function Save(){
+    
+}
 
 
 export default CompanyBio;
