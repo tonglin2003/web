@@ -55,7 +55,7 @@ function CompanyBio({ }) {
         <>
             <Header />
 
-            <div style={{ background: "#F0F8FF" }}>
+            <div className='profile background'>
 
                 <Spacer />
 
