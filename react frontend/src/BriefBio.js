@@ -10,14 +10,13 @@ function BriefBio() {
         <>
 
 <Header />
-<Spacer />
 
 <div class="hero-image">
   <img src ="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" className='img-fluid shadow-4'/>
   <div class="hero-text">
   <h1 className={"herofont"}>Welcome to *Client* Page</h1>
     <p>Here you will learn more about our products and our story</p>
-    <Link to="#" style={{textDecoration: "none"}}><button type="button" className="button-6 m-3">Browse Products</button></Link>
+    <Link to="/browse" style={{textDecoration: "none"}}><button type="button" className="button-6 m-3">Browse Products</button></Link>
   </div>
 </div>
 
