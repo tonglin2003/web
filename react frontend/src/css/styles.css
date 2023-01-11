@@ -246,6 +246,10 @@ footer .content .link-boxes{
     color: white !important;
 }
 
+.card-title{
+  font-size: 1.5vw !important;
+}
+
 /* -------------------------- Naomi --------------------------------- */
 
 
@@ -257,10 +261,6 @@ footer .content .link-boxes{
   /*max-width: 300px;*/
   max-height: 500px;
 
-}
-
-.card-title{
-    font-size: 1.5vw !important;
 }
 
 .card-title.medium{
