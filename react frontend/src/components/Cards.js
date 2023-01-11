@@ -26,7 +26,7 @@ const LargeCard = ({image, title, price}) => {
             <div class="container" id="theBack">
                 <div class="row">
                       <div class="col-sm">
-                         <div class="card" style={{width: "45rem"}}>
+                         <div class="card">
 
 <img src ="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg" class="card-img-top" id="braceletimg"
         alt="Hollywood Sign on The Hill" />
@@ -54,8 +54,8 @@ const LargeCard = ({image, title, price}) => {
             <p id="costofbracelet"> $10.05 </p>
 
             <div className="d-grid gap-2">
-                <button className="btn btn-primary" type="button" id="addtobag">Buy Now </button>
-                <button className="btn btn-primary" type="button" id="addtobag">Add to bag</button>
+                <button className="button-6" type="button" id="addtobag" style={{background:"black"}}>Buy Now </button>
+                <button className="button-6" type="button" id="addtobag" style={{background:"black"}}>Add to bag</button>
                 {/**/}
                 <p id="prodMeasurement"> Product Measurements </p>
                 <table className="table">
