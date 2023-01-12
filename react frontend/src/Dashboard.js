@@ -10,17 +10,10 @@ function Dashboard(){
     const user = JSON.parse(localStorage.getItem('currentUser'));
     const [name, setName] = useState();
 
-
-    console.log(user)
+    //Retrieve info from userdata
     useEffect(() => {
         setName(user.name);
     }, []);
-
-
-    // function 
-    // if(user){
-    //    setName(user.name);
-    // }
 
     // Redirect back to LOGIN URL
     const navigate = useNavigate();
