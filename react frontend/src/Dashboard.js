@@ -7,8 +7,9 @@ import css from './css/styles.css'
 
 function Dashboard(){
 
-    const user = localStorage.getItem('currentUser');
+    const user = JSON.parse(localStorage.getItem('currentUser'));
     const [name, setName] = useState();
+
 
     console.log(user)
     useEffect(() => {
