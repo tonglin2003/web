@@ -74,8 +74,8 @@ function Login() {
 
     //Default current user is none (LOGGED OUT)------------------------------------
     useEffect(() => {
-        localStorage.setItem('currentUser', JSON.stringify(currentUser));
-    }, [currentUser]);
+        localStorage.setItem('currentUser', -1);
+    }, []);
 
     // //Sets username = current username (LOGGED IN)------------------------------------
     // useEffect(() => {
