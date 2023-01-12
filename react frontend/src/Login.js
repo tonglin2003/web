@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import {Routes, Route, useNavigate} from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Spacer from './components/Spacer'
@@ -14,12 +15,19 @@ function Login() {
     const [usernameInput, setUsernameInput] = useState();
     const [passwordInput, setPasswordInput] = useState();
     const [invalidMessage, setInvalidMessage] = useState();
+    var inputUser;
 
     //User data from Backend
     const [userData, setUserData] = useState()
 
     //Local Storage
     const [currentUser, setCurrentUser] = useState([]);
+
+    // Redirect URL
+    const navigate = useNavigate();
+    const navigateToHome = () => {
+        navigate('/');
+    };
 
     //-----------------------------------------------------------------------
     //           FUNCTIONS
@@ -33,20 +41,30 @@ function Login() {
     
     //Check if the login input is valid
     function CheckInput (array, username, password){
-        var inputUser = findUserByUsername(array, username)
+        inputUser = findUserByUsername(array, username)
         if(inputUser){
             if(inputUser.password=== password){
-                Login(inputUser)}}
+                Login(inputUser);
+            }
+        }
         else {
             setInvalidMessage("Invalid login. Please check your username or password.")}
     }
 
     function Login (inputUser){
-        setCurrentUser(inputUser)
-        useEffect(() => {
-            localStorage.setItem('currentUser', JSON.stringify(currentUser));
-        }, [currentUser]);
-        
+        localStorage.setItem('currentUser', JSON.stringify(inputUser));
+        const LoggedUser = JSON.parse(localStorage.getItem('currentUser'));
+        if(LoggedUser){
+            console.log(LoggedUser);
+        }
+    }
+
+    const LoginValidation = event =>{
+        const LoggedUser = JSON.parse(localStorage.getItem('currentUser'));
+        if(LoggedUser){
+            navigateToHome();}
+        else{
+            event.preventDefault();} 
     }
 
 
@@ -115,7 +133,9 @@ function Login() {
             <div  style={{justifyContent: "center", display: "flex"}}>
            
 
-            <form className='profile contain'>
+            <form className='profile contain' 
+                    onSubmit={LoginValidation}>
+
                 <h1 style={{textAlign: "center"}}>Login</h1>
                 
                 {/* USERNAME INPUT */}
