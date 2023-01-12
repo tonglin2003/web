@@ -7,6 +7,7 @@ import SingleProduct from './SingleProduct'
 import BriefBio from './BriefBio'
 import BrowseProducts from './BrowseProducts'
 import Login from './Login'
+import Dashboard from './Dashboard'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/dashboard" element={<Dashboard />} />
       <Route exact path="/bio" element={<CompanyBio />} />
       <Route exact path="/post" element={<PostPage />} />
       {/*  ":product_id" can be captured in a variable (more details in "SingleProducts.js") */}
