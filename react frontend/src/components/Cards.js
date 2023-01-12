@@ -13,9 +13,6 @@ const Cards = ({size, image, title, price, productId}) => {
     * */
 
 
-    //Here, we still have normal product id
-    console.log("From the Cards: " + productId)
-
     if(size === 1){ return <SmallCard image = {image}
                                       title={title}
                                       price={price}
@@ -33,7 +30,7 @@ const SmallCard = ({image, title, price, productId}) => {
             <div className="col-md-4 col-sm-6 col-xs-6 d-block mx-auto">
                 <div className="card px-5 text-center position-relative">
                     <Link to={`/product/${productId}`}
-                          className="card px-5 text-center position-relative"
+                          className="card text-center position-relative"
                           style={{border: "none"}}
                     >
                         <img src={image} className="card-img-top d-block mx-auto overflow-auto" alt="Los Angeles Skyscrapers" />
