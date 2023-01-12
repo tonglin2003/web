@@ -16,7 +16,7 @@ function BriefBio() {
   <div class="hero-text">
   <h1 className={"herofont"}>Welcome to *Client* Page</h1>
     <p>Here you will learn more about our products and our story</p>
-    <Link to="/browse" style={{textDecoration: "none"}}><button type="button" className="button-6 m-3">Browse Products</button></Link>
+    <Link to="/product/:product_id" style={{textDecoration: "none"}}><button type="button" className="button-6 m-3">Back to Product</button></Link>
   </div>
 </div>
 

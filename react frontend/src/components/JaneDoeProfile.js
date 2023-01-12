@@ -1,3 +1,7 @@
+import React from 'react'
+import {Link} from "react-router-dom";
+
+
 const UserContext = React.createContext({
     username: 'janedoe',
     firstName: 'Jane',
@@ -60,3 +64,5 @@ const UserContext = React.createContext({
   )
   
   ReactDOM.render(<App />, document.getElementById("root"));
+
+  export default JaneDoeProfile
