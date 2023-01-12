@@ -5,7 +5,7 @@ import Spacer from './components/Spacer'
 
 function PostPage() {
     {/*setImage was next to [image]*/}
-const [image, setImage] = useState(require('./images/images.png'));
+const [image, setImage] = useState(require('./img/default-avatar.jpg'));
 const [secondImage, setNewImage2] = useState(image);
 const [thirdImage, setNewImage3] = useState(image);
 const [fourthImage, setNewImage4] = useState(image);
