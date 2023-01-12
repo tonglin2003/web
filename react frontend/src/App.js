@@ -7,6 +7,7 @@ import SingleProduct from './SingleProduct'
 import BriefBio from './BriefBio'
 import BrowseProducts from './BrowseProducts'
 import Login from './Login'
+import CategorizeProductPage from './CategorizeProductPage'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Route exact path="/product/:product_id" element={<SingleProduct />} />
       <Route exact path="/briefbio" element={<BriefBio />} />
       <Route exact path="/browse" element={<BrowseProducts />} />
+      <Route exact path="/browse/categories/:category" element={<CategorizeProductPage />} />
 
     </Routes>    
   );
