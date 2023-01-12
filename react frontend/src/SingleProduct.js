@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Spacer from './components/Spacer'
 import Cards from './components/Cards';
+import { Link } from 'react-router-dom';
 import SingleProductDisplay from './components/SingleProductsFunction'
 
 function SingleProduct() {
@@ -38,6 +39,21 @@ function SingleProduct() {
 
             <Spacer />
 
+            {/*--------- Leading to Brief Company Bio/ About Page --------*/}
+            
+        <div class="LearnMore card text-center">
+        <div class="LearnMore card-header">
+          Connections Made Possible by Justworks
+        </div>
+        <div class="LearnMore card-body">
+          <h5 class="LearnMore card-title">Name of Client</h5>
+          <div class="LearnMorecard-footer text-muted">
+        Founded in 2022
+        </div>
+          <p class="LearnMore card-text">Their slogan etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu volutpat odio facilisis mauris sit amet. Orci a scelerisque purus semper eget. Non sodales neque sodales ut. Tellus at urna condimentum mattis pellentesque id nibh tortor. Tellus mauris a diam maecenas. Phasellus vestibulum lorem sed risus ultricies tristique. Sit amet porttitor eget dolor morbi non arcu risus quis. Volutpat est velit egestas dui.</p>
+          <Link to="/briefbio" style={{textDecoration: "none"}}><button type="button" className="button-6 m-3">Learn More About Us</button></Link>
+        </div>
+      </div>
 
             <Spacer />
             <Spacer />
