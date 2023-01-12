@@ -12,7 +12,7 @@ function BriefBio() {
 <Header />
 
 <div className="hero-image">
-  <img src ="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" nmp />
+<img src ="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" className='img-fluid shadow-4'/>
   <div className="hero-text">
   <h1 className={"herofont"}>Welcome to *Client* Page</h1>
     <p>Here you will learn more about our products and our story</p>
