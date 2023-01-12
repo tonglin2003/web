@@ -9,10 +9,10 @@ import SingleProductDisplay from './components/SingleProductsFunction'
 
 function SingleProduct() {
     const { product_id } = useParams();
-    console.log("From the singleProduct: the product id got from the url is: " + typeof(product_id))
+    //console.log("From the singleProduct: the product id got from the url is: " + typeof(product_id))
 
     const id = Number(product_id)
-    console.log("From the singleProduct: After the Number() func: " + typeof(id))
+    //console.log("From the singleProduct: After the Number() func: " + typeof(id))
 
 
     return (
