@@ -30,8 +30,8 @@ const Header = () => {
                         </li>
                     </ul>
                     <div className="container-logo">
-                        <Link to={'/login'} style={{textDecoration: "none"}} ><button>Sign Up</button></Link>
-                        <Link to={'/login'} style={{textDecoration: "none"}} >Login </Link>
+                        <Link to={'/login'} style={{textDecoration: "none"}} ><button>Sign Up</button></Link>&nbsp;&nbsp;&nbsp;
+                        <Link to={'/login'} style={{textDecoration: "none"}} >Login</Link>&nbsp;&nbsp;&nbsp;
                         <Link to={"/"}>
                             <a href={""}>
                                 <img src="https://jwassets.justworks.com/assets/logos/og-logo-icon-37f2f3dec5838014e66c4ca492c2bed24e6f0119c8a9428e63c2bc5802f034f7.png" alt="Payroll, Benefits, HR Software, and Compliance | Justworks | Justworks" width="50" height="50" />
