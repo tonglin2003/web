@@ -68,20 +68,20 @@ function Home() {
                               image={"https://i.insider.com/60a2c77ef27b4c0019444ece?width=1200&format=jpeg"}
                               description={"Find the best offer only at Justworks for Women Clothing."}
                               category={"Women's Clothing"}
-                              link={`/browse/:"women's clothing"`}
-                              link={`/browse/categories/:"women's clothing"`}
+                              //link={`/browse/:"women's clothing"`}
+                              link={`/browse/categories/women's clothing`}
             />
             <RecommendDisplay num={1}
                               image={"https://www.werd.com/wp-content/uploads/2022/08/taylor-stitch.jpg"}
                               description={"Today is the day to buy some Man Clothing with the best offer at Justworks."}
                               category={"Men's Clothing"}
-                              link={"/browse/:men_clothings"}
+                              link={"/browse/categories/men's clothing"}
             />
             <RecommendDisplay num={2}
                               image={"https://kinsta.com/wp-content/uploads/2022/11/kinsta-cloud-hosting.jpg"}
                               description={"Technology Tool could be convenience and cheaper with the offers provided at Justworks."}
                               category={"Technology Tool"}
-                              link={"/browse/:c"}
+                              link={"/browse/categories/electronics"}
             />
 
 
