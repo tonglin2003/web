@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import {Routes, Route, useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Spacer from './components/Spacer'
@@ -25,8 +25,8 @@ function Login() {
 
     // Redirect URL
     const navigate = useNavigate();
-    const navigateToHome = () => {
-        navigate('/');
+    const navigateToDashboard = () => {
+        navigate('/dashboard');
     };
 
     //-----------------------------------------------------------------------
@@ -62,7 +62,7 @@ function Login() {
     const LoginValidation = event =>{
         const LoggedUser = JSON.parse(localStorage.getItem('currentUser'));
         if(LoggedUser){
-            navigateToHome();}
+            navigateToDashboard();}
         else{
             event.preventDefault();} 
     }

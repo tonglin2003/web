@@ -4,41 +4,38 @@ import Header from './components/Header'
 import Cards from './components/Cards';
 import Search from './components/Search';
 import axios from "axios"
+import {useParams} from "react-router-dom";
 
-
-function BrowseProducts() {
-
-
-    // Variable being used in the fetch request
-     const [products, setProduct] = useState([]);
-
-     //Variable used in the searching function
-    const [query, setQuery] = useState("");
+const CategorizeProductPage = () => {
+    const { category } = useParams();
+    const [products, setProduct] = useState([]);
     const [search, setSearch] = useState(false)
-    const [itemFound, setItemFound] = useState(false)
+    const [query, setQuery] = useState("");
 
+    // const cItem = category
 
-     // Fetch function for All the products
+    // console.log("the type of category is: " + typeof(category))
+    console.log(`https://fakestoreapi.com/products/category/${category}`)
+
     const fetchProductInfo = () => {
-        return axios.get("https://fakestoreapi.com/products")
+        return axios.get(`https://fakestoreapi.com/products/category/${category}`)
             .then((response) => setProduct(
                 response.data
             ));
     }
-
-    // Call the fetch function and set it to products (inside the useState)
-    useEffect(() =>{
-        fetchProductInfo();
-    }, [])
-
     function searchNow(val)
     {
         setQuery(val.target.value)
         setSearch(false);
     }
 
+    // Call the fetch function and set it to products (inside the useState)
+    useEffect(() =>{
+        fetchProductInfo();
+    }, []);
+
     return (
-        <>
+                <>
 
             <Header />
 
@@ -111,6 +108,8 @@ function BrowseProducts() {
 
         </>
     )
+
+
 }
 
-export default BrowseProducts;
+export default CategorizeProductPage
