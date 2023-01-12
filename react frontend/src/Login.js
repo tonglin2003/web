@@ -6,23 +6,68 @@ import css from './css/styles.css'
 
 function Login() {
 
+    //-----------------------------------------------------------------------
+    //           VARIABLES
+    //-----------------------------------------------------------------------
+
+    //User Input
+    const [usernameInput, setUsernameInput] = useState();
+    const [passwordInput, setPasswordInput] = useState();
+    const [invalidMessage, setInvalidMessage] = useState();
+
+    //User data from Backend
+    const [userData, setUserData] = useState()
+
+    //Local Storage
+    const [currentUser, setCurrentUser] = useState([]);
+
+    //-----------------------------------------------------------------------
+    //           FUNCTIONS
+    //-----------------------------------------------------------------------
+
+    function findUserByUsername(array, username){
+        return array.find((e) => {
+            return e.username === username;
+        })
+    }
+    
+    //Check if the login input is valid
+    function CheckInput (array, username, password){
+        var inputUser = findUserByUsername(array, username)
+        if(inputUser){
+            if(inputUser.password=== password){
+                Login(inputUser)}}
+        else {
+            setInvalidMessage("Invalid login. Please check your username or password.")}
+    }
+
+    function Login (inputUser){
+        setCurrentUser(inputUser)
+        useEffect(() => {
+            localStorage.setItem('currentUser', JSON.stringify(currentUser));
+        }, [currentUser]);
+        
+    }
+
+
+    //-----------------------------------------------------------------------
+    //           EXECUTIONS
+    //-----------------------------------------------------------------------
+
     //Default current user is none (LOGGED OUT)------------------------------------
-    const [currentUser, setCurrentUser] = useState("");
     useEffect(() => {
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
     }, [currentUser]);
 
-    //Setting username = current user (LOGGED IN)------------------------------------
-    const [username, setUsername] = useState();
-    useEffect(() => {
-        const username = JSON.parse(localStorage.getItem('currentUser'));
-        if(username){
-            setUsername(username);
-        }
-    }, []);
+    // //Sets username = current username (LOGGED IN)------------------------------------
+    // useEffect(() => {
+    //     const username = JSON.parse(localStorage.getItem('currentUser'));
+    //     if(username){
+    //         setUsername(username);
+    //     }
+    // }, []);
 
     //Retrieve user data from the backend ------------------------------------
-    const [userData, setUserData] = useState()
     useEffect(() => {
         fetch("/userdata")
         .then((res) => res.json())
@@ -43,22 +88,27 @@ function Login() {
         return <p>Opps. Something went wrong</p>;
     }
     //DEBUG USER DATA (END)-----------------
-
-    //------------------------------------------------------------------------
     
-    var currentUserData = userData[1]
+    // var currentUserData = userData[1]
+
+    //var searchedUser = findUserByUsername(userData, userInput)
+
+    // console.log((findUserByUsername(userData, "janedoe")).bio);
+
+    ///-----------------------------------------------------------------------
+    //           RETURN
+    //-----------------------------------------------------------------------
 
     return (
         <>
             <Header />
 
-            <div>
-                {currentUserData.name}
-                {userData.map((user, i) => (
+            {/* <div> */}
+                {/* {currentUserData.name} */}
+                {/* {userData.map((user, i) => (
                     <h3 key={i}>{user.name}</h3>
                 ))}
-            </div>
-       
+            </div> */}
        
             <div className='profile background'>
             <Spacer />
@@ -67,13 +117,21 @@ function Login() {
 
             <form className='profile contain'>
                 <h1 style={{textAlign: "center"}}>Login</h1>
-                <label>username</label><br></br>
-                <input type="username" required style={{fontSize: "1.5rem", width: "100%", height:"50px"}}/><br></br><br></br>
-
-                <label>password</label><br></br>
-                <input type="password" required style={{fontSize: "1.5rem", width: "100%", height:"50px"}}/><br></br><br></br>
                 
-                <input type="submit" value="Login" style={{maxWidth: "400px"}}/><br></br><br></br>
+                {/* USERNAME INPUT */}
+                <label>username</label><br></br>
+                <input type="username" value={usernameInput} required style={{fontSize: "1.5rem", width: "100%", height:"50px"  }} 
+                        onChange={(e) => setUsernameInput(e.target.value)}/><br></br><br></br>
+
+                {/* PASSWORD INPUT */}
+                <label>password</label><br></br>
+                <input type="password" value={passwordInput} required style={{fontSize: "1.5rem", width: "100%", height:"50px"}} 
+                        onChange={(e) => setPasswordInput(e.target.value)}/><br></br><br></br>
+
+                <p style={{color: "red"}}>{invalidMessage}</p>
+                
+                <input type="submit" value="Login"  style={{maxWidth: "400px"}} 
+                        onClick={()=> {CheckInput(userData, usernameInput, passwordInput)}}/><br></br><br></br>
 
             </form>
             </div>
