@@ -409,6 +409,14 @@ footer .content .link-boxes{
   background: #F0F8FF;
 }
 
+.profile.wrapping {  
+  display: grid;  
+  grid-gap: 5px;  
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 100px);  
+}
+
+
 /* ---------------------------Rachel-------------------------------- */
 .herofont {
   font-family: "Oswald", serif;
@@ -492,3 +500,4 @@ font-family:'Oswald'
   object-position: center right;
 }
 
+/* ----------------------------------------------------------- */
