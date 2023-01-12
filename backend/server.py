@@ -1,12 +1,13 @@
-from flask import Flask, jsonify
+from flask import Flask
+import json
 
 app = Flask(__name__)
 
 # API Route
-@app.route('/get', methods = ['GET'])
-def get_articles():
-    return jsonify({"Hello":"World"})
-
+@app.route('/userdata')
+def user_data():
+    with open('userData.json') as f:
+        return json.load(f)
 
 if __name__ == "__main__":
     app.run(debug=True)

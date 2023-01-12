@@ -1,3 +1,4 @@
+import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './Home'
 import CompanyBio from './CompanyBio'
@@ -16,7 +17,8 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route exact path="/bio" element={<CompanyBio />} />
       <Route exact path="/post" element={<PostPage />} />
-      <Route exact path="/product" element={<SingleProduct />} />
+      {/*  ":product_id" can be captured in a variable (more details in "SingleProducts.js") */}
+      <Route exact path="/product/:product_id" element={<SingleProduct />} />
       <Route exact path="/briefbio" element={<BriefBio />} />
       <Route exact path="/browse" element={<BrowseProducts />} />
 
