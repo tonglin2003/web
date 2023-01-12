@@ -42,10 +42,9 @@ function Login() {
     //Check if the login input is valid
     function CheckInput (array, username, password){
         inputUser = findUserByUsername(array, username)
-        if(inputUser){
-            if(inputUser.password=== password){
-                Login(inputUser);
-            }
+        console.log(inputUser)
+        if(inputUser && inputUser.password=== password){
+            Login(inputUser); 
         }
         else {
             setInvalidMessage("Invalid login. Please check your username or password.")}
@@ -54,9 +53,6 @@ function Login() {
     function Login (inputUser){
         localStorage.setItem('currentUser', JSON.stringify(inputUser));
         const LoggedUser = JSON.parse(localStorage.getItem('currentUser'));
-        if(LoggedUser){
-            console.log(LoggedUser);
-        }
     }
 
     const LoginValidation = event =>{
@@ -74,8 +70,8 @@ function Login() {
 
     //Default current user is none (LOGGED OUT)------------------------------------
     useEffect(() => {
-        localStorage.setItem('currentUser', JSON.stringify(currentUser));
-    }, [currentUser]);
+        localStorage.setItem('currentUser', -1);
+    }, []);
 
     // //Sets username = current username (LOGGED IN)------------------------------------
     // useEffect(() => {
@@ -98,7 +94,6 @@ function Login() {
     //DEBUG USER DATA (START)-----------------
     const [loading, setLoading] = useState(true);
 
-    console.log(userData);
     if(loading && !userData){
         return <p>Loading...</p>;
     }

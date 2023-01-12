@@ -100,13 +100,30 @@ function CompanyBio({ }) {
                         {/* BROWSE PRODUCTS section --------------------------------------------------*/}
                         {!(isEditMode) && <Spacer/>}
                         {!(isEditMode) && <><h4 style={{display: "inline"}}>Latest Products</h4> <Link to="#" style={{textDecoration: "none", display: "inline"}}>Browse all</Link></>}
-                        {!(isEditMode) && <div className="row row-cols-3 g-3 mx-0" >
-
+                        {!(isEditMode) && <div class="row"> 
+                        <div class="col-sm-3"> 
                             {
-                                products.slice(0,3).map(product => (
+                                products.slice(0,1).map(product => (
                                     <Cards size={4} image={product['image']} title={product['title']} price={product['price']} />
                                 ))
                             }
+                            </div>
+                        <div class="row col-sm-3" >     
+                            {
+                                products.slice(1,2).map(product => (
+                                    <Cards size={4} image={product['image']} title={product['title']} price={product['price']} />
+                                ))
+                            }
+                                </div>
+                                <div class="row col-sm-3" >     
+                            {
+                                products.slice(2,3).map(product => (
+                                    <Cards size={4} image={product['image']} title={product['title']} price={product['price']} />
+                                ))
+                            }
+                                </div>
+
+
                         </div>}
 
                         <Spacer />
