@@ -42,9 +42,11 @@ function Login() {
     //Check if the login input is valid
     function CheckInput (array, username, password){
         inputUser = findUserByUsername(array, username)
-        console.log(inputUser)
-        if(inputUser && inputUser.password=== password){
-            Login(inputUser); 
+
+        if(inputUser && inputUser.password && username && password){
+            if(inputUser.password === password){
+                Login(inputUser);
+            }
         }
         else {
             setInvalidMessage("Invalid login. Please check your username or password.")}
@@ -52,12 +54,11 @@ function Login() {
 
     function Login (inputUser){
         localStorage.setItem('currentUser', JSON.stringify(inputUser));
-        const LoggedUser = JSON.parse(localStorage.getItem('currentUser'));
     }
 
     const LoginValidation = event =>{
         const LoggedUser = JSON.parse(localStorage.getItem('currentUser'));
-        if(LoggedUser){
+        if(LoggedUser && LoggedUser !== -1){
             navigateToDashboard();}
         else{
             event.preventDefault();} 
