@@ -7,25 +7,28 @@ const Footer = () => {
         <footer className={"text-center"}>
 
             <div className="footer-content">
-                <h4> Join Our Newsletter</h4>
+                <h2 className={"title_font "} style={{fontSize:"2.5vw", color:"white"}}> Join Our Newsletter</h2>
             </div>
 
-            <div>
+            <div className={"container-fluid d-flex justify-content-center" }>
 
                 <form action="/action_page.php">
-                    <div className="container" style={{backgroundColor:"white", width: "200%"}}>
+                    <div>
+                    <div className="container rounded p-3" style={{backgroundColor:"white"}}>
                         <input type="text" placeholder="Name" name="name" required/>
                             <input type="text" placeholder="Email address" name="mail" required/>
                                 <label>
-                                    <input type="checkbox" checked="checked" name="subscribe"/> Sign Me Up!
+                                    <input type="checkbox" checked="checked" name="subscribe" /> Sign Me Up!
                                 </label>
                     </div>
 
                     <div className="container-botrad">
                         <input type="submit" value="Subscribe"/>
                     </div>
+                        </div>
                 </form>
 
+            </div>
 
 
                 {/*Footer Content*/}
@@ -54,7 +57,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-            </div>
+
 
 
                 {/*Socials*/}
@@ -68,7 +71,7 @@ const Footer = () => {
                 <li><Link to="https://www.youtube.com/c/JustworksHR?app=desktop" target="_blank"><i
                     className="fa fa-youtube"></i></Link></li>
                 <li><Link to="https://www.instagram.com/justworks_hr/?hl=en" target="_blank"><i
-                    className="fa-brands fa-instagram"></i></Link></li>
+                    className="fa fa-instagram"></i></Link></li>
             </ul>
 
 

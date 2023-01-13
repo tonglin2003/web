@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import '../css/styles.css'
 import axios from "axios";
 import Cards from "./Cards";
-import RecommendProductsDisplay from './RecommendProducts'
+//import RecommendProductsDisplay from './RecommendProducts'
 
 const SingleProductDisplay = (productId) => {
     // return LargeCard design and has param of productId to fetch specific product from the API
