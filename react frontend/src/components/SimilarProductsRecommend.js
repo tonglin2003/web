@@ -18,7 +18,7 @@ const RecommendProductsDisplay = (category) => {
 
     //console.log(`https://fakestoreapi.com/products/category/${curr_category}/?limit=3`)
     const fetchRecProductInfo = () => {
-        return axios.get(`https://fakestoreapi.com/products/category/${curr_category}/?limit=4`)
+        return axios.get(`https://fakestoreapi.com/products/category/${curr_category}/?limit=3`)
             .then((res) => setRecProduct(
                 res.data
             ));
