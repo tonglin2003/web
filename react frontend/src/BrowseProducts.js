@@ -39,19 +39,20 @@ function BrowseProducts() {
     }
 
     return (
-        <>
+        <div>
 
             <Header />
 
 
             {/*------- Search Bar------- */}
+            <div style={{margin: "0 4rem 0 4rem"}}>
 
             <div>
-                <input className={"w-50 ml-5 my-5"}
+                <input className={"ml-5 my-5"}
                        type="text"
                        placeholder="Search"
                        onChange={searchNow}
-                       style={{margin: "0 3% 0 5%", minHeight:"3rem"}}
+                       style={{margin: "0 3% 0 5%", minHeight:"3rem", width: "30vw"}}
                 />
                 <button className={"button-6"} onClick={ ()=> setSearch(true) }>Search</button>
             </div>
@@ -62,7 +63,7 @@ function BrowseProducts() {
                     search?
                         // ------------ If user request for a search -----------
                         // filters through the products to see if it includes the search term
-                        <div className="row row-cols-3 g-3 mx-5" style={{margin: "0 5vw 0 5vw"}}>
+                        <div className="row row-cols-3 g-3" style={{margin: "0 5vw 0 5vw"}}>
                             {
                                 products.filter((product) =>
                                     {
@@ -109,7 +110,8 @@ function BrowseProducts() {
             <Footer/>
 
 
-        </>
+        </div>
+        </div>
     )
 }
 
