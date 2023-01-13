@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './Home'
-import CompanyBio from './CompanyBio'
+import Profile from './Profile'
 import PostPage from './PostPage'
 import SingleProduct from './SingleProduct'
 import BriefBio from './BriefBio'
@@ -18,7 +18,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/dashboard" element={<Dashboard />} />
-      <Route exact path="/bio" element={<CompanyBio />} />
+      <Route exact path="/profile" element={<Profile />} />
       <Route exact path="/post" element={<PostPage />} />
       {/*  ":product_id" can be captured in a variable (more details in "SingleProducts.js") */}
       <Route exact path="/product/:product_id" element={<SingleProduct />} />

@@ -8,7 +8,7 @@ import Cards from './components/Cards';
 // import UploadImage from './components/UploadImage';
 import css from './css/styles.css'
 
-function CompanyBio({ }) {
+function Profle({ }) {
 
     const [isEditMode, setIsEditMode] = useState(false);
 
@@ -205,4 +205,4 @@ function CompanyBio({ }) {
 }
 
 
-export default CompanyBio;
+export default Profle;

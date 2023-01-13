@@ -68,7 +68,7 @@ footer{
     bottom: 0;
     left: 0;
     right: 0;
-    background: #4287f5;
+    background: #3971cb;
     height: auto;
     font-family: "Ariel", sans-serif;
     padding-top: 30px;
@@ -125,12 +125,12 @@ input[type=checkbox] {
 }
 /* Style the submit button */
 input[type=submit] {
-  background-color: #5edef7;
+  background-color: #3946b6;
   color: white;
   border: none;
 }
 input[type=submit]:hover {
-  opacity: 0.8;
+  background-color: #0d1557;
 }
 /* sub code end */
 
@@ -234,7 +234,7 @@ footer .content .link-boxes{
 }
 
 .card{
-    height: 50vw !important;
+    height: 38vw !important;
     overflow: scroll;
     /*max-width: 300px;*/
     max-height: 600px;
@@ -328,7 +328,32 @@ footer .content .link-boxes{
 
 /* -------------------------- Hafeefa --------------------------------- */
 
-
+#getstartedbutton {
+    background: rgb(255,99,71);
+    border-radius: 8%;
+    padding: 15px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 800;
+    padding-right: 18px;
+    padding-left: 19px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+#thebuttonspaddings{
+    padding-top:5px;
+}
+#theloginbutton{
+    border: solid;
+    border-radius: 8%;
+    padding:19px;
+    padding-left:30px;
+    padding-right:30px;
+    border-block-color:black;
+    background:white;
+    color:black;
+    font-weight: 600;
+    text-decoration:none;
+}
 .card-img-top{
     width: 100% !important;
     height: 100% !important;
