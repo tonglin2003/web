@@ -2,45 +2,59 @@ import React, {useState, useEffect} from "react";
 import {useNavigate} from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Sidebar from './components/DashSidebar'
 import Spacer from './components/Spacer'
 import css from './css/styles.css'
 
 function Dashboard(){
 
-    const user = localStorage.getItem('currentUser');
+    //-----------------------------------------------------------------------
+    //           VARIABLES
+    //-----------------------------------------------------------------------
+
+    //Initialize user data
+    const user = JSON.parse(localStorage.getItem('currentUser'));
     const [name, setName] = useState();
 
-    console.log(user)
-    useEffect(() => {
-        setName(user.name);
-    }, []);
-
-
-    // function 
-    // if(user){
-    //    setName(user.name);
-    // }
-
-    // Redirect back to LOGIN URL
+    // Redirect back to LOGIN Page
     const navigate = useNavigate();
     const navigateToLogin = () => {
         navigate('/login');
     };
 
-    // console.log("hi hi");
-    // console.log(user);
+    //-----------------------------------------------------------------------
+    //           EXECUTIONS
+    //-----------------------------------------------------------------------
+
+     //Retrieve info from userdata
+     useEffect(() => {
+        setName(user.name);
+    }, []);
+
+    // Redirect back to LOGIN if not logged in
+    useEffect(() => {
+        console.log(user)
+        if(!user || user === -1){
+            navigateToLogin();}    
+    }, []);
     
-    // if(!user){
-    //     navigateToLogin();
-    //     console.log(user);
-    // }
-    
+    //-----------------------------------------------------------------------
+    //           RETURN
+    //-----------------------------------------------------------------------
+
     return(
         <>
             <Header />
-            <Spacer />
-            <h1>Welcome, {name}</h1>
-            <Spacer />
+            <div className="row">
+                <div className="col" style={{display: "contents"}}><Sidebar /></div> 
+                <div className="col">
+                    <Spacer />
+                    <div style={{paddingLeft: "50px"}}>
+                        <h1>Welcome back, {name}!</h1>
+                    </div>
+                    <Spacer />
+                </div>           
+            </div>
             <Footer />
         </>
     )
