@@ -16,21 +16,9 @@ function Home() {
     return (
         <>
             <Header />
-            <Spacer />
 
-            {/*<div class="p-5 text-center " id="back">*/}
-            {/*    <h1 class="mb-2">JUSTWORKS</h1> <br></br>*/}
-            {/*    <h4 class="mb-3">Our mission is to help entrepreneurs and businesses grow with confidence. We do this with a simple and friendly platform, expert <br></br>*/}
-            {/*        <br></br>*/}
-            {/*        support from real people when it’s needed, and access to corporate-level benefits that ensure people feel secure and valued.*/}
-            {/*    </h4>*/}
-            {/*    <br></br>*/}
-            {/*    <Link class="btn btn-primary" to="" role="button"> Log In </Link>*/}
-            {/*    <Link class="btn signup" to="" role="button" id="signUp"> Sign Up </Link>*/}
 
-            {/*</div>*/}
-
-            <div className="container">
+            <div className="container my-5" >
                 <div className="row">
                     <div className="col m-3">
                         <h1 className={"title_font"}>Justworks</h1>
@@ -43,15 +31,14 @@ function Home() {
                     </div>
                     <div className="col">
                         <img src={ "https://assets-global.website-files.com/5e19ea5aa7d3a217492e372b/61786221a8b701a33c2b9f0d_AxiosHQ_Launch_house-ad%20(1).png" }
-                             className={"img-fluid w-75 mb-5 rounded"} style={{float: "right" }}/>
+                             className={"img-fluid w-75 mb-5 rounded thumbnail"} style={{float: "right" }}/>
 
                         <img src={ "http://succeedwithwp.com/wp-content/uploads/2018/07/kinsta-review-managed-wordpress-hosting.jpeg" }
-                             className={"img-fluid w-75 rounded"}/>
+                             className={"img-fluid w-75 rounded "}/>
                     </div>
                 </div>
             </div>
 
-            <Spacer/>
 
      <div className={"py-5 my-5"} style={{borderBottom: "0.1vh #9facbf solid", borderTop: "0.1vh #9facbf solid", background: "#ebedf0"}}>
         <Carousel variant={"dark"}>
@@ -68,7 +55,6 @@ function Home() {
                               image={"https://i.insider.com/60a2c77ef27b4c0019444ece?width=1200&format=jpeg"}
                               description={"Find the best offer only at Justworks for Women Clothing."}
                               category={"Women's Clothing"}
-                              //link={`/browse/:"women's clothing"`}
                               link={`/browse/categories/women's clothing`}
             />
             <RecommendDisplay num={1}

@@ -60,7 +60,7 @@ const LargeCard = ({productId}) => {
             </div>
 
 
-                        <p className={"title_font m-3"} style={{fontSize: "3vw"}}> ${ product['price'] } </p>
+                        <p className={"title_font m-3"} style={{fontSize: "3vw"}}> ${ Number(product['price']).toFixed(2) } </p>
 
                         <div className="d-grid gap-2">
                             <button className="button-6" type="button" id="addtobag" style={{background:"black"}}>Buy Now </button>

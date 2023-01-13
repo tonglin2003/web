@@ -12,9 +12,9 @@ const Footer = () => {
 
             <div className={"container-fluid d-flex justify-content-center" }>
 
-                <form action="/action_page.php">
+                <form action="/action_page.php" style={{width:"60vw"}}>
                     <div>
-                    <div className="container rounded p-3" style={{backgroundColor:"white"}}>
+                    <div className="container rounded p-3 mx-auto w-100" style={{backgroundColor:"white"}}>
                         <input type="text" placeholder="Name" name="name" required/>
                             <input type="text" placeholder="Email address" name="mail" required/>
                                 <label>
@@ -22,9 +22,14 @@ const Footer = () => {
                                 </label>
                     </div>
 
-                    <div className="container-botrad">
-                        <input type="submit" value="Subscribe"/>
-                    </div>
+                    {/*<div className="container-botrad">*/}
+                    {/*    <input type="submit" value="Subscribe"/>*/}
+                    {/*</div>*/}
+
+                        <div>
+                            <button type="submit" className={"button-6 mt-3 w-100"} style={{background: "#10336b"}}>Subscribe</button>
+                        </div>
+
                         </div>
                 </form>
 
