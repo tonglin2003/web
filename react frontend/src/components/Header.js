@@ -34,7 +34,7 @@ const Header = () => {
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse " id="navbarNav">
+                <div className="collapse navbar-collapse" id="navbarNav" style={{padding:"10px",paddingBottom:"15px"}}>
                     <ul className="navbar-nav">
                         <li className="nav-item active">
                             <Link to="/" class="nav-link">Home</Link>
@@ -54,14 +54,14 @@ const Header = () => {
                     </ul>
                     <Link to={"/"}>
                             <a href={""}>
-                            <img src="https://i.ibb.co/hDrmxS9/Logo.png" alt="Payroll, Benefits, HR Software, and Compliance | Justworks | Justworks" width="195" height="35" />
+                                <img src="https://i.ibb.co/hDrmxS9/Logo.png" alt="Payroll, Benefits, HR Software, and Compliance | Justworks | Justworks" width="195" height="35" />
                             </a>
                         </Link>
-                    <div className="container-logo" style={{margin: "auto 5%"}}>
-                        {!(isLoggedin) && <Link to={'/login'} id="getstartedbutton" style={{textDecoration: "none", fontSize:"1.2vw", background: "#e1903f"}} className={"button-6"}>Get Started</Link>}
+                    <div className="container-logo" style={{margin: "auto 3%"}}>
+                        {!(isLoggedin) && <Link to={'/login'} id="getstartedbutton" style={{textDecoration: "none", padding:"20px"}}>Get Started</Link>}
                         &nbsp;&nbsp;&nbsp;
-                        {!(isLoggedin) && <Link to={'/login'} id="theloginbutton" className={"button-6"} style={{fontSize: "1.2vw"}}>Login</Link>}
-                        {isLoggedin && <Link to={'/'} style={{textDecoration: "none"}} className={"button-6"}
+                        {!(isLoggedin) && <Link to={'/login'} id="theloginbutton" >Login</Link>}
+                        {isLoggedin && <Link to={'/'} style={{textDecoration: "none"}}
                                             onClick={ () => {Logout(); }} >Logout</Link>}
                         &nbsp;&nbsp;&nbsp;
 
