@@ -3,7 +3,7 @@ import Spacer from './components/Spacer'
 import Header from './components/Header'
 import Cards from './components/Cards';
 import { Link } from 'react-router-dom'
-import 'css/browseNavBar.css'
+import './css/browseNavBar.css'
 
 import Search from './components/Search';
 import axios from "axios"
@@ -14,7 +14,7 @@ function BrowseProducts() {
 
 
     // Variable being used in the fetch request
-     const [products, setProduct] = useState([]);
+    const [products, setProduct] = useState([]);
 
      //Variable used in the searching function
     const [query, setQuery] = useState("");
@@ -80,7 +80,6 @@ function BrowseProducts() {
                                 ).map((filteredProduct) =>
                                     (
                                         <>
-                                            {/*{ console.log( "Type of filteredProject is: " + typeof filteredProduct ) }*/}
                                             <Cards size={1}
                                                    image={filteredProduct.image}
                                                    title={filteredProduct.title}
@@ -121,6 +120,8 @@ function BrowseProducts() {
                             <li><Link to="#" target="_blank">Technology</Link></li>
                         </ul>
                     </div>
+
+            </div>
 
             <Spacer />
 
