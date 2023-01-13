@@ -5,7 +5,7 @@ import Spacer from './components/Spacer'
 
 function PostPage() {
     {/*setImage was next to [image]*/}
-const [image, setImage] = useState(require('./img/default-avatar.jpg'));
+const [image, setImage] = useState(require('./img/images.png'));
 const [secondImage, setNewImage2] = useState(image);
 const [thirdImage, setNewImage3] = useState(image);
 const [fourthImage, setNewImage4] = useState(image);
@@ -14,8 +14,13 @@ const [sixthImage, setNewImage6] = useState(image);
 
             {/* uploads image to website ---------*/}
     function handleImageChange(e) {
-        setImage(URL.createObjectURL(e.target.files[0]));
+         setImage(URL.createObjectURL(e.target.files[0]));
+        // setNewImage2(URL.createObjectURL(e.target.files[0]));
     }
+    // function handleImageChanges(e) {
+    //     // setImage(URL.createObjectURL(e.target.files[0]));
+    //     setNewImage2(URL.createObjectURL(e.target.files[secondImage]));
+    // }
     return (
         <>
             <Header />
@@ -27,11 +32,11 @@ const [sixthImage, setNewImage6] = useState(image);
 <p style={{paddingLeft:"120px", fontWeight:"500",  fontSize:"25px"}}> Product Details </p>
             <p style={{fontSize:"10px" , color:"gray", paddingLeft:"120px"}}> Tell the world about your awesome product!</p>
             <form style={{width:"1500px", border:"solid", borderColor:"whitesmoke"}}>
-  <div>
+  <div style={{paddingBottom:"18px"}}>
                  {/*class="form-group" this went inside the div up there*/}
                  {/*2 column grid layout with text inputs for the first and last names */}
 
-               <div>*Title</div>
+               <div >*Title</div>
       <div style={{fontSize:"10px" , color:"gray"}}> Include keywords that buyers would use to search for your item. </div>
                 <div className="row mb-4">
                     <div className="col">
@@ -103,76 +108,28 @@ const [sixthImage, setNewImage6] = useState(image);
                 <li>Use natural lighting and no flash.</li>
                 <li> Show the item being held, worn, or used. </li>
                 <li> Shoot against a clean, simple background. </li>
-                <li>Add photos to your variations so buyers can see all their options.</li>
+                {/*<li>Add photos to your variations so buyers can see all their options.</li>*/}
             </ul>
             </div>
 
       {/*First upload photo*/}
               <div className="container">
-                  <div className="row">
-                      <div className="col-sm">
-              <input className="form-control form-control-sm" id="formFileSm" style = {{width:"400px"}} type="file"                                 onChange={handleImageChange}
+
+              <input className="form-control form-control-sm" id="formFileSm" style = {{width:"1267px"}} type="file"                                 onChange={handleImageChange}
          />
-<p>  </p> <p> </p>
+                                        <p>  </p> <p> </p>
                                                  {/* this was profile center, changed to profile cuz it made everything go to the left  */}
-      <img src={image} style={{ maxHeight: "200px", maxWidth: "100%" }} className="profile " alt="upload photo"/>
-          <p></p>
+            <img src={image} style={{ maxHeight: "200px", maxWidth: "100%"}} className="profile center" alt="upload photo"/>
+                    <p></p>
               </div>
+  </div>
 
-       {/* second upload photo*/}
-             <div className="col-sm">
-                 {/*<div className="card-block">*/}
-               <input className="form-control form-control-sm" id="formFileSm" style = {{width:"400px"}} type="file"                                 onChange={handleImageChange}
-         />
-                    <p>  </p> <p> </p>
-         <img src={secondImage} style={{ maxHeight: "200px", maxWidth: "100%" }} className="profile " alt="Upload second card"/>
-        {/*</div>*/}
-      </div>
 
-     {/*  Third upload photo  */}
-                <div className="col-sm">
-               <input className="form-control form-control-sm" id="formFileSm" style = {{width:"400px"}} type="file"                                 onChange={handleImageChange}
-         />
-                    <p>  </p> <p> </p>
-         <img src={thirdImage} style={{ maxHeight: "200px", maxWidth: "100%" }} className="profile " alt="upload photo"/>
-
-              </div>
-                  </div>
-
-                {/*                         */}
-                {/*  FOURTH upload photo  */}
-            <div className="row">
-                 <div className="col-sm">
-                    <input className="form-control form-control-sm" id="formFileSm" style = {{width:"400px"}} type="file"                                 onChange={handleImageChange}
-         />
-                                                          <p>  </p> <p> </p>
-         <img src={fourthImage} style={{ maxHeight: "200px", maxWidth: "100%" }} className="profile " alt="upload fourth card"/>
-            </div>
-
-                {/*FIFTH UPLOAD PHOTO*/}
-           <div className="col-sm">
-                 <input className="form-control form-control-sm" id="formFileSm" style = {{width:"400px"}} type="file"                                 onChange={handleImageChange}
-         />
-                                                            <p>  </p> <p> </p>
-                 <img src={fifthImage} style={{ maxHeight: "200px", maxWidth: "100%" }} className="profile " />
-
-            </div>
-
-           {/*SIXTH  UPLOAD PHOTO*/}
-                <div className="col-sm">
-                    <input className="form-control form-control-sm" id="formFileSm" style = {{width:"400px"}} type="file"                                 onChange={handleImageChange}
-         />
-                    <p>  </p> <p> </p>
-         <img src={sixthImage} style={{ maxHeight: "200px", maxWidth: "100%" }} className="profile " />
-
-            </div>
-          </div>
-        </div>
-      </div>
 <p> </p>
                 {/* SUBMIT BUTTON */}
-                <button type="submit" className= "btn btn-primary btn-block mb-4" style={{width:"100%"}}> Submit </button>
-
+                <p></p>
+                <button type="submit" className= "btn btn-primary btn-block mb-4" id="button-6" style={{width:"100%"}}> Upload Product </button>
+                {/*<button type="submit" className= "btn btn-primary btn-block mb-4" style={{width:"100%"}}> Submit </button>*/}
      </form>
 
             <Spacer />
@@ -183,3 +140,67 @@ const [sixthImage, setNewImage6] = useState(image);
 }
 
 export default PostPage;
+//{/*First upload photo*/}
+{/*}
+//               <div className="container">
+//                   <div className="row">
+//                       <div className="col-sm">
+//               <input className="form-control form-control-sm" id="formFileSm" style = {{width:"400px"}} type="file"                                 onChange={handleImageChange}
+//          />
+// <p>  </p> <p> </p>
+//                                                  {/* this was profile center, changed to profile cuz it made everything go to the left  */}
+//       <img src={image} style={{ maxHeight: "200px", maxWidth: "100%" }} className="profile " alt="upload photo"/>
+//           <p></p>
+//               </div>
+//
+//        {/* second upload photo*/}
+//              <div className="col-sm">
+//                  {/*<div className="card-block">*/}
+//                <input className="form-control form-control-sm" id="formFileSm" style = {{width:"400px"}} type="file"      /*>}                            onChange={handleImageChange}
+//          />
+//                     <p>  </p> <p> </p>
+//          <img src={secondImage} style={{ maxHeight: "200px", maxWidth: "100%" }} className="profile " alt="Upload second card"/>
+//         {/*</div>*/}
+//       </div>
+//
+//      {/*  Third upload photo  */}
+//                 <div className="col-sm">
+//                <input className="form-control form-control-sm" id="formFileSm" style = {{width:"400px"}} type="file"                                 onChange={handleImageChange}
+//          />
+//                     <p>  </p> <p> </p>
+//          <img src={thirdImage} style={{ maxHeight: "200px", maxWidth: "100%" }} className="profile " alt="upload photo"/>
+//
+//               </div>
+//                   </div>
+//
+//                 {/*                         */}
+//                 {/*  FOURTH upload photo  */}
+//             <div className="row">
+//                  <div className="col-sm">
+//                     <input className="form-control form-control-sm" id="formFileSm" style = {{width:"400px"}} type="file"                                 onChange={handleImageChange}
+//          />
+//                                                           <p>  </p> <p> </p>
+//          <img src={fourthImage} style={{ maxHeight: "200px", maxWidth: "100%" }} className="profile " alt="upload fourth card"/>
+//             </div>
+//
+//                 {/*FIFTH UPLOAD PHOTO*/}
+//            <div className="col-sm">
+//                  <input className="form-control form-control-sm" id="formFileSm" style = {{width:"400px"}} type="file"                                 onChange={handleImageChange}
+//          />
+//                                                             <p>  </p> <p> </p>
+//                  <img src={fifthImage} style={{ maxHeight: "200px", maxWidth: "100%" }} className="profile " />
+//
+//             </div>
+//
+//            {/*SIXTH  UPLOAD PHOTO*/}
+//                 <div className="col-sm">
+//                     <input className="form-control form-control-sm" id="formFileSm" style = {{width:"400px"}} type="file" multiple                                onChange={handleImageChange}
+//          />
+//                     <p>  </p> <p> </p>
+//          <img src={sixthImage} style={{ maxHeight: "200px", maxWidth: "100%" }} className="profile " multiple/>
+//
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+// <p> </p>

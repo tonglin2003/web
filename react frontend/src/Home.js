@@ -33,12 +33,13 @@ function Home() {
             <div className="container">
                 <div className="row">
                     <div className="col m-3">
-                        <h1 className={"title_font"}>Justworks</h1>
-                        <h4 className="m-3 font ">Our mission is to help entrepreneurs and businesses grow with confidence.
-                            We do this with a simple and friendly platform, expert support from real people when it’s needed,
-                            and access to corporate-level benefits that ensure people feel secure and valued.
+                        <h1 className={"title_font"} style={{paddingBottom:"10px"}}>Justworks</h1>
+                        <h4 className="m-3 font ">Justworks is guided by four principles: customer obsession
+                            rather than competitor focus, passion for invention, commitment to operational
+                            excellence, and long-term thinking. Justworks strives to be Earth's most customer-centric company,
+                            Earth's best employer, and Earth's safest place to work.
                         </h4>
-                        <p className="font fw-bold m-3">Find your special discount offer here: </p>
+                        <p className="font fw-bold m-3" style={{paddingTop:"15px"}}>Find your special discount offer here: </p>
                         <Link to="/browse" style={{textDecoration: "none"}}><button type="button" className="button-6 m-3">Find Discount</button></Link>
                     </div>
                     <div className="col">
@@ -66,20 +67,23 @@ function Home() {
         <div className="row">
             <RecommendDisplay num={0}
                               image={"https://i.insider.com/60a2c77ef27b4c0019444ece?width=1200&format=jpeg"}
-                              description={"Find the best offer only at Justworks for Women Clothing."}
+                              description={"Find the best offer for women's clothing only at Justworks.\n"}
                               category={"Women's Clothing"}
                               //link={`/browse/:"women's clothing"`}
                               link={`/browse/categories/women's clothing`}
             />
             <RecommendDisplay num={1}
                               image={"https://www.werd.com/wp-content/uploads/2022/08/taylor-stitch.jpg"}
-                              description={"Today is the day to buy some Man Clothing with the best offer at Justworks."}
+                              description={"Today is the day to buy men's clothing with the best offer at Justworks.\n"}
+
+
+                              //Today is the day to buy men's clothing with the best offer at Justworks.
                               category={"Men's Clothing"}
                               link={"/browse/categories/men's clothing"}
             />
             <RecommendDisplay num={2}
                               image={"https://kinsta.com/wp-content/uploads/2022/11/kinsta-cloud-hosting.jpg"}
-                              description={"Technology Tool could be convenience and cheaper with the offers provided at Justworks."}
+                              description={"Technology tools will be more convenient and cheaper with the offers provided by Justworks."}
                               category={"Technology Tool"}
                               link={"/browse/categories/electronics"}
             />
