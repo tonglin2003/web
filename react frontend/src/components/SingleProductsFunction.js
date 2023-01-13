@@ -25,14 +25,14 @@ const LargeCard = ({productId}) => {
                 response.data
             ));
     }
-    console.log(`https://fakestoreapi.com/products/${productId}`)
+    //console.log(`https://fakestoreapi.com/products/${productId}`)
 
     // Calling the function and if failed then return []
     useEffect(() =>{
         fetchProductInfo();
     }, [])
 
-    console.log("Inside singleproductfunction, the product is: " + JSON.stringify(product))
+    //console.log("Inside singleproductfunction, the product is: " + JSON.stringify(product))
 
 
 
@@ -60,7 +60,7 @@ const LargeCard = ({productId}) => {
             </div>
 
 
-                        <p className={"title_font m-3"} style={{fontSize: "3vw"}}> ${ Number(product['price']).toFixed(2) } </p>
+                        <p className={"title_font m-3"} style={{fontSize: "3vw"}}> ${ product['price'] } </p>
 
                         <div className="d-grid gap-2">
                             <button className="button-6" type="button" id="addtobag" style={{background:"black"}}>Buy Now </button>
