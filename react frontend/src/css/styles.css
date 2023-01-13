@@ -329,11 +329,11 @@ footer .content .link-boxes{
 /* -------------------------- Hafeefa --------------------------------- */
 
 #getstartedbutton {
-    background: orange;
+    background: rgb(255,99,71);
     border-radius: 8%;
     padding: 15px;
     font-family: "Source Sans Pro", sans-serif;
-    font-weight: 700;
+    font-weight: 800;
     padding-right: 18px;
     padding-left: 19px;
     color: white;

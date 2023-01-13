@@ -5,7 +5,7 @@ import Spacer from './components/Spacer'
 
 function PostPage() {
     {/*setImage was next to [image]*/}
-const [image, setImage] = useState(require('./images/images.png'));
+const [image, setImage] = useState(require('./img/images.png'));
 const [secondImage, setNewImage2] = useState(image);
 const [thirdImage, setNewImage3] = useState(image);
 const [fourthImage, setNewImage4] = useState(image);
@@ -108,7 +108,7 @@ const [sixthImage, setNewImage6] = useState(image);
             </div>
 
       {/*First upload photo*/}
-              <div className="container">
+              <div className="container" style={{paddingBottom:"90px"}}>
                   <div className="row">
                       <div className="col-sm">
               <input className="form-control form-control-sm" id="formFileSm" style = {{width:"400px"}} type="file"                                 onChange={handleImageChange}
@@ -169,7 +169,6 @@ const [sixthImage, setNewImage6] = useState(image);
           </div>
         </div>
       </div>
-<p> </p>
                 {/* SUBMIT BUTTON */}
                 <button type="submit" className= "btn btn-primary btn-block mb-4" style={{width:"100%"}}> Submit </button>
 
