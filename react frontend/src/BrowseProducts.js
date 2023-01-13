@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Cards from './components/Cards';
 import Search from './components/Search';
 import axios from "axios"
+import Footer from "./components/Footer";
 
 
 function BrowseProducts() {
@@ -42,17 +43,15 @@ function BrowseProducts() {
 
             <Header />
 
-            {/*------- Browse Page of showing all the products ------- */}
-            <h1 style={{margin: "10vh 0 0 50px"}}>Browse Products</h1>
 
             {/*------- Search Bar------- */}
 
             <div>
-                <input className={"w-50 ml-5"}
+                <input className={"w-50 ml-5 my-5"}
                        type="text"
                        placeholder="Search"
                        onChange={searchNow}
-                       style={{margin: "0 3% 0 5%"}}
+                       style={{margin: "0 3% 0 5%", minHeight:"3rem"}}
                 />
                 <button className={"button-6"} onClick={ ()=> setSearch(true) }>Search</button>
             </div>
@@ -107,6 +106,7 @@ function BrowseProducts() {
 
 
             <Spacer />
+            <Footer/>
 
 
         </>
