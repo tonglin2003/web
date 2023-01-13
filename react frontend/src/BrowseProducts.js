@@ -63,7 +63,7 @@ function BrowseProducts() {
                     search?
                         // ------------ If user request for a search -----------
                         // filters through the products to see if it includes the search term
-                        <div className="row row-cols-3 g-3" style={{margin: "0 5vw 0 5vw"}}>
+                        <div className="browse-cards row col-md" style={{margin: "0 5vw 0 5vw"}}>
                             {
                                 products.filter((product) =>
                                     {
@@ -91,7 +91,7 @@ function BrowseProducts() {
 
                         </div>
                         // ----------- If there is no need for search ------------
-                        : <div className="row row-cols-3 g-3 mx-5" style={{margin: "0 5vw 0 5vw"}}>
+                        : <div className="browse-cards row col-md" style={{margin: "0 5vw 0 5vw"}}>
                             {
                                 products.map(product => (<Cards size={1}
                                                                 image={product.image}

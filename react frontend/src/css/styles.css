@@ -4,13 +4,13 @@
 .title_font {
     font-family: "Oswald", serif;
     font-size: 4.5vw;
-    color: #0b2d3b;
+   
 }
 
 .font {
     font-family: "Source Sans Pro", serif ;
     color: #0b2d3b;
-    font-size: 1.5vw;
+    
 }
 
 .new_btn {
@@ -505,4 +505,7 @@ font-family:'Oswald'
   object-position: center right;
 }
 
-/* ----------------------------------------------------------- */
+
+
+/* -----------------------Breakpoints------------------------------------ */
+
