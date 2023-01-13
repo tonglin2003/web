@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import '../css/styles.css'
+// import Rating from '@mui/material/Rating';
 
 
 const Cards = ({size, image, title, price, productId}) => {
@@ -27,8 +28,8 @@ const SmallCard = ({image, title, price, productId}) => {
 
     return(
         <>
-            <div className="col-md-4 col-sm-6 col-xs-6 d-block mx-auto d-flex justify-content-center">
-                <div className="card text-center position-relative mb-5" style={{width:"90%"}}>
+            <div className="col-md-4 col-sm-6 col-xs-6 d-block mx-auto d-flex justify-content-center" >
+                <div className="card position-relative mb-5" style={{width:"90%"}}>
                     <Link to={`/product/${productId}`}
                           className="card text-center position-relative"
                           style={{border: "none"}}
@@ -37,12 +38,13 @@ const SmallCard = ({image, title, price, productId}) => {
                     </Link>
                     <div className="card-body">
                         <h5 className="card-title title_font" style={{fontSize:"1.5vw"}}>{title}</h5>
-                        <p className="card-text font">${price}</p>
-                        <div className="col text-center">
-                            <div className="col text-center">
-                                <Link to="/" class="button-6" style={{fontSize: "1.5vw"}}>Add to cart</Link>
-                            </div>
+                        <p className="card-text font fw-bold mt-3">${price.toFixed(2)}</p>
+                        <div>
+
                         </div>
+                        {/*<div className="col ">*/}
+                        {/*        <Link to="/" class="button-6" style={{fontSize: "1.5vw"}}>Add to cart</Link>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
             </div>

@@ -107,10 +107,11 @@ function BrowseProducts() {
 
 
             <Spacer />
+            </div>
             <Footer/>
 
 
-        </div>
+
         </div>
     )
 }
