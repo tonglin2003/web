@@ -15,19 +15,18 @@ function Dashboard(){
         setName(user.name);
     }, []);
 
-    // Redirect back to LOGIN URL
+    // Redirect back to LOGIN Page
     const navigate = useNavigate();
     const navigateToLogin = () => {
         navigate('/login');
     };
 
-    // console.log("hi hi");
-    // console.log(user);
-    
-    // if(!user){
-    //     navigateToLogin();
-    //     console.log(user);
-    // }
+    // Redirect back to LOGIN if not logged in
+    useEffect(() => {
+        console.log(user)
+        if(!user || user === -1){
+            navigateToLogin();}    
+    }, []);
     
     return(
         <>
