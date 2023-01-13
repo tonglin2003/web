@@ -68,7 +68,7 @@ footer{
     bottom: 0;
     left: 0;
     right: 0;
-    background: #4287f5;
+    background: #3971cb;
     height: auto;
     font-family: "Ariel", sans-serif;
     padding-top: 30px;
@@ -125,12 +125,12 @@ input[type=checkbox] {
 }
 /* Style the submit button */
 input[type=submit] {
-  background-color: #5edef7;
+  background-color: #3946b6;
   color: white;
   border: none;
 }
 input[type=submit]:hover {
-  opacity: 0.8;
+  background-color: #0d1557;
 }
 /* sub code end */
 

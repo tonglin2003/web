@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import '../css/styles.css'
 import axios from "axios";
+import Cards from "./Cards";
+//import RecommendProductsDisplay from './RecommendProducts'
 
 const SingleProductDisplay = (productId) => {
     // return LargeCard design and has param of productId to fetch specific product from the API
@@ -9,10 +11,12 @@ const SingleProductDisplay = (productId) => {
     return (<LargeCard productId={ JSON.stringify(productId.productId) }/>)
 }
 
+
+
 const LargeCard = ({productId}) => {
+// ----------------------------- Large Card Display ----------------------------- //
     // Setting productId to fetch data from the Fake Store API
     const [product, setProduct] = useState({});
-
 
     // Fetch the product by the product ID, returns a json/dictionary of data info
     const fetchProductInfo = () => {
@@ -21,13 +25,16 @@ const LargeCard = ({productId}) => {
                 response.data
             ));
     }
+    console.log(`https://fakestoreapi.com/products/${productId}`)
 
     // Calling the function and if failed then return []
     useEffect(() =>{
         fetchProductInfo();
     }, [])
 
-    console.log(`From the large cards: ${product['title']}`)
+    console.log("Inside singleproductfunction, the product is: " + JSON.stringify(product))
+
+
 
     // Return the website with the fetched data
     return(
@@ -37,7 +44,7 @@ const LargeCard = ({productId}) => {
                       <div className="col-sm">
                          <div className="card">
                             <img src ={product['image']}
-                                 className="card-img-top"
+                                 className="card-img-top p-3"
                                  id="braceleting"
                                  alt={ product['title'] } />
                         </div>
@@ -45,22 +52,15 @@ const LargeCard = ({productId}) => {
 
 
         <div className="col-sm">
-            <p id="theBracelet">{ product['title'] }</p>
-            {/*<div id="diff">Color: Silver</div>*/}
-            {/*<div id="diff">Material: Zinc Alloy</div>*/}
-            {/*<div id="diff">Details:	Dragon</div>*/}
-            {/*<div id="diff">Style: Fashionable </div>*/}
+            <h1  className={"title_font"} style={{fontSize: "3vw"}}>{ product['title'] }</h1>
 
-            <div id ="Colors"> Available sizes: </div>
-            <button type="button" className="btn btn-light" id="Onesize">One size</button>
+            <div className={"font"} >
+                <span className={"fw-bold"}>Description: </span>
+                {product.description}
+            </div>
 
-            {/*<button type="button" className="btn btn-secondary">Silver</button>*/}
-            {/*<button type="button" className="btn btn-success">Green</button>*/}
-            {/*<button type="button" className="btn btn-danger">Red</button>*/}
-            {/*<button type="button" className="btn btn-warning">Yellow</button>*/}
-            {/*<button type="button" className="btn btn-info">Blue</button>*/}
 
-                        <p id="costofbracelet"> ${ product['price'] } </p>
+                        <p className={"title_font m-3"} style={{fontSize: "3vw"}}> ${ product['price'] } </p>
 
                         <div className="d-grid gap-2">
                             <button className="button-6" type="button" id="addtobag" style={{background:"black"}}>Buy Now </button>
@@ -84,6 +84,17 @@ const LargeCard = ({productId}) => {
                     </div>
                  </div>
              </div>
+
+
+        {/*/!*Rec item put here!*!/*/}
+        {/*<RecommendProductsDisplay product={product}/>*/}
+
+
+
+
+
+
+
         </>
     )
 }
