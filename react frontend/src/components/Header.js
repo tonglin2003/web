@@ -7,16 +7,12 @@ const Header = () => {
     const currentUser = JSON.parse(localStorage.getItem('currentUser'))
     const [isLoggedin, setIsLoggedIn] = useState(false);
     
-    console.log(currentUser);
-    // console.log(isLoggedin);
-    console.log("hi hi hi")
-    
     //Check if logged in
     useEffect(() => {
-        if(currentUser){
-            if(currentUser !== -1){
-                setIsLoggedIn(true)
-            }
+        if(currentUser && currentUser !== -1){
+            setIsLoggedIn(true)
+            console.log(currentUser);
+
         }
     }, []);
 

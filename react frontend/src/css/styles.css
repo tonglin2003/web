@@ -272,6 +272,28 @@ footer .content .link-boxes{
   text-overflow: ellipsis;
 }
 
+.container-default {
+  width: 80%;
+  margin-right: 0;
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .container-default {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container-default {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-default {
+    width: 1170px;
+  }
+}
+
 
 
 

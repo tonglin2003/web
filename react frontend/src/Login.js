@@ -57,11 +57,13 @@ function Login() {
     }
 
     const LoginValidation = event =>{
+        event.preventDefault();
         const LoggedUser = JSON.parse(localStorage.getItem('currentUser'));
         if(LoggedUser && LoggedUser !== -1){
+            
             navigateToDashboard();}
-        else{
-            event.preventDefault();} 
+        // else{
+        //     event.preventDefault();} 
     }
 
 
