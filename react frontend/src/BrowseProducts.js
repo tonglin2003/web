@@ -2,6 +2,9 @@ import React, {useEffect, useState} from 'react'
 import Spacer from './components/Spacer'
 import Header from './components/Header'
 import Cards from './components/Cards';
+import { Link } from 'react-router-dom'
+import 'css/browseNavBar.css'
+
 import Search from './components/Search';
 import axios from "axios"
 import Footer from "./components/Footer";
@@ -103,11 +106,26 @@ function BrowseProducts() {
             </div>
 
 
+                {/*Browse Sidebar*/}
+                <div className="header"></div>
+                <input type="checkbox" className="openSidebarMenu" id="openSidebarMenu"/>
+                    <label htmlFor="openSidebarMenu" className="sidebarIconToggle">
+                        <div className="spinner diagonal part-1"></div>
+                        <div className="spinner horizontal"></div>
+                        <div className="spinner diagonal part-2"></div>
+                    </label>
+                    <div id="sidebarMenu">
+                        <ul className="sidebarMenuInner">
+                            <li><Link to="#" target="_blank">Women's Clothes</Link></li>
+                            <li><Link to="#" target="_blank">Men's Clothing</Link></li>
+                            <li><Link to="#" target="_blank">Technology</Link></li>
+                        </ul>
+                    </div>
+
             <Spacer />
 
 
             <Spacer />
-            </div>
             <Footer/>
 
 

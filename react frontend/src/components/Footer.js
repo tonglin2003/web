@@ -7,33 +7,25 @@ const Footer = () => {
         <footer className={"text-center"}>
 
             <div className="footer-content">
-                <h2 className={"title_font "} style={{fontSize:"2.5vw", color:"white"}}> Join Our Newsletter</h2>
+                <h4> Join Our Newsletter</h4>
             </div>
 
-            <div className={"container-fluid d-flex justify-content-center" }>
+            <div>
 
-                <form action="/action_page.php" style={{width:"60vw"}}>
-                    <div>
-                    <div className="container rounded p-3 mx-auto w-100" style={{backgroundColor:"white"}}>
+                <form action="/action_page.php">
+                    <div className="container" style={{backgroundColor:"white", width: "200%"}}>
                         <input type="text" placeholder="Name" name="name" required/>
                             <input type="text" placeholder="Email address" name="mail" required/>
                                 <label>
-                                    <input type="checkbox" checked="checked" name="subscribe" /> Sign Me Up!
+                                    <input type="checkbox" checked="checked" name="subscribe"/> Sign Me Up!
                                 </label>
                     </div>
 
-                    {/*<div className="container-botrad">*/}
-                    {/*    <input type="submit" value="Subscribe"/>*/}
-                    {/*</div>*/}
-
-                        <div>
-                            <button type="submit" className={"button-6 mt-3 w-100"} style={{background: "#10336b"}}>Subscribe</button>
-                        </div>
-
-                        </div>
+                    <div className="container-botrad">
+                        <input type="submit" value="Subscribe"/>
+                    </div>
                 </form>
 
-            </div>
 
 
                 {/*Footer Content*/}
@@ -62,7 +54,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-
+            </div>
 
 
                 {/*Socials*/}
@@ -76,7 +68,7 @@ const Footer = () => {
                 <li><Link to="https://www.youtube.com/c/JustworksHR?app=desktop" target="_blank"><i
                     className="fa fa-youtube"></i></Link></li>
                 <li><Link to="https://www.instagram.com/justworks_hr/?hl=en" target="_blank"><i
-                    className="fa fa-instagram"></i></Link></li>
+                    className="fa-brands fa-instagram"></i></Link></li>
             </ul>
 
 

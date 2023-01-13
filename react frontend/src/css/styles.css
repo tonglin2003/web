@@ -83,7 +83,8 @@ footer{
 }
 .footer-content h4{
     font-size: 24px;
-    font-weight: 400;
+    font-weight: bold;
+    padding-left: 20px;
     text-transform: capitalize;
     font-family: "Ariel", sans-serif;
     color: white;
@@ -168,7 +169,8 @@ footer .content .link-boxes{
 .content .link-boxes .box .link_name{
   color: #fff;
   font-size: 18px;
-  margin-top: 5px;
+    font-weight: bold;
+  margin-top: 10px;
   margin-bottom: 10px;
   position: relative;
 }
@@ -273,9 +275,6 @@ footer .content .link-boxes{
 }
 
 
-
-
-
 /* -------------------------- Tong (button-6) Please don't edit any--------------------------------- */
 
 .button-6 {
@@ -368,7 +367,7 @@ footer .content .link-boxes{
 }
 #diff {
     padding-left: 2px;
-    font-family: Helvetica Neue;
+    font-family: Helvetica Neue, serif;
     font-size: 20px;
 }
 #theBack{
@@ -386,10 +385,8 @@ footer .content .link-boxes{
 }
 #costofbracelet{
     font-size: 25px;
-    padding: 10px;
-    padding-top:25px;
     font-weight:bold;
-    padding-bottom: 15px;
+    padding: 25px 10px 15px;
 }
 #addtobag{
 
@@ -450,7 +447,7 @@ footer .content .link-boxes{
 }
 
 .clientbiofont {
-font-family:'Oswald'
+    font-family: 'Oswald', serif
 }
 
 /* The hero image */
@@ -506,3 +503,4 @@ font-family:'Oswald'
 }
 
 /* ----------------------------------------------------------- */
+
