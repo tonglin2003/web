@@ -25,14 +25,14 @@ const LargeCard = ({productId}) => {
                 response.data
             ));
     }
-    console.log(`https://fakestoreapi.com/products/${productId}`)
+    //console.log(`https://fakestoreapi.com/products/${productId}`)
 
     // Calling the function and if failed then return []
     useEffect(() =>{
         fetchProductInfo();
     }, [])
 
-    console.log("Inside singleproductfunction, the product is: " + JSON.stringify(product))
+    //console.log("Inside singleproductfunction, the product is: " + JSON.stringify(product))
 
 
 

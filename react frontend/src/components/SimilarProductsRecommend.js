@@ -4,23 +4,21 @@ import '../css/styles.css'
 import axios from "axios";
 import Cards from "./Cards";
 
-const RecommendProductsDisplay = (product) => {
+const RecommendProductsDisplay = (category) => {
     // ----------------------------- Recommendation Product ----------------------------- //
 
     //To get category of the current item and recommend product with same category
     const [recProducts, setRecProduct] = useState(['something default']);
 
-    console.log(product)
-    console.log("from the recproduct, the input product is: " + JSON.stringify(product.product.category))
+    const curr_category = JSON.stringify(category.category).replace(/["]+/g, '')
+    //console.log("Inside the RecProduct or similar: the category: "+curr_category)
 
-    const category = JSON.stringify(product.product.category).replace(/["]+/g, '')
-    const productId = JSON.stringify(product.product.id)
 
-    console.log("I'm category: " + category)
+    //console.log("I'm category: " + category)
 
-    console.log(`https://fakestoreapi.com/products/category/${category}/?limit=3`)
+    //console.log(`https://fakestoreapi.com/products/category/${curr_category}/?limit=3`)
     const fetchRecProductInfo = () => {
-        return axios.get(`https://fakestoreapi.com/products/category/${category}/?limit=4`)
+        return axios.get(`https://fakestoreapi.com/products/category/${curr_category}/?limit=4`)
             .then((res) => setRecProduct(
                 res.data
             ));
@@ -32,20 +30,26 @@ const RecommendProductsDisplay = (product) => {
         //console.log(recProducts)
     }, []);
 
-     console.log("recProduct now: " + recProducts)
+     //console.log("recProduct now: " +  JSON.parse(JSON.stringify(recProducts[0])).id)
     // recProducts.map(recProduct => ( console.log("Inside the map of reproduct" + {recProduct})))
+
+    const formattedRecProduct = JSON.parse(JSON.stringify(recProducts))
+     console.log(formattedRecProduct)
+
 
     return (
             <div>
                 <div className="row row-cols-3 g-3 mx-5" style={{margin: "0 5vw 0 5vw"}}>
                             {
 
-                                recProducts.map(recProduct => (
+                                formattedRecProduct.map(recProduct => (
                                                     <Cards size={1}
-                                                image={recProduct.image}
-                                                title={recProduct.title}
-                                                price={recProduct.price}
-                                                productId={recProduct.id}/>
+                                                            image={recProduct.image}
+                                                            title={recProduct.title}
+                                                            price={recProduct.price}
+                                                            productId={recProduct.id}
+                                                            category={recProduct.category}
+                                                    />
 
                                 )
                                 )

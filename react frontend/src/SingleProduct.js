@@ -7,11 +7,15 @@ import Cards from './components/Cards';
 import { Link } from 'react-router-dom';
 import SingleProductDisplay from './components/SingleProductsFunction'
 import axios from "axios";
+import RecommendProductsDisplay from "./components/SimilarProductsRecommend";
 
 function SingleProduct() {
     // ----- Get the product id to fetch the product data from the API -------- //
     const { product_id } = useParams();
     const id = Number(product_id)
+
+    const { category } = useParams();
+    console.log("Inside the single product, the category is: " + category)
 
 
 
@@ -27,7 +31,7 @@ function SingleProduct() {
             <SingleProductDisplay productId={id}/>
 
             <Spacer />
-
+            <RecommendProductsDisplay category={category}/>
 
             <Spacer />
 
@@ -46,6 +50,7 @@ function SingleProduct() {
           <Link to="/briefbio" style={{textDecoration: "none"}}><button type="button" className="button-6 m-3">Learn More About Us</button></Link>
         </div>
       </div>
+
 
             <Spacer />
             <Spacer />

@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import '../css/styles.css'
 
 
-const Cards = ({size, image, title, price, productId}) => {
+const Cards = ({size, image, title, price, productId, category}) => {
     /**
      * size (int, Required): from 1 to 3 to decide size
      * Image: (string, Optional): Link or directory to the product image
@@ -17,19 +17,21 @@ const Cards = ({size, image, title, price, productId}) => {
                                       title={title}
                                       price={price}
                                       productId={productId}
+                                      category={category}
     /> }
     else if(size === 2){ return <MediumCard image = {image} title={title} price={price} />}
     else if (size === 4) {return <BioCard image ={image} title={title} price={price} /> }
 
 }
 
-const SmallCard = ({image, title, price, productId}) => {
+const SmallCard = ({image, title, price, productId, category}) => {
+
 
     return(
         <>
             <div className="col-md-4 col-sm-6 col-xs-6 d-block mx-auto d-flex justify-content-center">
                 <div className="card text-center position-relative mb-5" style={{width:"90%"}}>
-                    <Link to={`/product/${productId}`}
+                    <Link to={`/product/${category}/${productId}`}
                           className="card text-center position-relative"
                           style={{border: "none"}}
                     >

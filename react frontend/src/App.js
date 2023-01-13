@@ -21,7 +21,7 @@ function App() {
       <Route exact path="/profile" element={<Profile />} />
       <Route exact path="/post" element={<PostPage />} />
       {/*  ":product_id" can be captured in a variable (more details in "SingleProducts.js") */}
-      <Route exact path="/product/:product_id" element={<SingleProduct />} />
+      <Route exact path="/product/:category/:product_id" element={<SingleProduct />} />
       <Route exact path="/briefbio" element={<BriefBio />} />
       <Route exact path="/browse" element={<BrowseProducts />} />
       <Route exact path="/browse/categories/:category" element={<CategorizeProductPage />} />

@@ -82,7 +82,9 @@ function BrowseProducts() {
                                                    image={filteredProduct.image}
                                                    title={filteredProduct.title}
                                                    price={filteredProduct.price}
-                                                   productId={filteredProduct.id}/>
+                                                   productId={filteredProduct.id}
+                                                   category = {filteredProduct.category}
+                                            />
                                         </>
                                     ))
                             }
@@ -92,10 +94,14 @@ function BrowseProducts() {
                         : <div className="row row-cols-3 g-3 mx-5" style={{margin: "0 5vw 0 5vw"}}>
                             {
                                 products.map(product => (<Cards size={1}
-                                                               image={product.image}
-                                                               title={product.title}
-                                                               price={product.price}
-                                                               productId={product.id}/>
+                                                                image={product.image}
+                                                                title={product.title}
+                                                                price={product.price}
+                                                                productId={product.id}
+                                                                category = {product.category}
+                                    />
+                                    // category is working fine when used console.log
+
                                 ))
                             }
                         </div>
