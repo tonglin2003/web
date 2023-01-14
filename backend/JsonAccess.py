@@ -43,6 +43,7 @@ def write_product_data(file_directory, title, price=0, description='', category=
 
     listObj.append(
         {
+            "id": listObj[len(listObj) - 1]["id"] + 1,
             "title": title,
             "price": price,
             "description": description,
@@ -53,3 +54,5 @@ def write_product_data(file_directory, title, price=0, description='', category=
     )
     with open(file_directory, 'w') as file:
         json.dump(listObj, file, indent=4, separators=(',', ': '))
+
+    return listObj

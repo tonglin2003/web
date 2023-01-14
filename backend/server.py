@@ -1,34 +1,38 @@
-from flask import Flask, current_app,jsonify,request
+from flask import Flask, current_app, jsonify, request
 import json
 import JsonAccess
 import os
-
 
 app = Flask(__name__)
 
 userDataDirectory = os.path.join(os.path.dirname(app.instance_path), 'static', 'userData.json')
 productDataDirectory = os.path.join(os.path.dirname(app.instance_path), 'static', 'productData.json')
 
+
 # API Route
 @app.route('/userdata')
 def user_data():
     return JsonAccess.pullData(userDataDirectory)
 
+
 @app.route('/products')
 def get_product():
     return JsonAccess.pullData(productDataDirectory)
+
+
 @app.route('/post%product/success', methods=["POST"])
 def add_new_product():
+    print("Server.py's add_new_product is running!!")
     title = request.json["title"]
+    print(f"the title is {title}")
     price = request.json["price"]
+    print(f"The price is {price}")
     description = request.json["description"]
     category = request.json["category"]
-    image = request.json["image"]
+    # image = request.json["image"]
 
-    print("Server.py's add_new_product is running!!")
+    return JsonAccess.write_product_data(productDataDirectory, title, price, description, category)
 
-    #JsonAccess.write_product_data(productDataDirectory, title, price, description, category, image)
 
 if __name__ == "__main__":
     app.run(debug=True)
-

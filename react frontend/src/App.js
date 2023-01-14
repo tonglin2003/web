@@ -9,8 +9,6 @@ import BrowseProducts from './BrowseProducts'
 import Login from './Login'
 import Dashboard from './Dashboard'
 import CategorizeProductPage from "./CategorizeProductPage";
-import ProductPosting from "./components/ProductPosting";
-
 
 function App() {
 
@@ -26,8 +24,6 @@ function App() {
       <Route exact path="/briefbio" element={<BriefBio />} />
       <Route exact path="/browse" element={<BrowseProducts />} />
       <Route exact path="/browse/categories/:category" element={<CategorizeProductPage />} />
-
-        {/*<Route exact path="/postTesting" element={<PostPage/>}/>*/}
 
     </Routes>    
   );
