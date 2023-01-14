@@ -1,7 +1,8 @@
-from flask import Flask
+from flask import Flask, current_app,jsonify,request
 import json
 import JsonAccess
 import os
+
 
 app = Flask(__name__)
 
@@ -14,8 +15,19 @@ def user_data():
     return JsonAccess.pullData(userDataDirectory)
 
 @app.route('/products')
-def getProduct():
+def get_product():
     return JsonAccess.pullData(productDataDirectory)
+@app.route('/post%product/success', methods=["POST"])
+def add_new_product():
+    title = request.json["title"]
+    price = request.json["price"]
+    description = request.json["description"]
+    category = request.json["category"]
+    image = request.json["image"]
+
+    print("Server.py's add_new_product is running!!")
+
+    #JsonAccess.write_product_data(productDataDirectory, title, price, description, category, image)
 
 if __name__ == "__main__":
     app.run(debug=True)
