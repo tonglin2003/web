@@ -6,11 +6,6 @@ import Spacer from './components/Spacer'
 function PostPage() {
     {/*setImage was next to [image]*/}
 const [image, setImage] = useState(require('./img/images.png'));
-const [secondImage, setNewImage2] = useState(image);
-const [thirdImage, setNewImage3] = useState(image);
-const [fourthImage, setNewImage4] = useState(image);
-const [fifthImage, setNewImage5] = useState(image);
-const [sixthImage, setNewImage6] = useState(image);
 
             {/* uploads image to website ---------*/}
     function handleImageChange(e) {
