@@ -4,20 +4,20 @@ from flask import Flask
 
 app = Flask(__name__)
 
-filename = os.path.join(os.path.dirname(app.instance_path), 'static', 'userData.json')
+
 
 
 # function to pull data out of the json file, and return data as a list of dictionaries
-def pullData():
-    with open(filename, mode="r") as file:
+def pullData(fileDirectory):
+    with open(fileDirectory, mode="r") as file:
         data = json.load(file)
         return data
 
 
 # adds/update Data into JSON, takes in price(double), discount(double), productType(string)
 # and doesn't return anything
-def writeData(username, password, name, image, bio, phone, email, website, location):
-    listObj = pullData()
+def writeData(fileDirectory, username, password, name, image, bio, phone, email, website, location):
+    listObj = pullData(fileDirectory)
 
     listObj.append(
         {
@@ -33,5 +33,5 @@ def writeData(username, password, name, image, bio, phone, email, website, locat
             "location": location
         }
     )
-    with open(filename, 'w') as file:
+    with open(fileDirectory, 'w') as file:
         json.dump(listObj, file, indent=4, separators=(',', ': '))

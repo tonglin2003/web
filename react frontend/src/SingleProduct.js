@@ -14,10 +14,9 @@ function SingleProduct() {
     const { product_id } = useParams();
     const id = Number(product_id)
 
+
     const { category } = useParams();
-    console.log("Inside the single product, the category is: " + category)
-
-
+    //console.log("Inside the single product, the category is: " + category)
 
 
 

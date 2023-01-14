@@ -1,0 +1,28 @@
+[{
+  "id": 21,
+  "title": "Build Python Web Apps with Django",
+  "price": 45.99,
+  "description": "Welcome to the world of Django (pronounced like JANG-go with a silent D)! Get introduced to an open-source web development framework supported by the Django Software Foundation.",
+  "category": "online course",
+  "image": "https://i.ytimg.com/vi/xSUm6iMtREA/maxresdefault.jpg",
+  "rating": {"rate": 4.5}
+ },
+  {
+  "id": 22,
+  "title": "Python for Beginners - Learn Programming from scratch",
+  "price": 49.99,
+  "description": "This python for beginners course is geared to students who want to know how python works and also to those totally new to programming.",
+  "category": "online course",
+  "image": "https://dietanand.org/wp-content/uploads/2019/03/Python-Training.jpg",
+  "rating": {"rate": 4.8}
+ },
+  {
+  "id": 23,
+  "title": "Java Programming Masterclass updated to Java 17",
+  "price": 39.99,
+  "description": "Learn Java In This Course And Become a Computer Programmer. Obtain valuable Core Java Skills And Java Certification",
+  "category": "online course",
+  "image": "https://www.classcentral.com/report/wp-content/uploads/2022/05/Java-BCG-Banner.png",
+  "rating": {"rate": 4.5}
+ }
+]

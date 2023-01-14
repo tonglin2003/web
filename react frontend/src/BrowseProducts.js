@@ -16,7 +16,6 @@ function BrowseProducts() {
      //Variable used in the searching function
     const [query, setQuery] = useState("");
     const [search, setSearch] = useState(false)
-    const [itemFound, setItemFound] = useState(false)
 
 
      // Fetch function for All the products
@@ -31,6 +30,7 @@ function BrowseProducts() {
     useEffect(() =>{
         fetchProductInfo();
     }, [])
+
 
     function searchNow(val)
     {
