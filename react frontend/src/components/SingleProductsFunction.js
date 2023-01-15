@@ -25,14 +25,11 @@ const LargeCard = ({productId}) => {
                 response.data
             ));
     }
-    //console.log(`https://fakestoreapi.com/products/${productId}`)
 
     // Calling the function and if failed then return []
     useEffect(() =>{
         fetchProductInfo();
     }, [])
-
-    //console.log("Inside singleproductfunction, the product is: " + JSON.stringify(product))
 
 
 
@@ -45,7 +42,6 @@ const LargeCard = ({productId}) => {
                          <div className="card">
                             <img src ={product['image']}
                                  className="card-img-top p-3"
-                                 id="braceleting"
                                  alt={ product['title'] } />
                         </div>
                     </div>

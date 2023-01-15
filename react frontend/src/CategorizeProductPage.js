@@ -92,7 +92,9 @@ const CategorizeProductPage = () => {
                                                                image={product.image}
                                                                title={product.title}
                                                                price={product.price}
-                                                               productId={product.id}/>
+                                                               productId={product.id}
+                                                                category={product.category}
+                                    />
                                 ))
                             }
                         </div>
