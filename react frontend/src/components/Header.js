@@ -11,8 +11,6 @@ const Header = () => {
     useEffect(() => {
         if(currentUser && currentUser !== -1){
             setIsLoggedIn(true)
-            console.log(currentUser);
-
         }
     }, []);
 

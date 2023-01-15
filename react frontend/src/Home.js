@@ -9,15 +9,11 @@ import CarouselItem from "./components/Category_Cards";
 import RecommendDisplay from "./components/recommendDisplay"
 
 
-
-
 function Home() {
 
     return (
         <>
             <Header />
-
-
             <div className="container my-5" >
                 <div className="row">
                     <div className="col m-3">

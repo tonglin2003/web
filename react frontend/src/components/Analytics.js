@@ -19,8 +19,7 @@ const Analytics = () => {
             legend: { display: false },
             tooltip: {
                 callbacks: {
-                    // label: (tooltipItem, data) => (' $' + tooltipItem.yLabel.value),
-                    
+                    // label: (tooltipItem, data) => (' $' + tooltipItem.yLabel.value),  
                 }
               }
         },

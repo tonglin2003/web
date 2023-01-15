@@ -7,6 +7,7 @@ import css from './css/styles.css'
 
 function Login() {
 
+
     //-----------------------------------------------------------------------
     //           VARIABLES
     //-----------------------------------------------------------------------
@@ -17,10 +18,10 @@ function Login() {
     const [invalidMessage, setInvalidMessage] = useState();
     var inputUser;
 
-    //User data from Backend
-    const [userData, setUserData] = useState()
+    //Init user data from Backend
+    const [userData, setUserData] = useState([]);
 
-    //Local Storage
+    //Init current user data from Frontend
     const [currentUser, setCurrentUser] = useState([]);
 
     // Redirect URL
@@ -74,6 +75,8 @@ function Login() {
     //Default current user is none (LOGGED OUT)------------------------------------
     useEffect(() => {
         localStorage.setItem('currentUser', -1);
+        console.log('test')
+
     }, []);
 
     // //Sets username = current username (LOGGED IN)------------------------------------

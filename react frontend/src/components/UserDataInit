@@ -1,0 +1,49 @@
+import React, {useEffect, useState} from 'react'
+
+const UserDataInit = () =>{
+//     //Variable to store user data from Backend
+//   const [userData, setUserData] = useState()
+//   const [loading, setLoading] = useState(true);
+  
+//   //Retrieve user data from the backend ------------------------------------
+//   useEffect(() => {
+//   fetch("/userdata")
+//     .then((res) => res.json())
+//     .then((data) => {
+//         setUserData(data);
+//         setLoading(false);
+//         });
+//   }, []);
+
+//   //DEBUG USER DATA (START)-----------------
+
+//   if(loading && !userData){
+//       return <p>Loading...</p>;
+//   }
+//   if(!loading && !userData){
+//       return <p>Opps. Something went wrong</p>;
+//   }
+//   //DEBUG USER DATA (END)-----------------
+
+    useEffect(()=> {
+        props.setFloodMessages(data)
+    }, [])
+            
+    useEffect(()=> {
+        let data = JSON.parse(localStorage.getItem('flood-messages'));
+        if(data){
+            props.setFloodMessages(data)
+        }
+        console.log('get')
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem('flood-messages', JSON.stringify(props.messages));
+        console.log('sb b b b et')
+      }, [props.messages]);
+
+    console.log(data)
+
+}
+export default UserDataInit
+
