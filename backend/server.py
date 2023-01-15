@@ -29,9 +29,9 @@ def add_new_product():
     print(f"The price is {price}")
     description = request.json["description"]
     category = request.json["category"]
-    # image = request.json["image"]
+    image = request.json["image"]
 
-    return JsonAccess.write_product_data(productDataDirectory, title, price, description, category)
+    return JsonAccess.write_product_data(productDataDirectory, title, price, description, category, image)
 
 
 if __name__ == "__main__":
