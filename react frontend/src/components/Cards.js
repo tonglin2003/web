@@ -4,7 +4,7 @@ import '../css/styles.css'
 // import Rating from '@mui/material/Rating';
 
 
-const Cards = ({size, image, title, price, productId}) => {
+const Cards = ({size, image, title, price, productId, category}) => {
     /**
      * size (int, Required): from 1 to 3 to decide size
      * Image: (string, Optional): Link or directory to the product image
@@ -18,33 +18,32 @@ const Cards = ({size, image, title, price, productId}) => {
                                       title={title}
                                       price={price}
                                       productId={productId}
+                                      category={category}
     /> }
     else if(size === 2){ return <MediumCard image = {image} title={title} price={price} />}
     else if (size === 4) {return <BioCard image ={image} title={title} price={price} /> }
 
 }
 
-const SmallCard = ({image, title, price, productId}) => {
+
+const SmallCard = ({image, title, price, productId, category}) => {
+
 
     return(
         <>
-            <div className="col-md-4 col-sm-6 col-xs-6 d-block mx-auto d-flex justify-content-center" >
+             <div className="col-md-4 col-sm-6 col-xs-6 d-block mx-auto d-flex justify-content-center" >
                 <div className="card position-relative mb-5" style={{width:"90%"}}>
-                    <Link to={`/product/${productId}`}
+                    <Link to={`/product/${category}/${productId}`}
                           className="card text-center position-relative"
                           style={{border: "none"}}
                     >
                         <img src={image} className="card-img-top d-block mx-auto overflow-auto w-50 rounded" alt="Los Angeles Skyscrapers" />
                     </Link>
-                    <div className="card-body">
+                    <div className="card-body" style={{border:"none"}}>
                         <h5 className="card-title title_font" style={{fontSize:"1.5vw"}}>{title}</h5>
-                        <p className="card-text font fw-bold mt-3">${price.toFixed(2)}</p>
-                        <div>
-
+                        <p className="card-text font fw-bold mt-3">${Number(price).toFixed(2)}</p>
+                        <div className="col text-center">
                         </div>
-                        {/*<div className="col ">*/}
-                        {/*        <Link to="/" class="button-6" style={{fontSize: "1.5vw"}}>Add to cart</Link>*/}
-                        {/*</div>*/}
                     </div>
                 </div>
             </div>
