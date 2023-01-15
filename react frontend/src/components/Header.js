@@ -54,7 +54,7 @@ const Header = () => {
                     </ul>
                     <Link to={"/"}>
                             <a href={""}>
-                                <img src="https://i.ibb.co/hDrmxS9/Logo.png" alt="Payroll, Benefits, HR Software, and Compliance | Justworks | Justworks" width="195" height="35" />
+                                <img src="https://i.ibb.co/hDrmxS9/Logo.png" alt="Payroll, Benefits, HR Software, and Compliance | Justworks | Justworks" width="195vw" height="35vw" />
                             </a>
                         </Link>
                     <div className="container-logo" style={{margin: "auto 3%"}}>

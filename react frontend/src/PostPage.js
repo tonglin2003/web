@@ -26,13 +26,14 @@ const [sixthImage, setNewImage6] = useState(image);
             <Header />
             <Spacer />
 
+
             {/*<p style={{textAlign:"center",padding:"10px"}}> Sell your products </p>*/}
             {/*<div  style={{justifyContent: "center", display: "flex"}}>*/}
 
 <p style={{paddingLeft:"120px", fontWeight:"500",  fontSize:"25px"}}> Product Details </p>
             <p style={{fontSize:"10px" , color:"gray", paddingLeft:"120px"}}> Tell the world about your awesome product!</p>
             <form style={{width:"1500px", border:"solid", borderColor:"whitesmoke"}}>
-  <div style={{paddingBottom:"18px"}}>
+  <div style={{paddingBottom:"18px", paddingLeft:"20px"}}>
                  {/*class="form-group" this went inside the div up there*/}
                  {/*2 column grid layout with text inputs for the first and last names */}
 
@@ -41,16 +42,15 @@ const [sixthImage, setNewImage6] = useState(image);
                 <div className="row mb-4">
                     <div className="col">
                         <div className="form-outline">
-                            <input type="text" id="form6Example1" className="form-control"/>
-                            <label className="form-label" htmlFor="form6Example1"></label>
+                            <input type="text" id="form6Example1" style={{width:"72.9vw", height:"4.5vh"}} className="form-control" required data-errormessage-value-missing="Please input something" />
                         </div>
                     </div>
-
-                    <div> *Type of Product </div>
+                    {/*type of product*/}
+                    <div style={{paddingTop:"20px"}}> *Type of Product </div>
                         <div style={{fontSize:"10px" , color:"gray"}}> Type a two or three-word description of your item to get category suggestions that will help more shoppers find it. Examples: Hoodie, ring </div>
                          <div className="col">
                             <div className="form-outline">
-                                    <input type="text" id="form6Example2" className="form-control"/>
+                                    <input type="text" id="form6Example2"style={{width:"72.9vw", height:"4.5vh"}} className="form-control" required/>
                                     <label className="form-label" htmlFor="form6Example2"></label>
                     </div>
                 </div>
@@ -59,25 +59,27 @@ const [sixthImage, setNewImage6] = useState(image);
 
 
                  {/*Email input */}<div> Email (Optional) </div>
-                   <div style={{fontSize:"10px" , color:"gray"}}> This will allow a buyer to contact you directly for any needed questions.</div>
+                   <div style={{fontSize:"10px" , color:"gray"}}> This will allow a buyer to contact you directly for any needed questions.
+                       It will also be used to send you Justworks updates and product updates.</div>
                         <div className="form-outline mb-4">
-                            <input type="email" id="form6Example5" className="form-control"/>
+                            <input type="email" id="form6Example5" className="form-control" style={{width:"72.9vw", height:"4.5vh"}}/>
                               <label className="form-label" htmlFor="form6Example5"></label>
                 </div>
 
                {/*Number input*/} Phone (Optional)
-                <div style={{fontSize:"10px" , color:"gray"}}> This will allow a buyer to contact you directly for any needed questions.</div>
+                <div style={{fontSize:"10px" , color:"gray"}}> This will allow a buyer to contact you directly for any needed questions.
+                       It will also be used to send you Justworks updates and product updates.</div>
                 <div className="form-outline mb-4">
-                    <input type="number" id="form6Example6" className="form-control"/>
+                    <input type="number" id="form6Example6" className="form-control" style={{width:"72.9vw", height:"4.5vh"}}/>
                     <label className="form-label" htmlFor="form6Example6"></label>
                 </div>
 
-                 {/*Message input */}
+                 {/*Prod discription input */}
       <div> Product Description and Additional Information (Optional) </div>
                 <div style={{fontSize:"10px" , color:"gray"}}> Start with a brief overview that describes your item’s finest features. Shoppers will only see the first few lines of your description at first, so make it count! </div>
                     <div style={{fontSize:"10px" , color:"gray"}}> Not sure what else to say? Shoppers also like hearing about your process, and the story behind this item.</div>
                         <div className="form-outline mb-4">
-                      <textarea className="form-control" id="form6Example7" rows="4"></textarea>
+                      <textarea className="form-control" style={{width:"72.9vw", height:"12.5vh"}} id="form6Example7" rows="4"></textarea>
                      <label className="form-label" htmlFor="form6Example7"></label>
                     </div>
 
@@ -90,7 +92,7 @@ const [sixthImage, setNewImage6] = useState(image);
             <div> Material (Optional) </div>
       <div style={{fontSize:"10px" , color:"gray"}}> Components, Ingredients, etc </div>
                 <div className="form-outline mb-4">
-                    <input type="text" id="form6Example3" className="form-control"/>
+                    <input type="text" id="form6Example3" className="form-control" style={{width:"72.9vw", height:"4.5vh"}}/>
                     <label className="form-label" htmlFor="form6Example3"></label>
                 </div>
 
@@ -115,11 +117,13 @@ const [sixthImage, setNewImage6] = useState(image);
       {/*First upload photo*/}
               <div className="container">
 
-              <input className="form-control form-control-sm" id="formFileSm" style = {{width:"1267px"}} type="file"                                 onChange={handleImageChange}
+              <input className="form-control form-control-sm" id="formFileSm" style = {{width:"1267px"}} type="file"  className="form-control" required data-errormessage-value-missing="Please input something" style={{width:"80vw", height:"4.5vh"}}                        onChange={handleImageChange}
          />
                                         <p>  </p> <p> </p>
                                                  {/* this was profile center, changed to profile cuz it made everything go to the left  */}
-            <img src={image} style={{ maxHeight: "200px", maxWidth: "100%"}} className="profile center" alt="upload photo"/>
+            <img src={image} style={{ maxHeight: "40vh", maxWidth: "50vw%"}} className="profile center" alt="upload photo"/>
+                              {/*<img src={image} style={{ maxHeight: "200px", maxWidth: "100%"}} className="profile center" alt="upload photo"/>*/}
+
                     <p></p>
               </div>
   </div>
@@ -128,7 +132,7 @@ const [sixthImage, setNewImage6] = useState(image);
 <p> </p>
                 {/* SUBMIT BUTTON */}
                 <p></p>
-                <button type="submit" className= "btn btn-primary btn-block mb-4" id="button-6" style={{width:"100%"}}> Upload Product </button>
+                <button type="submit" className= "btn btn-primary btn-block mb-4" id="button-6" style={{width:"83.5vw"}}> Upload Product </button>
                 {/*<button type="submit" className= "btn btn-primary btn-block mb-4" style={{width:"100%"}}> Submit </button>*/}
      </form>
 
