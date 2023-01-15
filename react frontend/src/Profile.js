@@ -6,7 +6,6 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Spacer from './components/Spacer'
 import Cards from './components/Cards'
-import defaultAvatar from './img/default-avatar.jpg'
 // import UploadImage from './components/UploadImage';
 import css from './css/styles.css'
 
@@ -62,12 +61,6 @@ function Profile() {
 
 
 const NewProfile = () => {
-
-    // Get the user id from the page---------------------------------------------------
-    const {userID} = useParams()
-    const id = Number(userID)
-
-
     //-----------------------------------------------------------------------
     //           VARIABLES
     //-----------------------------------------------------------------------
@@ -76,10 +69,14 @@ const NewProfile = () => {
     const [userData, setUserData] = useState(-1);
     const [profileUser, setProfileUser] = useState(-1)
 
+    //states of the profile page
     const [isCurrentUser, setIsCurrentUser] = useState(false)
     const [isEditMode, setIsEditMode] = useState(false)
     const [loading, setLoading] = useState(true)
 
+    // Get the user id from the page---------------------------------------------------
+    const {userID} = useParams()
+    const id = Number(userID)
 
     //saved variables --------------------------------------------------
     const [name, setName] = useState(" ")
@@ -122,27 +119,6 @@ const NewProfile = () => {
     function handleImageChange(e) {
         setNewImage(URL.createObjectURL(e.target.files[0]))
     }
-
-    //Set up profile user's info
-    // function setProfileInfo(profileUser){
-    //     //save variables
-    //     setName(profileUser.name)
-    //     setImage(profileUser.image)
-    //     setBio(profileUser.bio)
-    //     setPhone(profileUser.phone)
-    //     setEmail(profileUser.email)
-    //     setWebsite(profileUser.website)
-    //     setLocation(profileUser.location)
-    //     //variables during edit mode
-    //     setNewName(profileUser.name)
-    //     setNewImage(profileUser.image)
-    //     setNewBio(profileUser.bio)
-    //     setNewPhone(profileUser.phone)
-    //     setNewEmail(profileUser.email)
-    //     setNewWebsite(profileUser.website)
-    //     setNewLocation(profileUser.location)
-    //     setLoading(false)
-    // }
 
     //-----------------------------------------------------------------------
     //           EXECUTE
@@ -334,10 +310,8 @@ const NewProfile = () => {
                                     setLocation(newLocation);
                                 }} />}
                         </div>
-
                     </div>
                 </fieldset>
-
             </form>
         </>
     )
