@@ -12,7 +12,7 @@ import CategorizeProductPage from "./CategorizeProductPage";
 import Policy from "./Policy";
 
 function App() {
-
+//
   return (
     <Routes>
       <Route path="/" element={<Home />} />

@@ -11,6 +11,7 @@ function Policy() {
             <Header />
             <Spacer />
             <div> Company Policy </div>
+            <div>Policy</div>
 
 
 
