@@ -39,7 +39,7 @@ const SmallCard = ({image, title, price, productId, category}) => {
                     >
                         <img src={image} className="card-img-top d-block mx-auto overflow-auto w-50 rounded" alt="Los Angeles Skyscrapers" />
                     </Link>
-                    <div className="card-body">
+                    <div className="card-body" style={{border:"none"}}>
                         <h5 className="card-title title_font" style={{fontSize:"1.5vw"}}>{title}</h5>
                         <p className="card-text font fw-bold mt-3">${Number(price).toFixed(2)}</p>
                         <div className="col text-center">

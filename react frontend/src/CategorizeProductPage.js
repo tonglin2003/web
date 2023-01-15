@@ -112,4 +112,4 @@ const CategorizeProductPage = () => {
 
 }
 
-export default CategorizeProductPage
+export default CategorizeProductPage;

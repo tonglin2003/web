@@ -9,34 +9,32 @@ import Footer from "./components/Footer";
 
 function BrowseProducts() {
 
-
-    // Variable being used in the fetch request
-     const [products, setProduct] = useState([]);
-
-     //Variable used in the searching function
+    // ----------------------- Variable used in Search -------------------- //
+    //Variable used in the searching function
     const [query, setQuery] = useState("");
     const [search, setSearch] = useState(false)
-    const [itemFound, setItemFound] = useState(false)
-
-
-     // Fetch function for All the products
-    const fetchProductInfo = () => {
-        return axios.get("https://fakestoreapi.com/products")
-            .then((response) => setProduct(
-                response.data
-            ));
-    }
-
-    // Call the fetch function and set it to products (inside the useState)
-    useEffect(() =>{
-        fetchProductInfo();
-    }, [])
-
     function searchNow(val)
     {
         setQuery(val.target.value)
         setSearch(false);
     }
+
+    // ----------------------- Fetching for data in the flask json product file -------------------- //
+      // Variable being used in the fetch request
+    const [products, setProduct] = useState([]);
+
+
+     // Fetch function for All the products
+    useEffect(() => {
+        fetch("/products")
+        .then((res) => res.json())
+        .then((productData) => {
+            setProduct(productData);
+        });
+    }, []);
+
+    //console.log("The mockProducts is: " + JSON.stringify(products))
+
 
     return (
         <div>
@@ -113,10 +111,11 @@ function BrowseProducts() {
 
 
             <Spacer />
-            <Footer/>
+
 
 
         </div>
+            <Footer/>
         </div>
     )
 }

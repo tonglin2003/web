@@ -10,7 +10,6 @@ import Login from './Login'
 import Dashboard from './Dashboard'
 import CategorizeProductPage from "./CategorizeProductPage";
 
-
 function App() {
 
   return (
