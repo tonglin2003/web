@@ -150,7 +150,7 @@ const PostProductForm = (props) => {
                 <div className="text-center mt-5">
                     <button type="submit"
                             className= "button-6 w-50 justify-content-center"
-                            style={{background: "#4d5181"}}
+                            style={{background: "#6692ab"}}
                     >
                         Upload Product
                     </button>
