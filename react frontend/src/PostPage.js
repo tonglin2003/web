@@ -31,23 +31,21 @@ const [image, setImage] = useState(require('./img/images.png'));
     //     setNewImage2(URL.createObjectURL(e.target.files[secondImage]));
     // }
     return (
-        <>
+        <div>
             <Header />
-            <Spacer />
 
 
-
-            {/*<p style={{textAlign:"center",padding:"10px"}}> Sell your products </p>*/}
-            {/*<div  style={{justifyContent: "center", display: "flex"}}>*/}
-
-<p style={{paddingLeft:"120px", fontWeight:"500",  fontSize:"25px"}}> Product Details </p>
-            <p style={{fontSize:"10px" , color:"gray", paddingLeft:"120px"}}> Tell the world about your awesome product!</p>
-            <PostProductForm postedProduct={postedArticle}/>
-
-            <Spacer />
+            <div style={{background: "#f5f5f5"}}>
+                <br/>
+                <div className="title_font text-center mb-4" style={{fontSize:"3vw"}}>
+                    Create Your Own Product
+                </div>
+                <PostProductForm postedProduct={postedArticle}/>
+                <Spacer />
+            </div>
             <Footer />
 
-        </>
+        </div>
     )
 }
 
