@@ -33,7 +33,6 @@ function BrowseProducts() {
         });
     }, []);
 
-    //console.log("The mockProducts is: " + JSON.stringify(products))
 
 
     return (
@@ -80,6 +79,7 @@ function BrowseProducts() {
                                                    image={filteredProduct.image}
                                                    title={filteredProduct.title}
                                                    price={filteredProduct.price}
+                                                   discount = {filteredProduct['percent discount']}
                                                    productId={filteredProduct.id}
                                                    category = {filteredProduct.category}
                                             />
@@ -95,6 +95,7 @@ function BrowseProducts() {
                                                                 image={product.image}
                                                                 title={product.title}
                                                                 price={product.price}
+                                                                discount = {product['percent discount']}
                                                                 productId={product.id}
                                                                 category = {product.category}
                                     />

@@ -4,7 +4,7 @@ import '../css/styles.css'
 // import Rating from '@mui/material/Rating';
 
 
-const Cards = ({size, image, title, price, productId, category}) => {
+const Cards = ({size, image, title, price, discount, productId, category}) => {
     /**
      * size (int, Required): from 1 to 3 to decide size
      * Image: (string, Optional): Link or directory to the product image
@@ -17,6 +17,7 @@ const Cards = ({size, image, title, price, productId, category}) => {
     if(size === 1){ return <SmallCard image = {image}
                                       title={title}
                                       price={price}
+                                      discount={discount}
                                       productId={productId}
                                       category={category}
     /> }
@@ -26,8 +27,8 @@ const Cards = ({size, image, title, price, productId, category}) => {
 }
 
 
-const SmallCard = ({image, title, price, productId, category}) => {
-
+const SmallCard = ({image, title, price, discount, productId, category}) => {
+    const [haveDiscount, setHaveDiscount] = useState(discount>0)
 
     return(
         <>
@@ -41,7 +42,22 @@ const SmallCard = ({image, title, price, productId, category}) => {
                     </Link>
                     <div className="card-body" style={{border:"none"}}>
                         <h5 className="card-title title_font" style={{fontSize:"1.5vw"}}>{title}</h5>
-                        <p className="card-text font fw-bold mt-3">${Number(price).toFixed(2)}</p>
+                        {haveDiscount?
+                            <div className="card-text font fw-bold mt-3">
+                                <span style={{color: "#983a3a"}}>
+                                    ${ (Number(price) * (1-(Number(discount))/100)).toFixed(2)}
+                                </span>
+                                <span style={{fontSize: "1vw", opacity:"50%"}}>
+                                    <del className="m-3">${Number(price).toFixed(2)}</del>
+                                </span>
+                            </div>
+                            :
+                            <div className="card-text font fw-bold mt-3">
+                                    <p className="font">${Number(price).toFixed(2)}</p>
+                            </div>
+                        }
+
+
                         <div className="col text-center">
                         </div>
                     </div>

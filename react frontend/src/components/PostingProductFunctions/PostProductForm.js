@@ -4,12 +4,13 @@ import ProductPosting from './ProductPosting'
 const PostProductForm = (props) => {
     const [title, setTitle] = useState('')
     const [price, setPrice] = useState('')
+    const [discount, setDiscount] = useState('')
     const [description, setDescription] = useState('')
     const [category, setCategory] = useState('')
     const [image, setImage] = useState('')
 
         const postProduct = () => {
-        ProductPosting.PostProduct({title, price, description, category, image})
+        ProductPosting.PostProduct({title, discount, price, description, category, image})
             // will come back to the postedProduct thing later!
             .then((response) => props.postedProduct(response))
             .catch(error => console.log('error', error))
@@ -20,6 +21,7 @@ const PostProductForm = (props) => {
         postProduct()
         setTitle('')
         setPrice('')
+        setDiscount('')
         setDescription('')
         setCategory('')
         setImage('')
@@ -60,7 +62,7 @@ const PostProductForm = (props) => {
 
             {/*---------- Price Section -------------*/}
             <div className="col mb-4">
-                <div className="font fw-bold"> *Price of Product </div>
+                <div className="font fw-bold"> *Original Product Price </div>
                     <div style={{fontSize:"10px" , color:"gray"}}>
                         Type a two or three-word description of your item to get category suggestions that will help more shoppers find it. Examples: Hoodie, ring
                     </div>
@@ -74,6 +76,26 @@ const PostProductForm = (props) => {
                                    min={1}
                                    onChange={ (e) => setPrice(e.target.value)}
                                    required
+                            />
+                            <label className="form-label" htmlFor="form6Example2"></label>
+                        </div>
+                    </div>
+            </div>
+
+            {/*---------- Discount Section -------------*/}
+            <div className="col mb-4">
+                <div className="font fw-bold"> Percent Discount Offer (Optional) </div>
+                    <div style={{fontSize:"10px" , color:"gray"}}>
+                        Type a two or three-word description of your item to get category suggestions that will help more shoppers find it. Examples: Hoodie, ring
+                    </div>
+                    <div className="col">
+                        <div className="form-outline">
+                            <input type="number"
+                                   className="form-control font"
+                                   placeholder="Enter percent discount"
+                                   value={discount}
+                                   min={0}
+                                   onChange={ (e) => setDiscount(e.target.value)}
                             />
                             <label className="form-label" htmlFor="form6Example2"></label>
                         </div>

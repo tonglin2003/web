@@ -21,13 +21,10 @@ function Home() {
                 <div className="row">
                     <div className="col m-3">
                         <h1 className={"title_font"}>Justworks</h1>
-                        <p className="m-3 font ">Justworks is guided by four principles: customer obsession
+                        <p className="m-3 font ">
+                             Justworks is guided by four principles: customer obsession
                             rather than competitor focus, passion for invention, commitment to operational
                             excellence, and long-term thinking.
-                        </p>
-                        <p className="m-3 font">
-                            Justworks strives to be Earth's most customer-centric company,
-                            Earth's best employer, and Earth's safest place to work.
                         </p>
                         <p className="font fw-bold m-3">Find your special discount offer here: </p>
                         <Link to="/browse" className="mx-3" style={{textDecoration: "none"}}><button type="button" className="button-6">Browse Product</button></Link>
