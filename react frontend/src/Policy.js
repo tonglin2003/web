@@ -111,9 +111,14 @@ function Policy() {
                                     any future postings and your account will immediately be terminated.
                                     If your listing has been rejected for violating our policies and you
                                     feel it was a mistake, you can request a review by contacting us using either
-                                    phone number or email:
+                                    phone number or email. We can be contacted here:
                                     <div>
-                                    111-111-111 or email us at justworksmarketplace@js.com.
+                                        <div>
+                                       Phone number: (+1)1111-111-111
+                                        </div>
+                                        <div>
+                                        Or email us at: justworksmarketplace@js.com.
+                                        </div>
                                     </div>
                                 </p>
                                 </div>
