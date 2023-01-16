@@ -36,8 +36,8 @@ def get_product_by_id():
 def add_new_product():
     print("Server.py's add_new_product is running!!")
     title = request.json["title"]
-    discount = request.json['discount']
-    price = request.json["price"]
+    discount = int(request.json['discount'])
+    price = int(request.json["price"])
     description = request.json["description"]
     category = request.json["category"]
     image = request.json["image"]
