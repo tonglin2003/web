@@ -3,7 +3,7 @@ import 'chart.js/auto'
 import {Bar, Line} from "react-chartjs-2"
 import {Chart as ChartJS, Filler} from "chart.js";
 import gradient from 'chartjs-plugin-gradient';
-import Spacer from './Spacer';
+import Spacer from '../Spacer';
 
 //Initialize Graph Features
 ChartJS.register(gradient, Filler);

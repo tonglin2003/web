@@ -6,6 +6,7 @@ import Header from './components/WebHeaderAndFooter/Header'
 import Footer from './components/WebHeaderAndFooter/Footer'
 import Spacer from './components/Spacer'
 import Cards from './components/Cards'
+import UpdateUserData from './components/UserData/UpdateUserData'
 // import UploadImage from './components/UploadImage';
 import css from './css/styles.css'
 
@@ -60,7 +61,7 @@ function Profile() {
 }
 
 
-const NewProfile = () => {
+const NewProfile = (props) => {
     //-----------------------------------------------------------------------
     //           VARIABLES
     //-----------------------------------------------------------------------
@@ -121,26 +122,9 @@ const NewProfile = () => {
     }
 
 
-    const UpdateUserInfo = (body)=>{
-        console.log("ewweeeeeee")
-        console.log(body)
-        return fetch("http://localhost:5000/api/update_user",{
-            'method':'POST',
-            'mode': 'cors',
-            headers : {'Content-Type':'application/json',
-            'Access-Control-Allow-Origin': '*',
-            'Accept': 'application/json',
-            'Access-Control-Allow-Credentials':'true',
-            },
-            body: JSON.stringify(body)
-    })
-    // .then(response => response.json())
-    .catch(error => console.log(error))
-    }
-
     const updatedInfo = ()=>{
-        UpdateUserInfo({id, newName})
-        .then((response) => updatedInfo(response))
+        UpdateUserData.UpdateUser({id, newName})
+        .then((response) => props.updatedInfo(response))
         .catch(error => console.log('error',error))
       }
 

@@ -10,7 +10,7 @@ import {
   CDBSidebarMenu,
   CDBSidebarMenuItem,
 } from 'cdbreact';
-import Analytics from './components/Analytics'
+import Analytics from './components/UserData/Analytics'
 import Spacer from './components/Spacer'
 import css from './css/styles.css'
 
