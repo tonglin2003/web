@@ -28,7 +28,7 @@ const PostProductForm = (props) => {
     }
 
     return (
-        <form style={{border:"solid", borderColor:"#a0a2b7", background:"white"}}
+        <form style={{border:"1px solid #dce8f2", background:"white", boxShadow: "10px 10px 2px #dce8f2"}}
               className="mx-auto p-5 w-50 rounded"
               onSubmit = {handleSubmit}>
 
@@ -172,7 +172,7 @@ const PostProductForm = (props) => {
                 <div className="text-center mt-5">
                     <button type="submit"
                             className= "button-6 w-50 justify-content-center"
-                            style={{background: "#6692ab"}}
+                            style={{background: "#0f374f"}}
                     >
                         Upload Product
                     </button>

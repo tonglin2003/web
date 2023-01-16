@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import Spacer from './components/Spacer'
-import Header from './components/Header'
+import Header from './components/WebHeaderAndFooter/Header'
 import Cards from './components/Cards';
 import {useParams} from "react-router-dom";
 

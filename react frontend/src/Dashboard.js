@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {useNavigate} from 'react-router-dom'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './components/WebHeaderAndFooter/Header'
+import Footer from './components/WebHeaderAndFooter/Footer'
 import Sidebar from './components/DashSidebar'
 import Spacer from './components/Spacer'
 import css from './css/styles.css'

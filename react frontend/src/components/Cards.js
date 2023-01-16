@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import '../css/styles.css'
-// import Rating from '@mui/material/Rating';
 
 
 const Cards = ({size, image, title, price, discount, productId, category}) => {

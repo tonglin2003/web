@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './components/WebHeaderAndFooter/Header'
+import Footer from './components/WebHeaderAndFooter/Footer'
 import Spacer from './components/Spacer'
 import './css/styles.css'
 import Carousel from 'react-bootstrap/Carousel';
-import CarouselItem from "./components/Category_Cards";
-import RecommendDisplay from "./components/recommendDisplay"
+import CarouselItem from "./components/HomePageFunctions/Category_Cards";
+import RecommendDisplay from "./components/HomePageFunctions/recommendDisplay"
 
 
 

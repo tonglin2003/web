@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, NavLink  } from 'react-router-dom'
-import '../css/styles.css'
+import '../../css/styles.css'
 import {Carousel, Nav} from 'react-bootstrap';
 import ReactDOM from "react-dom";
 

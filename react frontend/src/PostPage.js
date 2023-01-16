@@ -1,6 +1,6 @@
 import React, {useEffect, useState } from 'react';
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './components/WebHeaderAndFooter/Header'
+import Footer from './components/WebHeaderAndFooter/Footer'
 import Spacer from './components/Spacer'
 import PostProductForm from './components/PostingProductFunctions/PostProductForm'
 
@@ -35,7 +35,7 @@ const [image, setImage] = useState(require('./img/images.png'));
             <Header />
 
 
-            <div style={{background: "#f5f5f5"}}>
+            <div style={{background: "#F0F8FF"}}>
                 <br/>
                 <div className="title_font text-center mb-4" style={{fontSize:"3vw"}}>
                     Create Your Own Product

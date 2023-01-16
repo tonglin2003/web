@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react'
 import {useParams} from "react-router-dom";
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './components/WebHeaderAndFooter/Header'
+import Footer from './components/WebHeaderAndFooter/Footer'
 import Spacer from './components/Spacer'
 import Cards from './components/Cards';
 import { Link } from 'react-router-dom';
-import SingleProductDisplay from './components/SingleProductsFunction'
+import SingleProductDisplay from './components/SingleProductPageFunctions/SingleProductsFunction'
 import axios from "axios";
-import RecommendProductsDisplay from "./components/SimilarProductsRecommend";
+import RecommendProductsDisplay from "./components/SingleProductPageFunctions/SimilarProductsRecommend";
 
 function SingleProduct() {
     // ----- Get the product id to fetch the product data from the API -------- //

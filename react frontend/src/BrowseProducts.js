@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import Spacer from './components/Spacer'
-import Header from './components/Header'
+import Header from './components/WebHeaderAndFooter/Header'
 import Cards from './components/Cards';
-import Search from './components/Search';
 import axios from "axios"
-import Footer from "./components/Footer";
+import Footer from "./components/WebHeaderAndFooter/Footer";
 
 
 function BrowseProducts() {
