@@ -17,20 +17,23 @@ const LargeCard = ({productId}) => {
 // ----------------------------- Large Card Display ----------------------------- //
     // Setting productId to fetch data from the Fake Store API
     const [product, setProduct] = useState({});
-
-    // Fetch the product by the product ID, returns a json/dictionary of data info
     const fetchProductInfo = () => {
-        return axios.get(`https://fakestoreapi.com/products/${productId}`)
-            .then((response) => setProduct(
-                response.data
-            ));
-    }
+        fetch(`/getItemById`,{
+                'method':'POST',
+                 headers : {
+                'Content-Type':'application/json'
+          },
+          body:JSON.stringify({"id": productId} )
+        })
+        .then(response => (response.json()))
+            .then((productData) => setProduct(productData[0]))
+        .catch(error => console.log(error))
+	}
 
     // Calling the function and if failed then return []
     useEffect(() =>{
         fetchProductInfo();
     }, [])
-
 
 
     // Return the website with the fetched data

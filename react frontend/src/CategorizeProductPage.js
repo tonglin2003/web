@@ -80,6 +80,7 @@ const CategorizeProductPage = () => {
                                                    image={filteredProduct.image}
                                                    title={filteredProduct.title}
                                                    price={filteredProduct.price}
+                                                   discount={filteredProduct['percent discount']}
                                                    productId={filteredProduct.id}/>
                                         </>
                                     ))
@@ -93,6 +94,7 @@ const CategorizeProductPage = () => {
                                                                image={product.image}
                                                                title={product.title}
                                                                price={product.price}
+                                                                discount={product['percent discount']}
                                                                productId={product.id}
                                                                 category={product.category}
                                     />

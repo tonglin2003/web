@@ -25,6 +25,12 @@ def get_product_by_category():
     print("Something is get by the getItemByCategory function!!")
     return JsonAccess.pullDataByKey(productDataDirectory, "category", category)
 
+@app.route('/getItemById', methods=["GET", "POST"])
+def get_product_by_id():
+    productId = request.json['id']
+    print(JsonAccess.pullDataByKey(productDataDirectory, "id", int(productId)))
+    return JsonAccess.pullDataByKey(productDataDirectory, "id", int(productId))
+
 
 @app.route('/post%product/success', methods=["POST"])
 def add_new_product():

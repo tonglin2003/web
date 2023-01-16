@@ -64,7 +64,7 @@ const PostProductForm = (props) => {
             <div className="col mb-4">
                 <div className="font fw-bold"> *Original Product Price </div>
                     <div style={{fontSize:"10px" , color:"gray"}}>
-                        Type a two or three-word description of your item to get category suggestions that will help more shoppers find it. Examples: Hoodie, ring
+                        The original price of your product
                     </div>
                     <div className="col">
                         <div className="form-outline">
@@ -86,7 +86,7 @@ const PostProductForm = (props) => {
             <div className="col mb-4">
                 <div className="font fw-bold"> Percent Discount Offer (Optional) </div>
                     <div style={{fontSize:"10px" , color:"gray"}}>
-                        Type a two or three-word description of your item to get category suggestions that will help more shoppers find it. Examples: Hoodie, ring
+                        Percent discount that you are willing to offer for other Justworks customers
                     </div>
                     <div className="col">
                         <div className="form-outline">

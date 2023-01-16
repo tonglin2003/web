@@ -34,7 +34,7 @@ const RecommendProductsDisplay = (category) => {
     // recProducts.map(recProduct => ( console.log("Inside the map of reproduct" + {recProduct})))
 
     const formattedRecProduct = JSON.parse(JSON.stringify(recProducts))
-     console.log(formattedRecProduct)
+     //console.log(formattedRecProduct)
 
 
     return (
