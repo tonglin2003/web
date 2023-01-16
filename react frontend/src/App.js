@@ -12,9 +12,6 @@ import CategorizeProductPage from "./CategorizeProductPage";
 
 function App() {
 
-
-
-  
   return (
 
     <>

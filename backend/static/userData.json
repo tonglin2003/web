@@ -1,28 +1,56 @@
-[{
-    "id": 1,
-    "username": "janedoe",
-    "password": "000",
-    "name": "Jane Doe",
-    "image": "/imgs/default-avatar.jpg",
-    "bio": "Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.",
-    "phone": "212-123-4567",
-    "email": "support@janedoe.com",
-    "website": "janedoe.com",
-    "location": "Brooklyn, NY",
-    "products": [],
-    "revenue": [10,24,58,35,88,77,63,72,87,100,120,150]
-},
-{
-    "id": 2,
-    "username": "sprintern",
-    "password": "2023",
-    "name": "The Sprinterns",
-    "image": "/imgs/default-avatar.jpg",
-    "bio": "Interns at JustWorks for the Winter of 2023.",
-    "phone": "603-999-7273",
-    "email": "info@sprintership.com",
-    "website": "sprintership.com",
-    "location": "New York, USA",
-    "products": [],
-    "revenue": [30,44,58,45,30,27,19,7,12,3,0,0]
-}]
+[
+    {
+        "id": 0,
+        "username": "janedoe",
+        "password": "000",
+        "name": "Henry",
+        "image": "/imgs/default-avatar.jpg",
+        "bio": "Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.Marketing specialist from the Big Apple. Helping businesses thrive since 2002.",
+        "phone": "212-123-4567",
+        "email": "support@janedoe.com",
+        "website": "janedoe.com",
+        "location": "Brooklyn, NY",
+        "products": [],
+        "revenue": [
+            10,
+            24,
+            58,
+            35,
+            88,
+            77,
+            63,
+            72,
+            87,
+            100,
+            120,
+            150
+        ]
+    },
+    {
+        "id": 1,
+        "username": "sprintern",
+        "password": "2023",
+        "name": "The Sprinterns",
+        "image": "/imgs/default-avatar.jpg",
+        "bio": "Interns at JustWorks for the Winter of 2023.",
+        "phone": "603-999-7273",
+        "email": "info@sprintership.com",
+        "website": "sprintership.com",
+        "location": "New York, USA",
+        "products": [],
+        "revenue": [
+            30,
+            44,
+            58,
+            45,
+            30,
+            27,
+            19,
+            7,
+            12,
+            3,
+            0,
+            0
+        ]
+    }
+]

@@ -34,7 +34,7 @@ function Profile() {
     // Redirect back to LOGIN if not logged in
     useEffect(() => {
         // console.log(id)
-        if(!(id) || id < 1){
+        if(!(id) || id < 0){
             if(!(currentUser) || currentUser === -1){
                 navigateToLogin();}
             else {
@@ -120,6 +120,36 @@ const NewProfile = () => {
         setNewImage(URL.createObjectURL(e.target.files[0]))
     }
 
+
+    const UpdateUserInfo = (body)=>{
+        console.log("ewweeeeeee")
+        console.log(body)
+        return fetch("http://localhost:5000/api/update_user",{
+            'method':'POST',
+            'mode': 'cors',
+            headers : {'Content-Type':'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Accept': 'application/json',
+            'Access-Control-Allow-Credentials':'true',
+            },
+            body: JSON.stringify(body)
+    })
+    // .then(response => response.json())
+    .catch(error => console.log(error))
+    }
+
+    const updatedInfo = ()=>{
+        UpdateUserInfo({id, newName})
+        .then((response) => updatedInfo(response))
+        .catch(error => console.log('error',error))
+      }
+
+    const handleUserUpdate=(e)=>{
+        e.preventDefault()
+        updatedInfo()
+
+    }
+
     //-----------------------------------------------------------------------
     //           EXECUTE
     //-----------------------------------------------------------------------
@@ -130,10 +160,10 @@ const NewProfile = () => {
 
     //Retrieve user data from the backend ------------------------------------
     useEffect(() => {
-        fetch("/userdata")
+        fetch("/api/userdata")
         .then((res) => res.json())
         .then((userData) => {
-            if(userData && id){
+            if(userData && id > -1){
                 setUserData(userData)
                 setProfileUser(findUserByID(userData, id))
             }
@@ -160,7 +190,7 @@ const NewProfile = () => {
 
     //Retrieve product data
     useEffect(() =>{
-        if(currentUser.id && currentUser.id === id){
+        if(currentUser.id > -1 && currentUser.id === id){
             setIsCurrentUser(true)
         }
     }, [currentUser, id])
@@ -182,7 +212,18 @@ const NewProfile = () => {
     //-----------------------------------------------------------------------
     return(
         <>
-            <form className="profile center" style={{ width: "100%" }}>
+            <form method='post' className="profile center" style={{ width: "100%" }}
+                    onSubmit={(e)=>{ 
+                        setIsEditMode(!isEditMode);
+                        setName(newName);
+                        setImage(newImage);
+                        setBio(newBio);
+                        setPhone(newPhone);
+                        setEmail(newEmail);
+                        setWebsite(newWebsite);
+                        setLocation(newLocation);
+                        handleUserUpdate(e);
+                        }}>
                 <fieldset style={{ maxWidth: "800px", width: "800px", paddingTop: "30px" }} className=" profile contain">
 
                     {/* EDIT MODE button --------------------------------------------------*/}
@@ -193,9 +234,10 @@ const NewProfile = () => {
 
                     {/* NAME field --------------------------------------------------*/}
                     {!(isEditMode) && <h1>{name}</h1>}
-                    {isEditMode && <label>Company Name</label>}
+                    {isEditMode && <label for="name">Company Name</label>}
                     {isEditMode && <input
                         type="text"
+                        name="name"
                         value={newName}
                         onChange={(e) => setNewName(e.target.value)} />}<br></br><br></br>
 
@@ -299,16 +341,10 @@ const NewProfile = () => {
                         <div className='col-sm'>
                             {isEditMode && <input type='submit'
                                 value="Save"
-                                onClick={() => {
-                                    setIsEditMode(!isEditMode);
-                                    setName(newName);
-                                    setImage(newImage);
-                                    setBio(newBio);
-                                    setPhone(newPhone);
-                                    setEmail(newEmail);
-                                    setWebsite(newWebsite);
-                                    setLocation(newLocation);
-                                }} />}
+                                // onClick={() => {
+                                    
+                                // }} 
+                                />}
                         </div>
                     </div>
                 </fieldset>
