@@ -328,7 +328,13 @@ footer .content .link-boxes{
 }
 
 /* -------------------------- Hafeefa --------------------------------- */
-
+.nav-item{
+    border-radius: 20px;
+}
+.nav-item:hover{
+    border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
 #questions{
     text-Align:center;
     border: solid;
@@ -346,6 +352,9 @@ footer .content .link-boxes{
     color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
+#getstartedbutton:hover{
+    background: red;
+}
 #thebuttonspaddings{
     padding-top:5px;
 }
@@ -360,6 +369,9 @@ footer .content .link-boxes{
     color:black;
     font-weight: 600;
     text-decoration:none;
+}
+#theloginbutton:hover{
+    background: lightblue;
 }
 .card-img-top{
     width: 100% !important;
