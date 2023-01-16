@@ -13,6 +13,12 @@ def pullData(file_directory):
         return data
 
 
+def pullDataByKey(file_directory, key, keyValue):
+    with open(file_directory, mode="r") as file:
+        data = json.load(file)
+        return [item for item in data if item[key] == keyValue]
+
+
 # adds/update Data into JSON, takes in price(double), discount(double), productType(string)
 # and doesn't return anything
 def write_user_data(file_directory, username, password, name, image, bio, phone, email, website, location):
@@ -37,7 +43,7 @@ def write_user_data(file_directory, username, password, name, image, bio, phone,
         json.dump(listObj, file, indent=4, separators=(',', ': '))
 
 
-def write_product_data(file_directory, title, price=0, description='', category='', image=''):
+def write_product_data(file_directory, title, discount, price=0, description='', category='', image=''):
     # file_directory is the file you want to write the data to
     listObj = pullData(file_directory)
 
@@ -49,7 +55,8 @@ def write_product_data(file_directory, title, price=0, description='', category=
             "description": description,
             "category": category,
             "image": image,
-            "rating": 0
+            "rating": 0,
+            "discount percentage": discount
         }
     )
     with open(file_directory, 'w') as file:

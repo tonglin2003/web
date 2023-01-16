@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import Spacer from './components/Spacer'
-import Header from './components/Header'
+import Header from './components/WebHeaderAndFooter/Header'
 import Cards from './components/Cards';
-import Search from './components/Search';
-import axios from "axios"
 import {useParams} from "react-router-dom";
 
 const CategorizeProductPage = () => {
@@ -12,27 +10,30 @@ const CategorizeProductPage = () => {
     const [search, setSearch] = useState(false)
     const [query, setQuery] = useState("");
 
-    // const cItem = category
-
-    // console.log("the type of category is: " + typeof(category))
-    console.log(`https://fakestoreapi.com/products/category/${category}`)
-
-    const fetchProductInfo = () => {
-        return axios.get(`https://fakestoreapi.com/products/category/${category}`)
-            .then((response) => setProduct(
-                response.data
-            ));
-    }
     function searchNow(val)
     {
         setQuery(val.target.value)
         setSearch(false);
     }
 
-    // Call the fetch function and set it to products (inside the useState)
-    useEffect(() =>{
+    // Fetching the product from the FLASK API
+    const fetchProductInfo = () => {
+        fetch(`/getItemByCategory`,{
+                'method':'POST',
+                 headers : {
+                'Content-Type':'application/json'
+          },
+          body:JSON.stringify({"category": category})
+        })
+        .then(response => (response.json()))
+            .then((productData) => setProduct(productData))
+        .catch(error => console.log(error))
+	}
+
+        useEffect(() =>{
         fetchProductInfo();
-    }, []);
+        }, []);
+
 
     return (
                 <>
@@ -92,7 +93,9 @@ const CategorizeProductPage = () => {
                                                                image={product.image}
                                                                title={product.title}
                                                                price={product.price}
-                                                               productId={product.id}/>
+                                                               productId={product.id}
+                                                                category={product.category}
+                                    />
                                 ))
                             }
                         </div>

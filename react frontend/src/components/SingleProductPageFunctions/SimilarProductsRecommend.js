@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import '../css/styles.css'
+import '../../css/styles.css'
 import axios from "axios";
-import Cards from "./Cards";
+import Cards from "../Cards";
 
 const RecommendProductsDisplay = (category) => {
     // ----------------------------- Recommendation Product ----------------------------- //

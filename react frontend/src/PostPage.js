@@ -1,6 +1,6 @@
 import React, {useEffect, useState } from 'react';
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './components/WebHeaderAndFooter/Header'
+import Footer from './components/WebHeaderAndFooter/Footer'
 import Spacer from './components/Spacer'
 import PostProductForm from './components/PostingProductFunctions/PostProductForm'
 
@@ -31,20 +31,21 @@ const [image, setImage] = useState(require('./img/images.png'));
         setImage(URL.createObjectURL(e.target.files[image]));
     }
     return (
-        <>
+        <div>
             <Header />
-            <Spacer />
 
 
-
-<p style={{paddingLeft:"120px", fontWeight:"500",  fontSize:"25px"}}> Product Details </p>
-            <p style={{fontSize:"10px" , color:"gray", paddingLeft:"120px"}}> Tell the world about your awesome product!</p>
-            <PostProductForm postedProduct={postedArticle}/>
-
-            <Spacer />
+            <div style={{background: "#F0F8FF"}}>
+                <br/>
+                <div className="title_font text-center mb-4" style={{fontSize:"3vw"}}>
+                    Create Your Own Product
+                </div>
+                <PostProductForm postedProduct={postedArticle}/>
+                <Spacer />
+            </div>
             <Footer />
 
-        </>
+        </div>
     )
 }
 

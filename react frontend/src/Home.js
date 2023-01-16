@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './components/WebHeaderAndFooter/Header'
+import Footer from './components/WebHeaderAndFooter/Footer'
 import Spacer from './components/Spacer'
 import './css/styles.css'
 import Carousel from 'react-bootstrap/Carousel';
-import CarouselItem from "./components/Category_Cards";
-import RecommendDisplay from "./components/recommendDisplay"
+import CarouselItem from "./components/HomePageFunctions/Category_Cards";
+import RecommendDisplay from "./components/HomePageFunctions/recommendDisplay"
 
 
 
@@ -17,18 +17,17 @@ function Home() {
         <>
             <Header />
 
-
             <div className="container my-5" >
                 <div className="row">
                     <div className="col m-3">
-                        <h1 className={"title_font"} style={{paddingBottom:"10px"}}>Justworks</h1>
-                        <h4 className="m-3 font ">Justworks is guided by four principles: customer obsession
+                        <h1 className={"title_font"}>Justworks</h1>
+                        <p className="m-3 font ">
+                             Justworks is guided by four principles: customer obsession
                             rather than competitor focus, passion for invention, commitment to operational
-                            excellence, and long-term thinking. Justworks strives to be Earth's most customer-centric company,
-                            Earth's best employer, and Earth's safest place to work.
-                        </h4>
-                        <p className="font fw-bold m-3" style={{paddingTop:"15px"}}>Find your special discount offer here: </p>
-                        <Link to="/browse" style={{textDecoration: "none"}}><button type="button" className="button-6 m-3">Find Discount</button></Link>
+                            excellence, and long-term thinking.
+                        </p>
+                        <p className="font fw-bold m-3">Find your special discount offer here: </p>
+                        <Link to="/browse" className="mx-3" style={{textDecoration: "none"}}><button type="button" className="button-6">Browse Product</button></Link>
                     </div>
                     <div className="col">
                         <img src={ "https://assets-global.website-files.com/5e19ea5aa7d3a217492e372b/61786221a8b701a33c2b9f0d_AxiosHQ_Launch_house-ad%20(1).png" }
@@ -73,6 +72,8 @@ function Home() {
                               category={"Technology Tool"}
                               link={"/browse/categories/electronics"}
             />
+
+
 
 
         </div>
