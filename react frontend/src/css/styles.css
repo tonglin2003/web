@@ -329,6 +329,12 @@ footer .content .link-boxes{
 
 /* -------------------------- Hafeefa --------------------------------- */
 
+#questions{
+    text-Align:center;
+    border: solid;
+    padding-Top:20px;
+    padding-Bottom:20px;
+}
 #getstartedbutton {
     background: rgb(255,99,71);
     border-radius: 8%;
