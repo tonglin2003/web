@@ -26,7 +26,6 @@ def get_product_by_category():
     return JsonAccess.pullDataByKey(productDataDirectory, "category", category)
 
 
-
 @app.route('/post%product/success', methods=["POST"])
 def add_new_product():
     print("Server.py's add_new_product is running!!")
