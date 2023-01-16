@@ -333,7 +333,9 @@ footer .content .link-boxes{
 }
 .nav-item:hover{
     border-color: rgba(0, 0, 0, 0.15);
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    transform: translateY(-1px);
+
 }
 #questions{
     text-Align:center;
@@ -354,6 +356,7 @@ footer .content .link-boxes{
 }
 #getstartedbutton:hover{
     background: red;
+
 }
 #thebuttonspaddings{
     padding-top:5px;
@@ -372,6 +375,7 @@ footer .content .link-boxes{
 }
 #theloginbutton:hover{
     background: lightblue;
+
 }
 .card-img-top{
     width: 100% !important;
