@@ -52,12 +52,15 @@ def user_data():
 def get_user_update_from_react():
     id = int(request.json['id'])
     name = request.json["newName"]
-    updateUserData.updateData(id, 'name', name)
-    return "Update success!"
+    image = request.json["newImage"]
+    bio = request.json["newBio"]
+    phone = request.json["newPhone"]
+    email = request.json["newEmail"]
+    website = request.json["newWebsite"]
+    location = request.json["newLocation"]
 
-# @app.route('/userdata')
-# def user_data():
-#     return JsonAcess.pullData()
+    updateUserData.updateAllData(id, name, image, bio, phone, email, website, location)
+    return "Update success!"
 
 if __name__ == "__main__":
     app.run(debug=True)

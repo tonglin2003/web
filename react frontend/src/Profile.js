@@ -7,7 +7,6 @@ import Footer from './components/WebHeaderAndFooter/Footer'
 import Spacer from './components/Spacer'
 import Cards from './components/Cards'
 import UpdateUserData from './components/UserData/UpdateUserData'
-// import UploadImage from './components/UploadImage';
 import css from './css/styles.css'
 
 function Profile() {
@@ -61,7 +60,7 @@ function Profile() {
 }
 
 
-const NewProfile = (props) => {
+const NewProfile = () => {
     //-----------------------------------------------------------------------
     //           VARIABLES
     //-----------------------------------------------------------------------
@@ -97,6 +96,9 @@ const NewProfile = (props) => {
     const [newWebsite, setNewWebsite] = useState(website)
     const [newLocation, setNewLocation] = useState(location)
 
+    //-----------------------------------------------------------------------
+    //           FUNCTIONS
+    //-----------------------------------------------------------------------
     // loads product card info --------------------------------------------------
     const [products, setProduct] = useState([])
     const fetchProductInfo = () => {
@@ -105,10 +107,7 @@ const NewProfile = (props) => {
                 response.data
             ));
     }
-
-    //-----------------------------------------------------------------------
-    //           FUNCTIONS
-    //-----------------------------------------------------------------------
+    
     //Find the current user by the id number of the page
     function findUserByID(array, id){
         return array.find((e) => {
@@ -123,8 +122,8 @@ const NewProfile = (props) => {
 
 
     const updatedInfo = ()=>{
-        UpdateUserData.UpdateUser({id, newName})
-        .then((response) => props.updatedInfo(response))
+        UpdateUserData.UpdateUser({id, newName, newImage, newBio, newPhone, newEmail, newWebsite, newLocation})
+        .then((response) => updatedInfo(response))
         .catch(error => console.log('error',error))
       }
 

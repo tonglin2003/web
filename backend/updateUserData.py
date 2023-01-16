@@ -22,3 +22,12 @@ def saveData(data):
 def updateData(userID, key, newValue):
     data[userID][key] = newValue
     saveData(data)
+
+def updateAllData(userID, name, image, bio, phone, email, website, location):
+        updateData(userID, 'name', name)
+        updateData(userID, 'image', image)
+        updateData(userID, 'bio', bio)
+        updateData(userID, 'phone', phone)
+        updateData(userID, 'email', email)
+        updateData(userID, 'website', website)
+        updateData(userID, 'location', location)
