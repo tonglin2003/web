@@ -16,6 +16,7 @@ def pullData(file_directory):
 def pullDataByKey(file_directory, key, keyValue):
     with open(file_directory, mode="r") as file:
         data = json.load(file)
+
         return [item for item in data if item[key] == keyValue]
 
 

@@ -17,6 +17,7 @@ const LargeCard = ({productId}) => {
 // ----------------------------- Large Card Display ----------------------------- //
     // Setting productId to fetch data from the Fake Store API
     const [product, setProduct] = useState({});
+
     const fetchProductInfo = () => {
         fetch(`/getItemById`,{
                 'method':'POST',
@@ -34,6 +35,7 @@ const LargeCard = ({productId}) => {
     useEffect(() =>{
         fetchProductInfo();
     }, [])
+
 
 
     // Return the website with the fetched data
@@ -58,8 +60,20 @@ const LargeCard = ({productId}) => {
                 {product.description}
             </div>
 
-
-                        <p className={"title_font m-3"} style={{fontSize: "3vw"}}> ${ product['price'] } </p>
+                        { (Number(product['percent discount']) > 0)?
+                            <div className="card-text font fw-bold mt-3">
+                                <span style={{color: "#983a3a"}}>
+                                    ${ (Number(product['price']) * (1-(Number(product['percent discount']))/100)).toFixed(2)}
+                                </span>
+                                <span style={{fontSize: "1vw", opacity:"50%"}}>
+                                    <del className="m-3">${Number(product['price']).toFixed(2)}</del>
+                                </span>
+                            </div>
+                            :
+                            <div className="card-text font fw-bold mt-3">
+                                    <p className="font">${Number(product['price']).toFixed(2)}</p>
+                            </div>
+                        }
 
                         <div className="d-grid gap-2">
                             <button className="button-6" type="button" id="addtobag" style={{background:"black"}}>Buy Now </button>

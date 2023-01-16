@@ -11,12 +11,7 @@ const RecommendProductsDisplay = (category) => {
     const [recProducts, setRecProduct] = useState(['something default']);
 
     const curr_category = JSON.stringify(category.category).replace(/["]+/g, '')
-    //console.log("Inside the RecProduct or similar: the category: "+curr_category)
 
-
-    //console.log("I'm category: " + category)
-
-    //console.log(`https://fakestoreapi.com/products/category/${curr_category}/?limit=3`)
     const fetchRecProductInfo = () => {
         return axios.get(`https://fakestoreapi.com/products/category/${curr_category}/?limit=3`)
             .then((res) => setRecProduct(
@@ -29,6 +24,24 @@ const RecommendProductsDisplay = (category) => {
         fetchRecProductInfo(recProducts);
         //console.log(recProducts)
     }, []);
+
+    // const [product, setProduct] = useState([])
+    //     const fetchProductInfo = () => {
+    //     fetch(`/getItemByCategory`,{
+    //             'method':'POST',
+    //              headers : {
+    //             'Content-Type':'application/json'
+    //       },
+    //       body:JSON.stringify({"category": category, "limit": 3})
+    //     })
+    //     .then(response => (response.json()))
+    //         .then((productData) => setProduct(productData))
+    //     .catch(error => console.log(error))
+	// }
+    //
+    //     useEffect(() =>{
+    //     fetchProductInfo();
+    //     }, []);
 
      //console.log("recProduct now: " +  JSON.parse(JSON.stringify(recProducts[0])).id)
     // recProducts.map(recProduct => ( console.log("Inside the map of reproduct" + {recProduct})))
@@ -49,6 +62,7 @@ const RecommendProductsDisplay = (category) => {
                                                             price={recProduct.price}
                                                             productId={recProduct.id}
                                                             category={recProduct.category}
+                                                           discount = {recProduct['percent discount']}
                                                     />
 
                                 )

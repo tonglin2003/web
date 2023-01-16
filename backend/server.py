@@ -19,16 +19,17 @@ def user_data():
 def get_product():
     return JsonAccess.pullData(productDataDirectory)
 
+
 @app.route('/getItemByCategory', methods=["GET", "POST"])
 def get_product_by_category():
     category = request.json['category']
-    print("Something is get by the getItemByCategory function!!")
+
     return JsonAccess.pullDataByKey(productDataDirectory, "category", category)
+
 
 @app.route('/getItemById', methods=["GET", "POST"])
 def get_product_by_id():
     productId = request.json['id']
-    print(JsonAccess.pullDataByKey(productDataDirectory, "id", int(productId)))
     return JsonAccess.pullDataByKey(productDataDirectory, "id", int(productId))
 
 
@@ -47,3 +48,5 @@ def add_new_product():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
