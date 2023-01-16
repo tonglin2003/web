@@ -7,6 +7,7 @@ import css from './css/styles.css'
 
 function Login() {
 
+
     //-----------------------------------------------------------------------
     //           VARIABLES
     //-----------------------------------------------------------------------
@@ -17,10 +18,10 @@ function Login() {
     const [invalidMessage, setInvalidMessage] = useState();
     var inputUser;
 
-    //User data from Backend
-    const [userData, setUserData] = useState()
+    //Init user data from Backend
+    const [userData, setUserData] = useState([]);
 
-    //Local Storage
+    //Init current user data from Frontend
     const [currentUser, setCurrentUser] = useState([]);
 
     // Redirect URL
@@ -57,11 +58,13 @@ function Login() {
     }
 
     const LoginValidation = event =>{
+        event.preventDefault();
         const LoggedUser = JSON.parse(localStorage.getItem('currentUser'));
         if(LoggedUser && LoggedUser !== -1){
+            
             navigateToDashboard();}
-        else{
-            event.preventDefault();} 
+        // else{
+        //     event.preventDefault();} 
     }
 
 
@@ -72,6 +75,8 @@ function Login() {
     //Default current user is none (LOGGED OUT)------------------------------------
     useEffect(() => {
         localStorage.setItem('currentUser', -1);
+        console.log('test')
+
     }, []);
 
     // //Sets username = current username (LOGGED IN)------------------------------------
@@ -84,7 +89,7 @@ function Login() {
 
     //Retrieve user data from the backend ------------------------------------
     useEffect(() => {
-        fetch("/userdata")
+        fetch("/api/userdata")
         .then((res) => res.json())
         .then((userData) => {
             setUserData(userData);
@@ -132,22 +137,36 @@ function Login() {
             <form className='profile contain' 
                     onSubmit={LoginValidation}>
 
-                <h1 style={{textAlign: "center"}}>Login</h1>
+                <h1 style={{textAlign: "center"}}>Welcome!</h1>
+                <h1 style={{textAlign: "center"}}>Let's get started.</h1><br></br>
                 
                 {/* USERNAME INPUT */}
-                <label>username</label><br></br>
+                <label>USERNAME</label><br></br>
                 <input type="username" value={usernameInput} required style={{fontSize: "1.5rem", width: "100%", height:"50px"  }} 
                         onChange={(e) => setUsernameInput(e.target.value)}/><br></br><br></br>
 
                 {/* PASSWORD INPUT */}
-                <label>password</label><br></br>
+                <label>PASSWORD</label><br></br>
                 <input type="password" value={passwordInput} required style={{fontSize: "1.5rem", width: "100%", height:"50px"}} 
                         onChange={(e) => setPasswordInput(e.target.value)}/><br></br><br></br>
 
-                <p style={{color: "red"}}>{invalidMessage}</p>
+                {invalidMessage && <p style={{color: "red"}}>{invalidMessage}</p>}
                 
+                {/* <div className="row">
+                    <div className="col" style={{display: "flex", justifyContent: "center"}}>
+                        <input type="checkbox" className='form-check-input' style={{bottom:"8px", position: "relative", right:"3px"}}/>
+                        <label> Remember me </label>
+                    </div>
+                    <div className="col" style={{display: "flex", justifyContent: "center"}}>
+                        <a href="#!" style={{textDecoration: "none"}}>Forgot password?</a>
+                    </div>
+                </div> */}
+
                 <input type="submit" value="Login"  style={{maxWidth: "400px"}} 
                         onClick={()=> {CheckInput(userData, usernameInput, passwordInput)}}/><br></br><br></br>
+                        <div className="text-center">
+                            <p>New to Justworks? <a style={{textDecoration: "none"}} href="#!">Get Started</a></p>
+                        </div><br></br><br></br>
 
             </form>
             </div>
