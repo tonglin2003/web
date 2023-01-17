@@ -1,5 +1,4 @@
 export default class UpdateUserData{
-
 	static UpdateProfile(body){
 		return fetch(`/api/update_profile`,{
       		'method':'POST',
@@ -12,7 +11,11 @@ export default class UpdateUserData{
 	.catch(error => console.log(error))
 	}
 
+
+
 	static UpdateAccount(body){
+		console.log("update account is running")
+
 		return fetch(`/api/update_account`,{
       		'method':'POST',
       		 headers : {
@@ -23,6 +26,8 @@ export default class UpdateUserData{
 	.then(response => response.json())
 	.catch(error => console.log(error))
 	}
+
+
 
 	static NewUser(body){
 		return fetch(`/api/new_user`,{

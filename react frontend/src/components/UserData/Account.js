@@ -47,13 +47,15 @@ const Account = () => {
     const [validUpdateMessage, setValidUpdateMessage] = useState();
 
     const updatedInfo = ()=>{
+        console.log("update account is starting")
         UpdateUserData.UpdateAccount({id, newName, newPassword, newPhone, newEmail})
-        .then((response) => updatedInfo(response))
+        .then((response) => {return response})
         .catch(error => console.log('error',error))
       }
 
     const handleUserUpdate=(e)=>{
         e.preventDefault()
+        console.log("update account is about to start")
         updatedInfo()
         setValidUpdateMessage("Update success!")
     }
