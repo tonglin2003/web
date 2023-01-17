@@ -10,7 +10,8 @@
             "rate": 4.5,
             "count": 120
         },
-        "percent discount": 15
+        "percent discount": 15,
+        "company": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Axios_logo_%282020%29.svg/1200px-Axios_logo_%282020%29.svg.png"
     },
     {
         "id": 2,
@@ -23,7 +24,8 @@
             "rate": 4.1,
             "count": 259
         },
-        "percent discount": 10
+        "percent discount": 10,
+        "company": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Kinsta_logo.png/1200px-Kinsta_logo.png"
     },
     {
         "id": 3,
@@ -36,7 +38,9 @@
             "rate": 4.7,
             "count": 500
         },
-        "percent discount": 5
+        "percent discount": 5,
+        "company": "https://static1.squarespace.com/static/5ba04b9ca9e0286ffa06d14f/t/61e1cf84a6d2b129006b1907/1671726099908/"
+
     },
     {
         "id": 4,
@@ -49,7 +53,8 @@
             "rate": 2.1,
             "count": 430
         },
-        "percent discount": 5
+        "percent discount": 5,
+        "company": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/xwvatl59hxwc4tmqnwlt"
     },
     {
         "id": 5,
@@ -62,7 +67,8 @@
             "rate": 4.6,
             "count": 400
         },
-        "percent discount": 10
+        "percent discount": 10,
+        "company": "https://repository-images.githubusercontent.com/37153337/9d0a6780-394a-11eb-9fd1-6296a684b124"
     },
     {
         "id": 6,
@@ -75,7 +81,8 @@
             "rate": 3.9,
             "count": 70
         },
-        "percent discount": 20
+        "percent discount": 20,
+        "company": "https://d1.awsstatic.com/asset-repository/products/amazon-rds/1024px-MySQL.ff87215b43fd7292af172e2a5d9b844217262571.png"
     },
     {
         "id": 7,
@@ -88,7 +95,9 @@
             "rate": 3,
             "count": 400
         },
-        "percent discount": 30
+        "percent discount": 30,
+        "company": "https://cdn.freebiesupply.com/logos/thumbs/2x/codecademy-logo.png"
+
     },
     {
         "id": 8,
@@ -101,7 +110,8 @@
             "rate": 1.9,
             "count": 100
         },
-        "percent discount": 10
+        "percent discount": 10,
+        "company": "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.png"
     },
     {
         "id": 9,
@@ -114,7 +124,8 @@
             "rate": 3.3,
             "count": 203
         },
-        "percent discount": 10
+        "percent discount": 10,
+        "company": "https://www.ionos.com/newsroom/wp-content/uploads/sites/3/2022/02/LOGO_IONOS_Blue_RGB.png"
     },
     {
         "id": 10,
@@ -126,7 +137,8 @@
         "rating": {
             "rate": 4.5
         },
-        "percent discount": 30
+        "percent discount": 30,
+        "company": "https://www.djangoproject.com/m/img/logos/django-logo-negative.png"
     },
     {
         "id": 11,
@@ -138,7 +150,8 @@
         "rating": {
             "rate": 4.8
         },
-        "percent discount": 30
+        "percent discount": 30,
+        "company": "https://www.python.org/static/community_logos/python-logo-generic.svg"
     },
     {
         "id": 12,
@@ -150,6 +163,7 @@
         "rating": {
             "rate": 4.5
         },
-        "percent discount": 30
+        "percent discount": 30,
+        "company": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png"
     }
 ]

@@ -49,6 +49,12 @@ const LargeCard = ({productId}) => {
                                  className="card-img-top p-3"
                                  alt={ product['title'] } />
                         </div>
+                          <div className="text-center">
+                              <p className="font" style={{fontSize: "1vw"}}>Learn more about the Company: </p>
+                              <Link to="/briefbio">
+                                <img src={product['company']} className="w-25"/>
+                              </Link>
+                          </div>
                     </div>
 
 
