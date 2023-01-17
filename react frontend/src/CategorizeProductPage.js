@@ -3,6 +3,9 @@ import Spacer from './components/Spacer'
 import Header from './components/WebHeaderAndFooter/Header'
 import Cards from './components/Cards';
 import {useParams} from "react-router-dom";
+import HeaderImageDisplay from "./components/SingleProductPageFunctions/HeaderImageDisplay"
+import Footer from "./components/WebHeaderAndFooter/Footer";
+
 
 const CategorizeProductPage = () => {
     const { category } = useParams();
@@ -36,24 +39,27 @@ const CategorizeProductPage = () => {
 
 
     return (
-                <>
-
+        <>
             <Header />
+            <HeaderImageDisplay/>
 
-            {/*------- Browse Page of showing all the products ------- */}
-            <h1 style={{margin: "10vh 0 0 50px"}}>Browse Products</h1>
+
 
             {/*------- Search Bar------- */}
 
-            <div>
-                <input className={"w-50 ml-5"}
-                       type="text"
-                       placeholder="Search"
-                       onChange={searchNow}
-                       style={{margin: "0 3% 0 5%"}}
-                />
-                <button className={"button-6"} onClick={ ()=> setSearch(true) }>Search</button>
-            </div>
+            <div style={{background:"#faf8f8"}}>
+            {/*------- Search Bar------- */}
+                <div >
+
+                    <div className="">
+                        <input className={"ml-5 my-5 font"}
+                               type="text"
+                               placeholder="Search"
+                               onChange={searchNow}
+                               style={{margin: "0 3% 0 8%", minHeight:"3rem", width: "30vw"}}
+                        />
+                        <button className={"button-6"} onClick={ ()=> setSearch(true) }>Search</button>
+                    </div>
 
 
             <div>
@@ -110,7 +116,9 @@ const CategorizeProductPage = () => {
 
             <Spacer />
 
-
+            </div>
+            </div>
+                    <Footer/>
         </>
     )
 

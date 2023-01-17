@@ -27,8 +27,6 @@ const Cards = ({size, image, title, price, discount, productId, category}) => {
 
 
 const SmallCard = ({image, title, price, discount, productId, category}) => {
-    const [haveDiscount, setHaveDiscount] = useState(discount>0)
-
     return(
         <>
              <div className="col-md-4 col-sm-6 col-xs-6 d-block mx-auto d-flex justify-content-center" >
@@ -41,7 +39,7 @@ const SmallCard = ({image, title, price, discount, productId, category}) => {
                     </Link>
                     <div className="card-body" style={{border:"none"}}>
                         <h5 className="card-title title_font" style={{fontSize:"1.5vw"}}>{title}</h5>
-                        {haveDiscount?
+                        { (discount > 0)?
                             <div className="card-text font fw-bold mt-3">
                                 <span style={{color: "#983a3a"}}>
                                     ${ (Number(price) * (1-(Number(discount))/100)).toFixed(2)}

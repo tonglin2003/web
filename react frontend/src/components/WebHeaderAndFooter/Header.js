@@ -31,16 +31,16 @@ const Header = () => {
                 <div className="collapse navbar-collapse" id="navbarNav" style={{padding:"10px",paddingBottom:"15px"}}>
                     <ul className="navbar-nav">
                         <li className="nav-item active">
-                            <Link to="/" className="nav-link">Home</Link>
+                            <Link to="/" target="_blank" class="nav-link">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/" className="nav-link">Services</Link>
+                            <Link to="/policy" target="_blank" class="nav-link">Policy</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/browse" className="nav-link">Shop</Link>
+                            <Link to="/browse" target="_blank" class="nav-link">Shop</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/post" className="nav-link">Post Product</Link>
+                            <Link to="/post" target="_blank" class="nav-link">Post Product</Link>
                         </li>
                         <li className="nav-item">
                             {/*<Link to="/post" style={{textDecoration: "none"}}><button type="button" className="button-6">Post Product</button></Link>*/}
