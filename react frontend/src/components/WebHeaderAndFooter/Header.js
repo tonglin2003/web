@@ -39,11 +39,13 @@ const Header = () => {
                         <li className="nav-item">
                             <Link to="/browse" target="_blank" class="nav-link">Shop</Link>
                         </li>
+
                         <li className="nav-item">
-                            <Link to="/post" target="_blank" class="nav-link">Post Product</Link>
-                        </li>
-                        <li className="nav-item">
-                            {/*<Link to="/post" style={{textDecoration: "none"}}><button type="button" className="button-6">Post Product</button></Link>*/}
+                            {isLoggedin?
+                                <Link to="/post" target="_blank" class="nav-link">Post Product</Link>
+                                :
+                                <Link to="/login" target="_blank" class="nav-link">Post Product</Link>
+                            }
                         </li>
                     </ul>
                     <Link to={"/"}>
