@@ -1,17 +1,17 @@
 import json
 
 
-with open('static/userData.json') as f:
-        data = json.load(f)
-
 # for user in data:
 #     print(user['bio'])
 
 
 #Load json file
 def loadData():
-    with open('static/userData.json') as f:
+    with open('./static/userData.json') as f:
         return json.load(f)
+
+
+data = loadData()
 
 #Save json file with new data
 def saveData(data):
