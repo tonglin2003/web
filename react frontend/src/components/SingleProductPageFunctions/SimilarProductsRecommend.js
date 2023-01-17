@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import '../../css/styles.css'
 import axios from "axios";
-import Cards from "../Cards";
+import WideCards from "../CardsComponent/WideCards";
+import SmallCards from "../CardsComponent/SmallCards"
 
 const RecommendProductsDisplay = (category) => {
     // ----------------------------- Recommendation Product ----------------------------- //
@@ -56,13 +57,13 @@ const RecommendProductsDisplay = (category) => {
                             {
 
                                 formattedRecProduct.map(recProduct => (
-                                                    <Cards size={1}
-                                                            image={recProduct.image}
-                                                            title={recProduct.title}
-                                                            price={recProduct.price}
-                                                            productId={recProduct.id}
-                                                            category={recProduct.category}
-                                                           discount = {recProduct['percent discount']}
+                                                    <SmallCards
+                                                               image={recProduct.image}
+                                                               title={recProduct.title}
+                                                               price={recProduct.price}
+                                                               productId={recProduct.id}
+                                                               category={recProduct.category}
+                                                               discount = {recProduct['percent discount']}
                                                     />
 
                                 )

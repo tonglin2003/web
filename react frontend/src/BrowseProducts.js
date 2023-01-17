@@ -1,11 +1,15 @@
 import React, {useEffect, useState} from 'react'
 import Spacer from './components/Spacer'
 import Header from './components/WebHeaderAndFooter/Header'
-import Cards from './components/Cards';
+import WideCards from './components/CardsComponent/WideCards';
 import axios from "axios"
 import Footer from "./components/WebHeaderAndFooter/Footer";
 import {Link} from "react-router-dom";
 import HeaderImageDisplay from "./components/SingleProductPageFunctions/HeaderImageDisplay"
+
+import {MDBContainer} from "mdb-react-ui-kit";
+
+import "./css/card.css";
 
 
 function BrowseProducts() {
@@ -61,7 +65,7 @@ function BrowseProducts() {
                     search?
                         // ------------ If user request for a search -----------
                         // filters through the products to see if it includes the search term
-                        <div className="browse-cards row col-md" style={{margin: "0 5vw 0 5vw"}}>
+                           <MDBContainer fluid>
                             {
                                 products.filter((product) =>
                                     {
@@ -76,37 +80,42 @@ function BrowseProducts() {
                                     (
                                         <>
                                             {/*{ console.log( "Type of filteredProject is: " + typeof filteredProduct ) }*/}
-                                            <Cards size={1}
-                                                   image={filteredProduct.image}
-                                                   title={filteredProduct.title}
-                                                   price={filteredProduct.price}
-                                                   discount = {filteredProduct['percent discount']}
-                                                   productId={filteredProduct.id}
-                                                   category = {filteredProduct.category}
+                                            <WideCards size={1}
+                                                       image={filteredProduct.image}
+                                                       title={filteredProduct.title}
+                                                       price={filteredProduct.price}
+                                                       discount = {filteredProduct['percent discount']}
+                                                       productId={filteredProduct.id}
+                                                       category = {filteredProduct.category}
+                                                       description={filteredProduct.description}
                                             />
                                         </>
                                     ))
                             }
 
-                        </div>
+                        </MDBContainer>
                         // ----------- If there is no need for search ------------
-                        : <div className="browse-cards row col-md" style={{margin: "0 5vw 0 5vw"}}>
+                        :  <MDBContainer fluid>
                             {
-                                products.map(product => (<Cards size={1}
-                                                                image={product.image}
-                                                                title={product.title}
-                                                                price={product.price}
-                                                                discount = {product['percent discount']}
-                                                                productId={product.id}
-                                                                category = {product.category}
+                                products.map(product => (<WideCards size={1}
+                                                                    image={product.image}
+                                                                    title={product.title}
+                                                                    price={product.price}
+                                                                    discount = {product['percent discount']}
+                                                                    productId={product.id}
+                                                                    category = {product.category}
+                                                                    description={product.description}
                                     />
                                     // category is working fine when used console.log
 
                                 ))
                             }
-                        </div>
+                        </MDBContainer>
                 }
             </div>
+
+
+
 
 
             <Spacer />

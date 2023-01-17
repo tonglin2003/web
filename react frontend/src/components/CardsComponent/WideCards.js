@@ -1,9 +1,21 @@
 import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
-import '../css/styles.css'
+import '../../css/styles.css'
+import {
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBIcon,
+  MDBRipple,
+  MDBBtn,
+} from "mdb-react-ui-kit";
+import "../../css/card.css";
 
 
-const Cards = ({size, image, title, price, discount, productId, category}) => {
+const WideCards = ({size, image, title, price, discount, productId, category, description}) => {
     /**
      * size (int, Required): from 1 to 3 to decide size
      * Image: (string, Optional): Link or directory to the product image
@@ -19,6 +31,7 @@ const Cards = ({size, image, title, price, discount, productId, category}) => {
                                       discount={discount}
                                       productId={productId}
                                       category={category}
+                                      description = {description}
     /> }
     else if(size === 2){ return <MediumCard image = {image} title={title} price={price} />}
     else if (size === 4) {return <BioCard image ={image} title={title} price={price} /> }
@@ -26,40 +39,70 @@ const Cards = ({size, image, title, price, discount, productId, category}) => {
 }
 
 
-const SmallCard = ({image, title, price, discount, productId, category}) => {
+const SmallCard = ({image, title, price, discount, productId, category, description}) => {
     return(
         <>
-             <div className="col-md-4 col-sm-6 col-xs-6 d-block mx-auto d-flex justify-content-center" >
-                <div className="card position-relative mb-5" style={{width:"90%"}}>
-                    <Link to={`/product/${category}/${productId}`}
-                          className="card text-center position-relative"
-                          style={{border: "none"}}
-                    >
-                        <img src={image} className="card-img-top d-block mx-auto overflow-auto w-50 rounded" alt="Los Angeles Skyscrapers" />
-                    </Link>
-                    <div className="card-body" style={{border:"none"}}>
-                        <h5 className="card-title title_font" style={{fontSize:"1.5vw"}}>{title}</h5>
-                        { (discount > 0)?
-                            <div className="card-text font fw-bold mt-3">
-                                <span style={{color: "#983a3a"}}>
-                                    ${ (Number(price) * (1-(Number(discount))/100)).toFixed(2)}
-                                </span>
-                                <span style={{fontSize: "1vw", opacity:"50%"}}>
-                                    <del className="m-3">${Number(price).toFixed(2)}</del>
-                                </span>
-                            </div>
-                            :
-                            <div className="card-text font fw-bold mt-3">
-                                    <p className="font">${Number(price).toFixed(2)}</p>
-                            </div>
-                        }
-
-
-                        <div className="col text-center">
+        <MDBRow className="justify-content-center mb-3">
+            <MDBCol md="12" xl="10">
+              <MDBCard className="shadow-0 border rounded-3">
+                <MDBCardBody className="py-5">
+                  <MDBRow>
+                    <MDBCol md="12" lg="3" className="mb-4 mb-lg-0">
+                      <MDBRipple
+                        rippleColor="light"
+                        rippleTag="div"
+                        className="bg-image rounded hover-zoom hover-overlay"
+                      >
+                        <MDBCardImage
+                          src={image}
+                          fluid
+                          className="w-100"
+                        />
+                        <a href="react frontend/src/components#!">
+                          <div
+                            className="mask"
+                            style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+                          ></div>
+                        </a>
+                      </MDBRipple>
+                    </MDBCol>
+                    <MDBCol md="6">
+                      <h5 className="title_font" style={{fontSize:"2rem"}}>{title}</h5>
+                      <div className="d-flex flex-row">
+                        <div className="text-danger mb-1 me-2">
+                          <MDBIcon fas icon="star" />
+                          <MDBIcon fas icon="star" />
+                          <MDBIcon fas icon="star" />
+                          <MDBIcon fas icon="star" />
                         </div>
-                    </div>
-                </div>
-            </div>
+                        <span>145</span>
+                      </div>
+                      <div className="mt-1 mb-0 text-muted small font">
+                          {description}
+                      </div>
+                    </MDBCol>
+                    <MDBCol
+                      md="6"
+                      lg="3"
+                      className="border-sm-start-none border-start"
+                    >
+                      <div className="d-flex flex-row align-items-center mb-1">
+                        <h4 className="mb-1 me-1 title_font" style={{fontSize: "2vw"}}>${ (Number(price) * (1-(Number(discount))/100)).toFixed(2)}</h4>
+                        <span className="text-danger">
+                          <s className="font" style={{color: "#d03333", fontSize: "1.5vw"}}>${Number(price).toFixed(2)}</s>
+                        </span>
+                      </div>
+                      <div className="d-flex flex-column mt-4">
+                          <Link to={`/product/${category}/${productId}`}>
+                                <button className="button-6 w-100">Details</button>
+                          </Link>
+                      </div>
+                    </MDBCol>
+                  </MDBRow>
+                </MDBCardBody>
+              </MDBCard>
+            </MDBCol>
+          </MDBRow>
         </>
     )
 }
@@ -182,4 +225,4 @@ const BioCard = ({image, title, price}) => {
 }
 
 
-export default Cards
+export default WideCards

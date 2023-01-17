@@ -3,7 +3,7 @@ import {useParams} from "react-router-dom";
 import Header from './components/WebHeaderAndFooter/Header'
 import Footer from './components/WebHeaderAndFooter/Footer'
 import Spacer from './components/Spacer'
-import Cards from './components/Cards';
+import WideCards from './components/CardsComponent/WideCards';
 import { Link } from 'react-router-dom';
 import SingleProductDisplay from './components/SingleProductPageFunctions/SingleProductsFunction'
 import axios from "axios";
