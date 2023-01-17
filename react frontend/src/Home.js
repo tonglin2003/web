@@ -9,14 +9,11 @@ import CarouselItem from "./components/HomePageFunctions/Category_Cards";
 import RecommendDisplay from "./components/HomePageFunctions/recommendDisplay"
 
 
-
-
 function Home() {
 
     return (
         <>
             <Header />
-
                 <div
                 className="image-fluid "
                 style={{

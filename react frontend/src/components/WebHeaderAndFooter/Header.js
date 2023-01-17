@@ -7,16 +7,10 @@ const Header = () => {
     const currentUser = JSON.parse(localStorage.getItem('currentUser'))
     const [isLoggedin, setIsLoggedIn] = useState(false);
     
-    console.log(currentUser);
-    // console.log(isLoggedin);
-    console.log("hi hi hi")
-    
     //Check if logged in
     useEffect(() => {
-        if(currentUser){
-            if(currentUser !== -1){
-                setIsLoggedIn(true)
-            }
+        if(currentUser && currentUser !== -1){
+            setIsLoggedIn(true)
         }
     }, []);
 
@@ -30,7 +24,7 @@ const Header = () => {
         <header>
             <nav className="navbar navbar-inverse navbar-fixed-top navbar-expand-lg navbar-light " style={{borderBottom: "solid" ,borderBlockColor:"whitesmoke"}} id="nav">
                 <div className={"container-fluid"}>
-                <Link class=" navbar-brand" to="/"></Link>
+                <Link className=" navbar-brand" to="/"></Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -58,7 +52,7 @@ const Header = () => {
                             </a>
                         </Link>
                     <div className="container-logo" style={{margin: "auto 3%"}}>
-                        {!(isLoggedin) && <Link to={'/login'} id="getstartedbutton" style={{textDecoration: "none", padding:"20px"}}>Get Started</Link>}
+                        {!(isLoggedin) && <Link to={'/get-started'} id="getstartedbutton" style={{textDecoration: "none", padding:"20px"}}>Get Started</Link>}
                         &nbsp;&nbsp;&nbsp;
                         {!(isLoggedin) && <Link to={'/login'} id="theloginbutton" >Login</Link>}
                         {isLoggedin && <Link to={'/'} style={{textDecoration: "none"}}
