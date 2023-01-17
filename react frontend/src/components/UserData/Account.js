@@ -1,4 +1,3 @@
-
 import React, {useState, useEffect} from 'react'
 import UpdateUserData from './UpdateUserData';
 import Spacer from '../Spacer';
