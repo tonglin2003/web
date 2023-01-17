@@ -12,6 +12,17 @@ function Login() {
     //           VARIABLES
     //-----------------------------------------------------------------------
 
+    //------BUG:  DOES NOT REDIRECT TO DASHBOARD IF ALREADY LOGGED IN. WILL LOG OUT
+    //Init user data from Backend
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+
+    useEffect(() => {
+        if(user && user !== -1){
+            navigateToDashboard();}    
+    }, []);
+
+    //----------------------------------------------------------------------------
+ 
     //User Input
     const [usernameInput, setUsernameInput] = useState();
     const [passwordInput, setPasswordInput] = useState();
@@ -60,11 +71,8 @@ function Login() {
     const LoginValidation = event =>{
         event.preventDefault();
         const LoggedUser = JSON.parse(localStorage.getItem('currentUser'));
-        if(LoggedUser && LoggedUser !== -1){
-            
+        if(LoggedUser && LoggedUser !== -1){     
             navigateToDashboard();}
-        // else{
-        //     event.preventDefault();} 
     }
 
 
@@ -75,17 +83,7 @@ function Login() {
     //Default current user is none (LOGGED OUT)------------------------------------
     useEffect(() => {
         localStorage.setItem('currentUser', -1);
-        console.log('test')
-
     }, []);
-
-    // //Sets username = current username (LOGGED IN)------------------------------------
-    // useEffect(() => {
-    //     const username = JSON.parse(localStorage.getItem('currentUser'));
-    //     if(username){
-    //         setUsername(username);
-    //     }
-    // }, []);
 
     //Retrieve user data from the backend ------------------------------------
     useEffect(() => {
@@ -108,12 +106,6 @@ function Login() {
     }
     //DEBUG USER DATA (END)-----------------
     
-    // var currentUserData = userData[1]
-
-    //var searchedUser = findUserByUsername(userData, userInput)
-
-    // console.log((findUserByUsername(userData, "janedoe")).bio);
-
     ///-----------------------------------------------------------------------
     //           RETURN
     //-----------------------------------------------------------------------
@@ -121,13 +113,6 @@ function Login() {
     return (
         <>
             <Header />
-
-            {/* <div> */}
-                {/* {currentUserData.name} */}
-                {/* {userData.map((user, i) => (
-                    <h3 key={i}>{user.name}</h3>
-                ))}
-            </div> */}
        
             <div className='profile background'>
             <Spacer />
@@ -151,16 +136,6 @@ function Login() {
                         onChange={(e) => setPasswordInput(e.target.value)}/><br></br><br></br>
 
                 {invalidMessage && <p style={{color: "red"}}>{invalidMessage}</p>}
-                
-                {/* <div className="row">
-                    <div className="col" style={{display: "flex", justifyContent: "center"}}>
-                        <input type="checkbox" className='form-check-input' style={{bottom:"8px", position: "relative", right:"3px"}}/>
-                        <label> Remember me </label>
-                    </div>
-                    <div className="col" style={{display: "flex", justifyContent: "center"}}>
-                        <a href="#!" style={{textDecoration: "none"}}>Forgot password?</a>
-                    </div>
-                </div> */}
 
                 <input type="submit" value="Login"  style={{maxWidth: "400px"}} 
                         onClick={()=> {CheckInput(userData, usernameInput, passwordInput)}}/><br></br><br></br>
@@ -171,11 +146,8 @@ function Login() {
             </form>
             </div>
             <Spacer />
-
             </div>
-
             <Footer />
-
         </>
     )
 }
