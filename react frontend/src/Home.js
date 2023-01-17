@@ -27,7 +27,7 @@ function Home() {
                             excellence, and long-term thinking.
                         </p>
                         <p className="font fw-bold m-3">Find your special discount offer here: </p>
-                        <Link to="/browse" className="mx-3" style={{textDecoration: "none"}}><button type="button" className="button-6">Browse Product</button></Link>
+                        <Link to="/browse" className="mx-3" style={{textDecoration: "none"}}><button type="button" className="button-6">Find Discount</button></Link>
                     </div>
                     <div className="col">
                         <img src={ "https://assets-global.website-files.com/5e19ea5aa7d3a217492e372b/61786221a8b701a33c2b9f0d_AxiosHQ_Launch_house-ad%20(1).png" }

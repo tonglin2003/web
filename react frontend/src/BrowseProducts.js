@@ -38,25 +38,23 @@ function BrowseProducts() {
 
     return (
         <div>
-
+            <Header />
             <HeaderImageDisplay/>
 
-            <Header />
 
-
+        <div style={{background:"#faf8f8"}}>
             {/*------- Search Bar------- */}
-            <div style={{margin: "0 4rem 0 4rem"}}>
+            <div >
 
-            <div>
-                <input className={"ml-5 my-5"}
-                       type="text"
-                       placeholder="Search"
-                       onChange={searchNow}
-                       style={{margin: "0 3% 0 5%", minHeight:"3rem", width: "30vw"}}
-                />
-                <button className={"button-6"} onClick={ ()=> setSearch(true) }>Search</button>
-            </div>
-
+                <div className="">
+                    <input className={"ml-5 my-5 font"}
+                           type="text"
+                           placeholder="Search"
+                           onChange={searchNow}
+                           style={{margin: "0 3% 0 8%", minHeight:"3rem", width: "30vw"}}
+                    />
+                    <button className={"button-6"} onClick={ ()=> setSearch(true) }>Search</button>
+                </div>
 
             <div>
                 {
@@ -117,7 +115,7 @@ function BrowseProducts() {
             <Spacer />
 
 
-
+            </div>
         </div>
             <Footer/>
         </div>

@@ -107,7 +107,7 @@ const PostProductForm = (props) => {
             <div className="col mb-4">
                 <div className="font fw-bold">*Product Category </div>
                     <div style={{fontSize:"10px" , color:"gray"}}>
-                        This will allow a buyer to contact you directly for any needed questions.
+                        This will allow your product to be found easier
                     </div>
                 <div className="form-outline mb-4">
                     <input type="text"
