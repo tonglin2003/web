@@ -168,19 +168,11 @@ footer .content .link-boxes{
 /*css for category thing*/
 .content .link-boxes .box .link_name{
   color: #fff;
+    font-weight: bold;
   font-size: 18px;
   margin-top: 5px;
   margin-bottom: 10px;
   position: relative;
-}
-/*the line under each thing*/
-.link-boxes .box .link_name::before{
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  height: 2px;
-  width: 50px;
-  background: #fff;
 }
 /*removes stupid bullets*/
 .content .link-boxes .box li{
@@ -190,9 +182,7 @@ footer .content .link-boxes{
 /*css for links*/
 .content .link-boxes .box li a{
   color: #fff;
-  padding-left: 50px;
   font-size: 14px;
-  font-weight: 400;
   text-decoration: none;
   opacity: 0.8;
   transition: all 0.4s ease
@@ -203,13 +193,13 @@ footer .content .link-boxes{
   text-decoration: underline;
 }
 
-.footer-bottom{
-    background: #0a3c8c;
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 1px;
-    text-align: center;
-}
+/*.footer-bottom{*/
+/*    background: #0a3c8c;*/
+/*    width: 100%;*/
+/*    padding-top: 10px;*/
+/*    padding-bottom: 1px;*/
+/*}*/
+
 .footer-bottom p{
     font-size: 14px;
     word-spacing: 2px;
