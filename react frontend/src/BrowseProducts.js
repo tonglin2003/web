@@ -4,6 +4,8 @@ import Header from './components/WebHeaderAndFooter/Header'
 import Cards from './components/Cards';
 import axios from "axios"
 import Footer from "./components/WebHeaderAndFooter/Footer";
+import {Link} from "react-router-dom";
+import HeaderImageDisplay from "./components/SingleProductPageFunctions/HeaderImageDisplay"
 
 
 function BrowseProducts() {
@@ -36,6 +38,8 @@ function BrowseProducts() {
 
     return (
         <div>
+
+            <HeaderImageDisplay/>
 
             <Header />
 
