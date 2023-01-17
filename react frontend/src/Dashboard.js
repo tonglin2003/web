@@ -11,6 +11,7 @@ import {
   CDBSidebarMenuItem,
 } from 'cdbreact';
 import Analytics from './components/UserData/Analytics'
+import Account from "./components/UserData/Account";
 import Spacer from './components/Spacer'
 import css from './css/styles.css'
 
@@ -18,15 +19,22 @@ import css from './css/styles.css'
 //           SIDEBAR COMPONENT
 //-----------------------------------------------------------------------
 
-const Sidebar = ({ setIsDashboard, setIsAnalytics}) => {
+const Sidebar = ({ setIsDashboard, setIsAnalytics, setIsAccount}) => {
 
     function LoadAnalytics(){
             setIsDashboard(false);
+            setIsAccount(false);
             setIsAnalytics(true);
     }
     function LoadDashboard(){
             setIsAnalytics(false);
+            setIsAccount(false);
             setIsDashboard(true);
+    }
+    function LoadAccount(){
+        setIsDashboard(false);
+        setIsAnalytics(false);
+        setIsAccount(true);
     }
 
     return (
@@ -42,6 +50,9 @@ const Sidebar = ({ setIsDashboard, setIsAnalytics}) => {
                     <CDBSidebarMenu>
                     <NavLink exact to="" activeClassName="activeClicked">
                         <div onClick={()=> LoadDashboard()}><CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem></div>
+                    </NavLink>
+                    <NavLink exact to="" activeClassName="activeClicked">
+                        <div onClick={()=> LoadAccount()}><CDBSidebarMenuItem icon="database">My Account</CDBSidebarMenuItem></div>
                     </NavLink>
                     <NavLink exact to="/myproducts" activeClassName="activeClicked">
                         <CDBSidebarMenuItem icon="shop" style={{marginLeft: "9px"}}>
@@ -90,6 +101,8 @@ function Dashboard(){
     // Load Different tabs
     const [isDashboard, setIsDashboard] = useState(true);
     const [isAnalytics, setIsAnalytics] = useState(false);
+    const [isAccount, setIsAccount] = useState(false);
+
 
     // Redirect back to LOGIN Page
     const navigate = useNavigate();
@@ -121,11 +134,12 @@ function Dashboard(){
             <Header />
             <div className="container-default" >
             <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
-                    <Sidebar setIsDashboard={setIsDashboard} setIsAnalytics={setIsAnalytics} />
+                    <Sidebar setIsDashboard={setIsDashboard} setIsAnalytics={setIsAnalytics} setIsAccount={setIsAccount}/>
                     <div style={{width: "100%", paddingLeft: "50px", paddingRight: "50px"}}>
                         <Spacer />
                         {isDashboard && <DashHome/>}
                         {isAnalytics && <Analytics/>}
+                        {isAccount && <Account/>}
                         <Spacer />
                         <Spacer />
                     </div>

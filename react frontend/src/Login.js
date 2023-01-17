@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, Link} from 'react-router-dom'
 import Header from './components/WebHeaderAndFooter/Header'
 import Footer from './components/WebHeaderAndFooter/Footer'
 import Spacer from './components/Spacer'
@@ -165,7 +165,7 @@ function Login() {
                 <input type="submit" value="Login"  style={{maxWidth: "400px"}} 
                         onClick={()=> {CheckInput(userData, usernameInput, passwordInput)}}/><br></br><br></br>
                         <div className="text-center">
-                            <p>New to Justworks? <a style={{textDecoration: "none"}} href="#!">Get Started</a></p>
+                            <p>New to Justworks? <Link style={{textDecoration: "none"}} to="/get-started">Get Started</Link></p>
                         </div><br></br><br></br>
 
             </form>

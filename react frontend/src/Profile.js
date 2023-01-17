@@ -33,7 +33,6 @@ function Profile() {
 
     // Redirect back to LOGIN if not logged in
     useEffect(() => {
-        // console.log(id)
         if(!(id) || id < 0){
             if(!(currentUser) || currentUser === -1){
                 navigateToLogin();}
@@ -122,7 +121,7 @@ const NewProfile = () => {
 
 
     const updatedInfo = ()=>{
-        UpdateUserData.UpdateUser({id, newName, newImage, newBio, newPhone, newEmail, newWebsite, newLocation})
+        UpdateUserData.UpdateProfile({id, newName, newImage, newBio, newPhone, newEmail, newWebsite, newLocation})
         .then((response) => updatedInfo(response))
         .catch(error => console.log('error',error))
       }

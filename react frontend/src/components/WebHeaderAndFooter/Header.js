@@ -52,7 +52,7 @@ const Header = () => {
                             </a>
                         </Link>
                     <div className="container-logo" style={{margin: "auto 3%"}}>
-                        {!(isLoggedin) && <Link to={'/login'} id="getstartedbutton" style={{textDecoration: "none", padding:"20px"}}>Get Started</Link>}
+                        {!(isLoggedin) && <Link to={'/get-started'} id="getstartedbutton" style={{textDecoration: "none", padding:"20px"}}>Get Started</Link>}
                         &nbsp;&nbsp;&nbsp;
                         {!(isLoggedin) && <Link to={'/login'} id="theloginbutton" >Login</Link>}
                         {isLoggedin && <Link to={'/'} style={{textDecoration: "none"}}

@@ -7,6 +7,7 @@ import SingleProduct from './SingleProduct'
 import BriefBio from './BriefBio'
 import BrowseProducts from './BrowseProducts'
 import Login from './Login'
+import SignUp from './SignUp'
 import Dashboard from './Dashboard'
 import CategorizeProductPage from "./CategorizeProductPage";
 import Policy from "./Policy";
@@ -17,6 +18,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/get-started" element={<SignUp />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/profile/user/:userID" element={<Profile />}/>
       <Route path="/profile" element={<Profile />}/>
