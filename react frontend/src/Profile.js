@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {useNavigate,useParams} from 'react-router-dom'
+import {NavLink, useNavigate, useParams} from 'react-router-dom'
 import axios from "axios"
 import { Link } from 'react-router-dom'
 import Header from './components/WebHeaderAndFooter/Header'
@@ -8,6 +8,72 @@ import Spacer from './components/Spacer'
 import WideCards from './components/CardsComponent/WideCards'
 import UpdateUserData from './components/UserData/UpdateUserData'
 import css from './css/styles.css'
+// import ...
+import Analytics from './components/UserData/Analytics'
+import Account from "./components/UserData/Account";
+import {CDBSidebar, CDBSidebarContent, CDBSidebarHeader, CDBSidebarMenu, CDBSidebarMenuItem} from "cdbreact";
+const Sidebar = ({ setIsDashboard, setIsAnalytics, setIsAccount}) => {
+
+    function LoadAnalytics(){
+            setIsDashboard(false);
+            setIsAccount(false);
+            setIsAnalytics(true);
+    }
+    function LoadDashboard(){
+            setIsAnalytics(false);
+            setIsAccount(false);
+            setIsDashboard(true);
+    }
+    function LoadAccount(){
+        setIsDashboard(false);
+        setIsAnalytics(false);
+        setIsAccount(true);
+    }
+
+    return (
+        <div style={{ display: 'flex', overflow: 'scroll initial' }}>
+
+            <CDBSidebar textColor="#fff" backgroundColor="#333">
+
+                <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
+                    <div style={{marginLeft: "5px", marginTop: "23px"}}>Menu</div>
+                </CDBSidebarHeader>
+
+                <CDBSidebarContent className="sidebar-content">
+                    <CDBSidebarMenu>
+
+                    <NavLink exact to="" activeClassName="activeClicked">
+                        <div onClick={()=> LoadDashboard()}><CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem></div>
+                    </NavLink>
+
+                    <NavLink exact to="" activeClassName="activeClicked">
+                        <div onClick={()=> LoadAccount()}><CDBSidebarMenuItem icon="database">My Account</CDBSidebarMenuItem></div>
+                    </NavLink>
+
+                    <NavLink exact to="/myproducts" activeClassName="activeClicked">
+                        <CDBSidebarMenuItem icon="shop" style={{marginLeft: "9px"}}>
+                            <span style={{marginLeft: "8px"}}>My Products</span></CDBSidebarMenuItem>
+                    </NavLink>
+
+                    <NavLink exact to="/profile" activeClassName="activeClicked">
+                        <CDBSidebarMenuItem icon="user">Profile</CDBSidebarMenuItem>
+                    </NavLink>
+
+                    <NavLink exact to="" activeClassName="activeClicked">
+                        <div onClick={()=> LoadAnalytics()}><CDBSidebarMenuItem icon="chart-line">Analytics</CDBSidebarMenuItem></div>
+                    </NavLink>
+
+                    <br></br>
+                    <NavLink exact to="/post" activeClassName="activeClicked">
+                        <CDBSidebarMenuItem icon="cloud-upload"> &nbsp; <strong>Upload Product</strong></CDBSidebarMenuItem>
+                    </NavLink>
+
+                    </CDBSidebarMenu>
+                </CDBSidebarContent>
+            </CDBSidebar>
+        </div>
+    )
+}
 
 function Profile() {
     //-----------------------------------------------------------------------

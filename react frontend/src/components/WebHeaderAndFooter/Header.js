@@ -32,13 +32,13 @@ const Header = () => {
                 <div className="collapse navbar-collapse" id="navbarNav" style={{padding:"10px",paddingBottom:"15px"}}>
                     <ul className="navbar-nav">
                         <li className="nav-item active">
-                            <Link to="/" target="_blank" class="nav-link">Home</Link>
+                            <Link to="/" class="nav-link">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/policy" target="_blank" class="nav-link">Policy</Link>
+                            <Link to="/policy" class="nav-link">Policy</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/browse" target="_blank" class="nav-link">Shop</Link>
+                            <Link to="/browse" class="nav-link">Shop</Link>
                         </li>
 
                         <li className="nav-item">
