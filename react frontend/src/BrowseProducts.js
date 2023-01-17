@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import Spacer from './components/Spacer'
 import Header from './components/WebHeaderAndFooter/Header'
-import Cards from './components/Cards';
+import WideCards from './components/CardsComponent/WideCards';
 import axios from "axios"
 import Footer from "./components/WebHeaderAndFooter/Footer";
 import {Link} from "react-router-dom";
@@ -80,14 +80,14 @@ function BrowseProducts() {
                                     (
                                         <>
                                             {/*{ console.log( "Type of filteredProject is: " + typeof filteredProduct ) }*/}
-                                            <Cards size={1}
-                                                   image={filteredProduct.image}
-                                                   title={filteredProduct.title}
-                                                   price={filteredProduct.price}
-                                                   discount = {filteredProduct['percent discount']}
-                                                   productId={filteredProduct.id}
-                                                   category = {filteredProduct.category}
-                                                   description={filteredProduct.description}
+                                            <WideCards size={1}
+                                                       image={filteredProduct.image}
+                                                       title={filteredProduct.title}
+                                                       price={filteredProduct.price}
+                                                       discount = {filteredProduct['percent discount']}
+                                                       productId={filteredProduct.id}
+                                                       category = {filteredProduct.category}
+                                                       description={filteredProduct.description}
                                             />
                                         </>
                                     ))
@@ -97,14 +97,14 @@ function BrowseProducts() {
                         // ----------- If there is no need for search ------------
                         :  <MDBContainer fluid>
                             {
-                                products.map(product => (<Cards size={1}
-                                                                image={product.image}
-                                                                title={product.title}
-                                                                price={product.price}
-                                                                discount = {product['percent discount']}
-                                                                productId={product.id}
-                                                                category = {product.category}
-                                                                description={product.description}
+                                products.map(product => (<WideCards size={1}
+                                                                    image={product.image}
+                                                                    title={product.title}
+                                                                    price={product.price}
+                                                                    discount = {product['percent discount']}
+                                                                    productId={product.id}
+                                                                    category = {product.category}
+                                                                    description={product.description}
                                     />
                                     // category is working fine when used console.log
 

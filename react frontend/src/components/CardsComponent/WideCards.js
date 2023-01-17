@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
-import '../css/styles.css'
+import '../../css/styles.css'
 import {
   MDBContainer,
   MDBRow,
@@ -12,10 +12,10 @@ import {
   MDBRipple,
   MDBBtn,
 } from "mdb-react-ui-kit";
-import "../css/card.css";
+import "../../css/card.css";
 
 
-const Cards = ({size, image, title, price, discount, productId, category, description}) => {
+const WideCards = ({size, image, title, price, discount, productId, category, description}) => {
     /**
      * size (int, Required): from 1 to 3 to decide size
      * Image: (string, Optional): Link or directory to the product image
@@ -58,7 +58,7 @@ const SmallCard = ({image, title, price, discount, productId, category, descript
                           fluid
                           className="w-100"
                         />
-                        <a href="#!">
+                        <a href="react frontend/src/components#!">
                           <div
                             className="mask"
                             style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
@@ -225,4 +225,4 @@ const BioCard = ({image, title, price}) => {
 }
 
 
-export default Cards
+export default WideCards

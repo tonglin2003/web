@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import Header from './components/WebHeaderAndFooter/Header'
 import Footer from './components/WebHeaderAndFooter/Footer'
 import Spacer from './components/Spacer'
-import Cards from './components/Cards'
+import WideCards from './components/CardsComponent/WideCards'
 import UpdateUserData from './components/UserData/UpdateUserData'
 import css from './css/styles.css'
 
@@ -254,21 +254,21 @@ const NewProfile = () => {
                     <div className="col-sm-3"> 
                         {
                             products.slice(0,1).map(product => (
-                                <Cards size={4} image={product['image']} title={product['title']} price={product['price']} />
+                                <WideCards size={4} image={product['image']} title={product['title']} price={product['price']} />
                             ))
                         }
                         </div>
                     <div className="row col-sm-3" >     
                         {
                             products.slice(1,2).map(product => (
-                                <Cards size={4} image={product['image']} title={product['title']} price={product['price']} />
+                                <WideCards size={4} image={product['image']} title={product['title']} price={product['price']} />
                             ))
                         }
                             </div>
                             <div className="row col-sm-3" >     
                         {
                             products.slice(2,3).map(product => (
-                                <Cards size={4} image={product['image']} title={product['title']} price={product['price']} />
+                                <WideCards size={4} image={product['image']} title={product['title']} price={product['price']} />
                             ))
                         }
                             </div>
