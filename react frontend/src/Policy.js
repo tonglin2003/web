@@ -78,8 +78,8 @@ function Policy() {
                             If you are outside the sellers country,
                             you may return unworn, unwashed, and unaltered items. Any such return must be received
                             at our warehouse within 30 days of your order date or it will not be accepted. At this
-                            time, we are unable to provide free return shipping to anyone outside the contiguous
-                            United States.
+                            time, we are unable to provide free return shipping to anyone outside the sellers
+                            country.
                         </p>
 
                       <div className="title_font" style={{textAlign:"center",paddingTop:"40px", paddingLeft:"20px", paddingBottom:"40px"}}> Prohibited Content</div>
@@ -97,10 +97,10 @@ function Policy() {
                                         <li> Alchohol </li>
                                         <li> Used cosmetics </li>
                                         <li> Gambling </li>
-                                        <li> Body parts (Humans, animals)</li>
                                         <li> Discrimination </li>
-                                        <li> Misleading, Violent, or Hateful </li>
                                         <li> Tabacco Products </li>
+                                        <li> Body parts (Humans, animals)</li>
+                                        <li> Anything Misleading, Violent, or Hateful </li>
                                         <li> Weapons, ammunition, and Explosives</li>
                                     </ul>
                                 </p>
