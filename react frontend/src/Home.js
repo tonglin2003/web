@@ -68,25 +68,22 @@ function Home() {
         <div className="container">
             <div className="row">
                 <RecommendDisplay num={0}
-                                  image={"https://i.insider.com/60a2c77ef27b4c0019444ece?width=1200&format=jpeg"}
-                                  description={"Find the best offer for women's clothing only at Justworks.\n"}
-                                  category={"Women's Clothing"}
-                                  link={`/browse/categories/women's clothing`}
+                                  image={"https://i.pcmag.com/imagery/articles/077yPajAahLZZQk744QUkQf-1..v1626098845.png"}
+                                  description={"Find the best offer for Online Service Subscription only at Justworks.\n"}
+                                  category={"Subscription"}
+                                  link={`/browse/categories/Subscription`}
                 />
                 <RecommendDisplay num={1}
-                                  image={"https://www.werd.com/wp-content/uploads/2022/08/taylor-stitch.jpg"}
-                                  description={"Today is the day to buy men's clothing with the best offer at Justworks.\n"}
-
-
-                                  //Today is the day to buy men's clothing with the best offer at Justworks.
-                                  category={"Men's Clothing"}
-                                  link={"/browse/categories/men's clothing"}
+                                  image={"https://blog.hubspot.com/hubfs/best-online-courses.jpg"}
+                                  description={"Today is the day to buy Online Course with the best offer at Justworks.\n"}
+                                  category={"Online Course"}
+                                  link={"/browse/categories/Online Course"}
                 />
                 <RecommendDisplay num={2}
-                                  image={"https://kinsta.com/wp-content/uploads/2022/11/kinsta-cloud-hosting.jpg"}
-                                  description={"Technology tools will be more convenient and cheaper with the offers provided by Justworks."}
-                                  category={"Technology Tool"}
-                                  link={"/browse/categories/electronics"}
+                                  image={"https://www.lvhn.org/sites/default/files/styles/max_768x768/public/2019-01/Content%20Image-Physical%20Therapy.jpg?itok=q97tR22a"}
+                                  description={"Physical Service provided by Justworks customers will provide convenience."}
+                                  category={"Physical Service"}
+                                  link={"/browse/categories/Physical Service"}
                 />
 
 

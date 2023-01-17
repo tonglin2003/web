@@ -1,13 +1,14 @@
 import json
+import os
+from flask import Flask
 
+app = Flask(__name__)
 
-# for user in data:
-#     print(user['bio'])
-
+userDataDirectory = os.path.join(os.path.dirname(app.instance_path), 'static', 'userData.json')
 
 #Load json file
 def loadData():
-    with open('./static/userData.json') as f:
+    with open(userDataDirectory) as f:
         return json.load(f)
 
 

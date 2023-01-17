@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import '../../css/styles.css'
 import axios from "axios";
-import Cards from "../Cards";
+import WideCards from "../CardsComponent/WideCards";
 //import RecommendProductsDisplay from './RecommendProducts'
 
 const SingleProductDisplay = (productId) => {
