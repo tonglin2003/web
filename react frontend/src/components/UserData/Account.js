@@ -49,7 +49,7 @@ const Account = () => {
     const updatedInfo = ()=>{
         console.log("update account is starting")
         UpdateUserData.UpdateAccount({id, newName, newPassword, newPhone, newEmail})
-        .then((response) => updatedInfo(response))
+        .then((response) => {return response})
         .catch(error => console.log('error',error))
       }
 
