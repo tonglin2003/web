@@ -43,21 +43,21 @@ const Footer = () => {
                     <div className="link-boxes">
                         <ul className="box">
                             <li className="link_name">Justworks Market</li>
-                            <li><Link to="#">Home</Link></li>
-                            <li><Link to="#">Contact us</Link></li>
-                            <li><Link to="#">About us</Link></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/policy">Policy</Link></li>
+                            <li><Link to="/browse">Shop</Link></li>
                         </ul>
                         <ul className="box">
                             <li className="link_name">Categories</li>
-                            <li><Link to="#">Services</Link></li>
-                            <li><Link to="#">Technology</Link></li>
-                            <li><Link to="#">Clothes</Link></li>
+                            <li><Link to="/browse/categories/ :category">Women's Clothing</Link></li>
+                            <li><Link to="/browse/categories/ :category">Men's Clothing</Link></li>
+                            <li><Link to="/browse/categories/ :category">Technology Tools</Link></li>
                         </ul>
                         <ul className="box">
                             <li className="link_name">Account</li>
-                            <li><Link to="#">My Account</Link></li>
-                            <li><Link to="#">Preferences</Link></li>
-                            <li><Link to="#">Pricing</Link></li>
+                            <li><Link to="/post">Post Products</Link></li>
+                            <li><Link to="/login">Get Started</Link></li>
+                            <li><Link to="/login">Login</Link></li>
                         </ul>
                     </div>
                 </div>
