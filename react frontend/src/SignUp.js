@@ -15,6 +15,8 @@ function SignUp(){
 
     //Init user data from Backend
     const [userData, setUserData] = useState([]);
+    const [LoggedUser, setLoggedUser] = useState(0);
+
 
     //User Input
     const [usernameInput, setUsernameInput] = useState("");
@@ -38,7 +40,7 @@ function SignUp(){
     //upload new user to the server
     const uploadInfo = ()=>{
         UpdateUserData.NewUser({usernameInput, passwordInput, nameInput, phoneInput, emailInput})
-        .then((response) => uploadInfo(response))
+        .then((response) =>  {return response})
         .catch(error => console.log('error',error))
     }
 
@@ -66,9 +68,7 @@ function SignUp(){
     //Login new user and redirect to user dashboard
     function Login (){
         localStorage.setItem('currentUser', JSON.stringify(findUserByUsername(userData, usernameInput)))
-        if(JSON.parse(localStorage.getItem('currentUser')) !== -1){
-            navigateToDashboard()
-        }
+        setLoggedUser(1);
     }
 
     //-----------------------------------------------------------------------
@@ -76,10 +76,11 @@ function SignUp(){
     //-----------------------------------------------------------------------
     // Redirect back to DASHBOARD if logged in
     useEffect(() => {
-        const LoggedUser = JSON.parse(localStorage.getItem('currentUser'));
-        if(LoggedUser && LoggedUser !== -1){
+        console.log("about to redirect")
+        if(LoggedUser === 1){
+            console.log("redirecting now")
             navigateToDashboard();}
-    }, [])
+    }, [LoggedUser])
 
     //Retrieve user data from the backend ------------------------------------
     useEffect(() => {
