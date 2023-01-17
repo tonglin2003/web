@@ -50,7 +50,7 @@ const LargeCard = ({productId}) => {
                                  alt={ product['title'] } />
                         </div>
                           <div className="text-center">
-                              <p className="font" style={{fontSize: "1vw"}}>Learn more about the Company: </p>
+                              <p className="font" style={{fontSize: "1vw", margin: "0"}}>Learn more about the Company: </p>
                               <Link to="/briefbio">
                                 <img src={product['company']} className="w-25"/>
                               </Link>
@@ -59,9 +59,9 @@ const LargeCard = ({productId}) => {
 
 
         <div className="col-sm">
-            <h1  className={"title_font"} style={{fontSize: "3vw"}}>{ product['title'] }</h1>
+            <h1  className={"title_font"} style={{fontSize: "2vw"}}>{ product['title'] }</h1>
 
-            <div className={"font"} >
+            <div className={"font"} style={{fontSize: "1.3vw"}}>
                 <span className={"fw-bold"}>Description: </span>
                 {product.description}
             </div>
