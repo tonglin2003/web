@@ -16,16 +16,17 @@ productDataDirectory = os.path.join(os.path.dirname(app.instance_path), 'static'
 def get_product():
     return JsonAccess.pullData(productDataDirectory)
 
+
 @app.route('/getItemByCategory', methods=["GET", "POST"])
 def get_product_by_category():
     category = request.json['category']
-    print("Something is get by the getItemByCategory function!!")
+
     return JsonAccess.pullDataByKey(productDataDirectory, "category", category)
+
 
 @app.route('/getItemById', methods=["GET", "POST"])
 def get_product_by_id():
     productId = request.json['id']
-    print(JsonAccess.pullDataByKey(productDataDirectory, "id", int(productId)))
     return JsonAccess.pullDataByKey(productDataDirectory, "id", int(productId))
 
 
@@ -94,3 +95,5 @@ def get_new_user_from_react():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+

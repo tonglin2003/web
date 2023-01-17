@@ -27,12 +27,17 @@ function BriefBio() {
                     <div className="col m-3">
                         <h1 className={"clientbiofont"}>Client Brief Bio</h1>
                         <p className="font fw-bold m-3">Connect Through Justworks</p>
-                        <h4 className="m-3 font ">Their slogan etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu volutpat odio facilisis mauris sit amet. Orci a scelerisque purus semper eget. Non sodales neque sodales ut. Tellus at urna condimentum mattis pellentesque id nibh tortor. Tellus mauris a diam maecenas. Phasellus vestibulum lorem sed risus ultricies tristique. Sit amet porttitor eget dolor morbi non ar 
+                        <h4 className="m-3 font ">
+                            Their slogan etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu volutpat odio
+                            facilisis mauris sit amet. Orci a scelerisque purus semper eget. Non sodales neque
+                            sodales ut. Tellus at urna condimentum mattis pellentesque id nibh tortor. Tellus
+                            mauris a diam maecenas. Phasellus vestibulum lorem sed risus ultricies tristique.
+                            Sit amet porttitor eget dolor morbi non ar
                         <br></br>
                         <a href="#" className="fa fa-facebook"></a> <a href="#" className="fa fa-twitter"></a> <a href="#" className="fa fa-linkedin"></a>
                         </h4>
-                      
-                        
+
                     </div>
                     <div className="col">
                         <img src={ "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg" }

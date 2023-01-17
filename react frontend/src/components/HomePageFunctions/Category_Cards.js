@@ -18,7 +18,7 @@ const CarouselItem = (props) => (
             </NavLink>
         
             <Carousel.Caption>
-                    <div className={"w-50 p-2 rounded"} style={{background: "#1a4b8f"}}>
+                    <div className={"w-50 p-2 rounded"} style={{background: "#1a4b8f", transform: "skew(10deg)"}}>
                           <h3 className={"title_font text-white"}>
                               {props.category}
                           </h3>
