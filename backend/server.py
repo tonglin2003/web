@@ -29,6 +29,11 @@ def get_product_by_id():
     productId = request.json['id']
     return JsonAccess.pullDataByKey(productDataDirectory, "id", int(productId))
 
+@app.route('/getMoreItemByKey', methods=["GET", "POST"])
+def get_product_by_id_list():
+    product_id_list = request.json['id']
+    return JsonAccess.pullMoreDataByKey(productDataDirectory, "id", product_id_list)
+
 
 @app.route('/post%product/success', methods=["POST"])
 def add_new_product():

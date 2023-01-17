@@ -22,30 +22,20 @@ import css from './css/styles.css'
 const Sidebar = ({ setIsDashboard, setIsAnalytics, setIsAccount}) => {
 
     function LoadAnalytics(){
-        setIsDashboard(false);
-        setIsAccount(false);
-        // setIsConnect(false);
-        setIsAnalytics(true);
+            setIsDashboard(false);
+            setIsAccount(false);
+            setIsAnalytics(true);
     }
     function LoadDashboard(){
-        setIsAnalytics(false);
-        setIsAccount(false);
-        // setIsConnect(false);
-        setIsDashboard(true);
+            setIsAnalytics(false);
+            setIsAccount(false);
+            setIsDashboard(true);
     }
     function LoadAccount(){
         setIsDashboard(false);
         setIsAnalytics(false);
-        // setIsConnect(false);
         setIsAccount(true);
     }
-
-    function LoadConnect(){
-        setIsDashboard(false);
-        setIsAccount(false);
-        setIsAnalytics(false);
-        // setIsConnect(true);
-}
 
     return (
         <div style={{ display: 'flex', overflow: 'scroll initial' }}>
@@ -176,16 +166,16 @@ function Dashboard(){
     //-----------------------------------------------------------------------
     
     // Redirect back to LOGIN if not logged in
-    // useEffect(() => {
-    //     if(!(user) || user === -1){
-    //         navigateToLogin();}
-    // }, []);
-    //
-    //   //Retrieve info from userdata
-    //   useEffect(() => {
-    //     setName(user.name);
-    // }, []);
-    //
+    useEffect(() => {
+        if(!(user) || user === -1){
+            navigateToLogin();}    
+    }, []);
+
+      //Retrieve info from userdata
+      useEffect(() => {
+        setName(user.name);
+    }, []);
+    
     //-----------------------------------------------------------------------
     //           RETURN
     //-----------------------------------------------------------------------
@@ -193,19 +183,19 @@ function Dashboard(){
     return(
         <>
             <Header />
-                <div className="container-default" >
-                    <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
-                            <Sidebar setIsDashboard={setIsDashboard} setIsAnalytics={setIsAnalytics} setIsAccount={setIsAccount}/>
-                            <div style={{width: "100%", paddingLeft: "50px", paddingRight: "50px"}}>
-                                <Spacer />
-                                {isDashboard && <DashHome/>}
-                                {isAnalytics && <Analytics/>}
-                                {isAccount && <Account/>}
-                                <Spacer />
-                                <Spacer />
-                            </div>
-                </div>
-                </div>
+            <div className="container-default" >
+            <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
+                    <Sidebar setIsDashboard={setIsDashboard} setIsAnalytics={setIsAnalytics} setIsAccount={setIsAccount}/>
+                    <div style={{width: "100%", paddingLeft: "50px", paddingRight: "50px"}}>
+                        <Spacer />
+                        {isDashboard && <DashHome/>}
+                        {isAnalytics && <Analytics/>}
+                        {isAccount && <Account/>}
+                        <Spacer />
+                        <Spacer />
+                    </div>
+            </div>
+            </div>
             
             <Footer />
         </>
