@@ -51,22 +51,27 @@ const Sidebar = ({ setIsDashboard, setIsAnalytics, setIsAccount}) => {
                     <NavLink exact to="" activeClassName="activeClicked">
                         <div onClick={()=> LoadDashboard()}><CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem></div>
                     </NavLink>
+
                     <NavLink exact to="" activeClassName="activeClicked">
                         <div onClick={()=> LoadAccount()}><CDBSidebarMenuItem icon="database">My Account</CDBSidebarMenuItem></div>
                     </NavLink>
+
                     <NavLink exact to="/myproducts" activeClassName="activeClicked">
                         <CDBSidebarMenuItem icon="shop" style={{marginLeft: "9px"}}>
                             <span style={{marginLeft: "8px"}}>My Products</span></CDBSidebarMenuItem>
                     </NavLink>
+
                     <NavLink exact to="/profile" activeClassName="activeClicked">
                         <CDBSidebarMenuItem icon="user">Profile</CDBSidebarMenuItem>
                     </NavLink>
+
                     <NavLink exact to="" activeClassName="activeClicked">
                         <div onClick={()=> LoadAnalytics()}><CDBSidebarMenuItem icon="chart-line">Analytics</CDBSidebarMenuItem></div>
                     </NavLink>
+
                     <br></br>
                     <NavLink exact to="/post" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="cloud-upload"> &nbsp; <strong>Upload Product</strong></CDBSidebarMenuItem>
+                        <CDBSidebarMenuItem icon="cloud-upload" > &nbsp; <strong>Upload Product</strong></CDBSidebarMenuItem>
                     </NavLink>
 
                     </CDBSidebarMenu>
@@ -83,7 +88,7 @@ const DashHome = () => {
 
     return(
         <div>
-            <h1>Welcome back, {user.name}!</h1>
+            <h1 className="title_font">Welcome back, {user.name}!</h1>
             
         </div>
     )

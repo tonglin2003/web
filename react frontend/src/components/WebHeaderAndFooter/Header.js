@@ -21,6 +21,7 @@ const Header = () => {
     }    
 
     return (
+        <div id="darkmodes">
         <header>
             <nav className="navbar navbar-inverse navbar-fixed-top navbar-expand-lg navbar-light " style={{borderBottom: "solid" ,borderBlockColor:"whitesmoke"}} id="nav">
                 <div className={"container-fluid"}>
@@ -46,16 +47,27 @@ const Header = () => {
                             {/*<Link to="/post" style={{textDecoration: "none"}}><button type="button" className="button-6">Post Product</button></Link>*/}
                         </li>
                     </ul>
+
+                    {/* DARK MODE BUTTON */}
+                    {/*<input type="checkbox" id="darkmode-toggle"/>*/}
+                    {/*<label htmlFor="darkmode-toggle"/>*/}
+                    {/*<div className="background"></div>*/}
+
+                    {/* END OF DARK MOVE BUTTON */}
+
+
+
+
                     <Link to={"/"}>
                             <a href={""}>
-                                <img src="https://i.ibb.co/hDrmxS9/Logo.png" alt="Payroll, Benefits, HR Software, and Compliance | Justworks | Justworks" width="195vw" height="35vw" />
+                                <img src="https://i.ibb.co/hDrmxS9/Logo.png" alt="Payroll, Benefits, HR Software, and Compliance | Justworks | Justworks" width="231vw" height="35vw" style={{paddingRight:"30px"}} />
                             </a>
                         </Link>
                     <div className="container-logo" style={{margin: "auto 3%"}}>
                         {!(isLoggedin) && <Link to={'/get-started'} id="getstartedbutton" style={{textDecoration: "none", padding:"20px"}}>Get Started</Link>}
                         &nbsp;&nbsp;&nbsp;
                         {!(isLoggedin) && <Link to={'/login'} id="theloginbutton" >Login</Link>}
-                        {isLoggedin && <Link to={'/'} style={{textDecoration: "none"}}
+                        {isLoggedin && <Link to={'/'} id="logoutbutton"
                                             onClick={ () => {Logout(); }} >Logout</Link>}
                         &nbsp;&nbsp;&nbsp;
 
@@ -64,6 +76,7 @@ const Header = () => {
                 </div>
             </nav>
         </header>
+        </div>
     )
 }
 export default Header
