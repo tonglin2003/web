@@ -3,6 +3,8 @@ import Spacer from './components/Spacer'
 import Header from './components/WebHeaderAndFooter/Header'
 import Cards from './components/Cards';
 import {useParams} from "react-router-dom";
+import HeaderImageDisplay from "./components/SingleProductPageFunctions/HeaderImageDisplay"
+
 
 const CategorizeProductPage = () => {
     const { category } = useParams();
@@ -38,6 +40,7 @@ const CategorizeProductPage = () => {
     return (
                 <>
 
+            <HeaderImageDisplay/>
             <Header />
 
             {/*------- Browse Page of showing all the products ------- */}

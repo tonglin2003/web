@@ -23,8 +23,6 @@ function BriefBioReact() {
                     <div className="col">
                         <img src={ "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg" }
                              className={"img-fluid w-75 mb-5 rounded"} style={{float: "center" }}/>
-
-
                     </div>
                 </div>
             </div>
