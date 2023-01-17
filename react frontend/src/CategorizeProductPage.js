@@ -5,6 +5,7 @@ import Cards from './components/Cards';
 import {useParams} from "react-router-dom";
 import HeaderImageDisplay from "./components/SingleProductPageFunctions/HeaderImageDisplay"
 import Footer from "./components/WebHeaderAndFooter/Footer";
+import {MDBContainer} from "mdb-react-ui-kit";
 
 
 const CategorizeProductPage = () => {
@@ -67,7 +68,7 @@ const CategorizeProductPage = () => {
                     search?
                         // ------------ If user request for a search -----------
                         // filters through the products to see if it includes the search term
-                        <div className="row row-cols-3 g-3 mx-5" style={{margin: "0 5vw 0 5vw"}}>
+                           <MDBContainer fluid>
                             {
                                 products.filter((product) =>
                                     {
@@ -86,27 +87,33 @@ const CategorizeProductPage = () => {
                                                    image={filteredProduct.image}
                                                    title={filteredProduct.title}
                                                    price={filteredProduct.price}
-                                                   discount={filteredProduct['percent discount']}
-                                                   productId={filteredProduct.id}/>
+                                                   discount = {filteredProduct['percent discount']}
+                                                   productId={filteredProduct.id}
+                                                   category = {filteredProduct.category}
+                                                   description={filteredProduct.description}
+                                            />
                                         </>
                                     ))
                             }
 
-                        </div>
+                        </MDBContainer>
                         // ----------- If there is no need for search ------------
-                        : <div className="row row-cols-3 g-3 mx-5" style={{margin: "0 5vw 0 5vw"}}>
+                        :  <MDBContainer fluid>
                             {
                                 products.map(product => (<Cards size={1}
-                                                               image={product.image}
-                                                               title={product.title}
-                                                               price={product.price}
-                                                                discount={product['percent discount']}
-                                                               productId={product.id}
-                                                                category={product.category}
+                                                                image={product.image}
+                                                                title={product.title}
+                                                                price={product.price}
+                                                                discount = {product['percent discount']}
+                                                                productId={product.id}
+                                                                category = {product.category}
+                                                                description={product.description}
                                     />
+                                    // category is working fine when used console.log
+
                                 ))
                             }
-                        </div>
+                        </MDBContainer>
                 }
             </div>
 

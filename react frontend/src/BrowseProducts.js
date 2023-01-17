@@ -7,6 +7,10 @@ import Footer from "./components/WebHeaderAndFooter/Footer";
 import {Link} from "react-router-dom";
 import HeaderImageDisplay from "./components/SingleProductPageFunctions/HeaderImageDisplay"
 
+import {MDBContainer} from "mdb-react-ui-kit";
+
+import "./css/card.css";
+
 
 function BrowseProducts() {
 
@@ -61,7 +65,7 @@ function BrowseProducts() {
                     search?
                         // ------------ If user request for a search -----------
                         // filters through the products to see if it includes the search term
-                        <div className="browse-cards row col-md" style={{margin: "0 5vw 0 5vw"}}>
+                           <MDBContainer fluid>
                             {
                                 products.filter((product) =>
                                     {
@@ -83,14 +87,15 @@ function BrowseProducts() {
                                                    discount = {filteredProduct['percent discount']}
                                                    productId={filteredProduct.id}
                                                    category = {filteredProduct.category}
+                                                   description={filteredProduct.description}
                                             />
                                         </>
                                     ))
                             }
 
-                        </div>
+                        </MDBContainer>
                         // ----------- If there is no need for search ------------
-                        : <div className="browse-cards row col-md" style={{margin: "0 5vw 0 5vw"}}>
+                        :  <MDBContainer fluid>
                             {
                                 products.map(product => (<Cards size={1}
                                                                 image={product.image}
@@ -99,14 +104,18 @@ function BrowseProducts() {
                                                                 discount = {product['percent discount']}
                                                                 productId={product.id}
                                                                 category = {product.category}
+                                                                description={product.description}
                                     />
                                     // category is working fine when used console.log
 
                                 ))
                             }
-                        </div>
+                        </MDBContainer>
                 }
             </div>
+
+
+
 
 
             <Spacer />
