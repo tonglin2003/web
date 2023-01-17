@@ -43,7 +43,7 @@ const LargeCard = ({productId}) => {
     <>
             <div className="container" id="theBack">
                 <div className="row">
-                      <div className="col-sm">
+                      <div className="col-sm my-auto" >
                          <div className="card">
                             <img src ={product['image']}
                                  className="card-img-top p-3"

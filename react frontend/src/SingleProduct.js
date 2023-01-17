@@ -30,7 +30,7 @@ function SingleProduct() {
             <SingleProductDisplay productId={id}/>
 
             <Spacer />
-            <RecommendProductsDisplay category={category}/>
+            {/*<RecommendProductsDisplay category={category}/>*/}
 
             <Spacer />
 
