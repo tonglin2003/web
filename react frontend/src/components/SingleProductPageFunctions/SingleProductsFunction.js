@@ -81,24 +81,9 @@ const LargeCard = ({productId}) => {
                             </div>
                         }
 
-                        <div className="d-grid gap-2">
-                            <button className="button-6" type="button" id="addtobag" style={{background:"black"}}>Buy Now </button>
-                            <button className="button-6" type="button" id="addtobag" style={{background:"black"}}>Add to bag</button>
-                            <p id="prodMeasurement"> Product Measurements </p>
-                            <table className="table">
-                                <thead>
-                                <tr>
-                                    <th scope="col">Size</th>
-                                    <th scope="col">one-size</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>Diameter</td>
-                                    <td>2.6in | 6.5cm</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div className="d-grid gap-2 mt-3">
+                            <button className="button-6" type="button" id="addtobag" style={{background:"#1e6094"}}>Buy Now </button>
+                            <button className="button-6" type="button" id="addtobag" style={{background:"#1e6094"}}>Add to bag</button>
                         </div>
                     </div>
                  </div>
