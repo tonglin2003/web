@@ -7,10 +7,11 @@ const PostProductForm = (props) => {
     const [discount, setDiscount] = useState('')
     const [description, setDescription] = useState('')
     const [category, setCategory] = useState('')
+    const [companyLogo, setCompanyLogo] = useState('')
     const [image, setImage] = useState('')
 
         const postProduct = () => {
-        ProductPosting.PostProduct({title, discount, price, description, category, image})
+        ProductPosting.PostProduct({title, discount, price, description, category, companyLogo, image})
             // will come back to the postedProduct thing later!
             .then((response) => props.postedProduct(response))
             .catch(error => console.log('error', error))
@@ -25,6 +26,7 @@ const PostProductForm = (props) => {
         setDescription('')
         setCategory('')
         setImage('')
+        setCompanyLogo('')
     }
 
     return (
@@ -143,6 +145,25 @@ const PostProductForm = (props) => {
 
                         <label className="form-label" htmlFor="form6Example7"></label>
                     </div>
+            </div>
+
+
+                {/*---------- Company logo Section -------------*/}
+            <div className="col mb-4">
+                <div className="font fw-bold">*Company Logo</div>
+                    <div style={{fontSize:"10px" , color:"gray"}}>
+                        This allows our customers to find out more about your company
+                    </div>
+                <div className="form-outline mb-4">
+                    <input type="text"
+                           className="form-control font"
+                           placeholder="Enter Company Logo's link"
+                           value={companyLogo}
+                           onChange={ (e) => setCompanyLogo(e.target.value)}
+                           required
+                    />
+                    <label className="form-label" htmlFor="form6Example5"></label>
+                </div>
             </div>
 
             {/*---------- Image Section -------------*/}

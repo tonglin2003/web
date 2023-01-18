@@ -13,6 +13,7 @@ function Home() {
 
     return (
         <>
+
             <Header />
                 <div
                 className="image-fluid "

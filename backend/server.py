@@ -39,13 +39,15 @@ def get_product_by_id_list():
 def add_new_product():
     print("Server.py's add_new_product is running!!")
     title = request.json["title"]
-    discount = int(request.json['discount'])
-    price = int(request.json["price"])
+    discount = float(request.json['discount'])
+    price = float(request.json["price"])
     description = request.json["description"]
     category = request.json["category"]
+    companyLogo = request.json['companyLogo']
     image = request.json["image"]
 
-    return JsonAccess.write_product_data(productDataDirectory, title, discount, price, description, category, image)
+    return JsonAccess.write_product_data(productDataDirectory, title, discount, price, description,
+                                         category, companyLogo, image)
 
 
 # API Route
