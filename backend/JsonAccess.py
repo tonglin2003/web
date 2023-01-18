@@ -64,7 +64,7 @@ def write_product_data(file_directory, title, discount, price=0, description='',
             "category": category,
             "image": image,
             "rating": 0,
-            "discount percentage": discount
+            "percent discount": discount
         }
     )
     with open(file_directory, 'w') as file:
