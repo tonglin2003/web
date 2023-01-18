@@ -290,14 +290,11 @@ footer .content .link-boxes{
 /* -------------------------- Hafeefa --------------------------------- */
 #thedashboardbutton{
     border-radius: 8%;
-    padding:19px;
-    padding-left:15px;
-    padding-right:15px;
+    padding: 19px 15px;
     background:rgb(255,99,71);
     color:white;
     font-weight: 600;
     text-decoration:none;
-    font-weight: 600;
 }
 #thedashboardbutton:hover{
     background:red;
@@ -305,9 +302,7 @@ footer .content .link-boxes{
 #logoutbutton{
     border: solid;
     border-radius: 8%;
-    padding:17.5px;
-    padding-left:20px;
-    padding-right:20px;
+    padding: 18px 20px;
     border-block-color:black;
     background:white;
     color:black;
@@ -336,11 +331,9 @@ footer .content .link-boxes{
 #getstartedbutton {
     background: rgb(255,99,71);
     border-radius: 8%;
-    padding: 15px;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 800;
-    padding-right: 18px;
-    padding-left: 19px;
+    padding: 15px 18px 15px 19px;
     color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
@@ -354,9 +347,7 @@ footer .content .link-boxes{
 #theloginbutton{
     border: solid;
     border-radius: 8%;
-    padding:19px;
-    padding-left:30px;
-    padding-right:30px;
+    padding: 19px 30px;
     border-block-color:black;
     background:white;
     color:black;
@@ -381,7 +372,7 @@ footer .content .link-boxes{
 }
 #diff {
     padding-left: 2px;
-    font-family: Helvetica Neue;
+    font-family: Helvetica Neue, serif;
     font-size: 20px;
 }
 #theBack{
@@ -514,7 +505,7 @@ footer .content .link-boxes{
 }
 
 .clientbiofont {
-font-family:'Oswald'
+    font-family: 'Oswald', serif
 }
 
 /* The hero image */
