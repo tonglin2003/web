@@ -31,7 +31,7 @@ const [image, setImage] = useState(require('./img/images.png'));
         setImage(URL.createObjectURL(e.target.files[image]));
     }
     return (
-        <div>
+        <div >
             <Header />
 
 

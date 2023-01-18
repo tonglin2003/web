@@ -51,7 +51,7 @@ def write_user_data(file_directory, username, password, name, image, bio, phone,
         json.dump(listObj, file, indent=4, separators=(',', ': '))
 
 
-def write_product_data(file_directory, title, discount, price=0, description='', category='', image=''):
+def write_product_data(file_directory, title, discount, price=0, description='', category='', companyLogo='', image=''):
     # file_directory is the file you want to write the data to
     listObj = pullData(file_directory)
 
@@ -64,7 +64,8 @@ def write_product_data(file_directory, title, discount, price=0, description='',
             "category": category,
             "image": image,
             "rating": 0,
-            "percent discount": discount
+            "percent discount": discount,
+            "company": companyLogo
         }
     )
     with open(file_directory, 'w') as file:
