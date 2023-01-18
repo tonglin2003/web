@@ -40,7 +40,6 @@
         },
         "percent discount": 5,
         "company": "https://static1.squarespace.com/static/5ba04b9ca9e0286ffa06d14f/t/61e1cf84a6d2b129006b1907/1671726099908/"
-
     },
     {
         "id": 4,
@@ -97,13 +96,12 @@
         },
         "percent discount": 30,
         "company": "https://cdn.freebiesupply.com/logos/thumbs/2x/codecademy-logo.png"
-
     },
     {
         "id": 8,
         "title": "Build a Backend REST API with Python & Django - Advanced",
         "price": 59.99,
-        "description": "Whether you’re a freelance programmer, tech entrepreneur, or just starting out building backends - this course will help lay the foundation of your knowledge base and give you the tools to advance your skills with some of the most in-demand programming languages today.",
+        "description": "Whether you\u2019re a freelance programmer, tech entrepreneur, or just starting out building backends - this course will help lay the foundation of your knowledge base and give you the tools to advance your skills with some of the most in-demand programming languages today.",
         "category": "Online Course",
         "image": "https://1.bp.blogspot.com/-sOpewvQcO4A/YKwYFe_2Z5I/AAAAAAAARcE/JGYVyPqUHUEpsTFtuj8W9cf1wtWtuYtcgCLcBGAsYHQ/s750/Build%2Ba%2BBackend%2BREST%2BAPI%2Bwith%2BPython%2B%2526%2BDjango%2B-%2BAdvanced.jpgg",
         "rating": {
@@ -115,7 +113,7 @@
     },
     {
         "id": 9,
-        "title": "IONOS » Hosting Provider | Websites. Domains. Server. (Per Month)",
+        "title": "IONOS \u00bb Hosting Provider | Websites. Domains. Server. (Per Month)",
         "price": 15,
         "description": "IONOS, your digital partner for cloud solutions and web hosting, supporting your needs from websites, domains, servers, and more.",
         "category": "electronics",
@@ -165,5 +163,15 @@
         },
         "percent discount": 30,
         "company": "https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png"
+    },
+    {
+        "id": 13,
+        "title": "ps4",
+        "price": 50,
+        "description": "fadsfa",
+        "category": "gaming",
+        "image": "https://gmedia.playstation.com/is/image/SIEPDC/ps4-product-thumbnail-01-en-14sep21?$facebook$",
+        "rating": 0,
+        "discount percentage": 3
     }
 ]

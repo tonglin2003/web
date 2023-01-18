@@ -208,7 +208,7 @@ function SignUp(){
 
                 <br></br>
                 
-                <input onClick={(e)=> {e.preventDefault(); validateSignUp()}} type="button" value="Sign Up"  style={{maxWidth: "400px"}} /><br></br><br></br>
+                <input onClick={(e)=> {e.preventDefault(); validateSignUp()}} type="button" value="Sign Up"  style={{maxWidth: "400px"}}  className="profile center button-6"/><br></br>
 
             </form>
             </div>

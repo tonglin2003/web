@@ -138,5 +138,32 @@
             0,
             0
         ]
+    },
+    {
+        "id": 5,
+        "username": "hafeefa",
+        "password": "faf",
+        "name": "sfda",
+        "image": "/imgs/default-avatar.jpg",
+        "bio": "",
+        "phone": "32432",
+        "email": "ah@ha.com",
+        "website": "",
+        "location": "",
+        "products": [],
+        "revenue": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
     }
 ]

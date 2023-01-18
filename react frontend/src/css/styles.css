@@ -365,6 +365,22 @@ footer .content .link-boxes{
 #thedashboardbutton:hover{
     background:red;
 }
+#thesignupbutton {
+    border-radius: 8%;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background: rgb(30, 152, 255);;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 15px;
+}
+#thesignupbutton:hover{
+    transform: translateY(-5);
+    background: #5edef7;
+
+}
 #logoutbutton{
     border: solid;
     border-radius: 8%;
@@ -376,6 +392,7 @@ footer .content .link-boxes{
     color:black;
     font-weight: 600;
     text-decoration:none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 #logoutbutton:hover{
     background: powderblue;
