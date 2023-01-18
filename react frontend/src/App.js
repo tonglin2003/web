@@ -29,6 +29,7 @@ function App() {
       <Route exact path="/browse" element={<BrowseProducts />} />
       <Route exact path="/browse/categories/:category" element={<CategorizeProductPage />} />
       <Route exact path="/policy" element={<Policy/> } />
+      <Route path="/dashboard" element={<Dashboard/>} />
     </Routes>  
     </>  
   );

@@ -351,12 +351,26 @@ footer .content .link-boxes{
 }
 
 /* -------------------------- Hafeefa --------------------------------- */
+#thedashboardbutton{
+    border-radius: 8%;
+    padding:19px;
+    padding-left:15px;
+    padding-right:15px;
+    background:rgb(255,99,71);
+    color:white;
+    font-weight: 600;
+    text-decoration:none;
+    font-weight: 600;
+}
+#thedashboardbutton:hover{
+    background:red;
+}
 #logoutbutton{
     border: solid;
     border-radius: 8%;
-    padding:19px;
-    padding-left:30px;
-    padding-right:30px;
+    padding:17.5px;
+    padding-left:20px;
+    padding-right:20px;
     border-block-color:black;
     background:white;
     color:black;

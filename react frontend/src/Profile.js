@@ -50,12 +50,12 @@ const Sidebar = ({ setIsDashboard, setIsAnalytics, setIsAccount}) => {
                         <div onClick={()=> LoadAccount()}><CDBSidebarMenuItem icon="database">My Account</CDBSidebarMenuItem></div>
                     </NavLink>
 
-                    <NavLink exact to="/myproducts" activeClassName="activeClicked">
+                    <NavLink exact to="" activeClassName="activeClicked">
                         <CDBSidebarMenuItem icon="shop" style={{marginLeft: "9px"}}>
                             <span style={{marginLeft: "8px"}}>My Products</span></CDBSidebarMenuItem>
                     </NavLink>
 
-                    <NavLink exact to="/profile" activeClassName="activeClicked">
+                    <NavLink exact to="" activeClassName="activeClicked">
                         <CDBSidebarMenuItem icon="user">Profile</CDBSidebarMenuItem>
                     </NavLink>
 
@@ -72,6 +72,70 @@ const Sidebar = ({ setIsDashboard, setIsAnalytics, setIsAccount}) => {
                 </CDBSidebarContent>
             </CDBSidebar>
         </div>
+    )
+}
+
+        function Dashboard(){
+
+    //-----------------------------------------------------------------------
+    //           VARIABLES
+    //-----------------------------------------------------------------------
+
+    //Initialize user data
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+    const [name, setName] = useState();
+
+    // Load Different tabs
+    const [isDashboard, setIsDashboard] = useState(true);
+    const [isAnalytics, setIsAnalytics] = useState(false);
+    const [isAccount, setIsAccount] = useState(false);
+
+
+    // Redirect back to LOGIN Page
+    const navigate = useNavigate();
+    const navigateToLogin = () => {
+        navigate('/login');
+    };
+
+    //-----------------------------------------------------------------------
+    //           EXECUTIONS
+    //-----------------------------------------------------------------------
+
+    // Redirect back to LOGIN if not logged in
+    useEffect(() => {
+        if(!(user) || user === -1){
+            navigateToLogin();}
+    }, []);
+
+      //Retrieve info from userdata
+      useEffect(() => {
+        setName(user.name);
+    }, []);
+
+    //-----------------------------------------------------------------------
+    //           RETURN
+    //-----------------------------------------------------------------------
+
+    return(
+        <>
+            <Header />
+            <div className="container-default" >
+            <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
+                    <Sidebar setIsDashboard={setIsDashboard} setIsAnalytics={setIsAnalytics} setIsAccount={setIsAccount}/>
+                    <div style={{width: "100%", paddingLeft: "50px", paddingRight: "50px"}}>
+                        <Spacer />
+                        {/*{isDashboard && <DashHome/>}*/}
+                        {isAnalytics && <Analytics/>}
+                        {isAccount && <Account/>}
+                        <Spacer />
+                        <Spacer />
+                    </div>
+            </div>
+            </div>
+
+            <Footer />
+        </>
+
     )
 }
 

@@ -75,7 +75,7 @@ function Home() {
                 />
                 <RecommendDisplay num={1}
                                   image={"https://blog.hubspot.com/hubfs/best-online-courses.jpg"}
-                                  description={"Today is the day to buy Online Course with the best offer at Justworks.\n"}
+                                  description={"Today is the day to buy Online Courses with the best offer at Justworks.\n"}
                                   category={"Online Course"}
                                   link={"/browse/categories/Online Course"}
                 />

@@ -62,15 +62,18 @@ const Header = () => {
 
                     <Link to={"/"}>
                             <a href={""}>
-                                <img src="https://i.ibb.co/hDrmxS9/Logo.png" alt="Payroll, Benefits, HR Software, and Compliance | Justworks | Justworks" width="231vw" height="35vw" style={{paddingRight:"30px"}} />
+                                <img src="https://i.ibb.co/hDrmxS9/Logo.png" alt="Payroll, Benefits, HR Software, and Compliance | Justworks | Justworks" width="231vw" height="35vw" style={{paddingRight:"29px"}} />
                             </a>
                         </Link>
                     <div className="container-logo" style={{margin: "auto 3%"}}>
+                         {(isLoggedin) && <Link to={'/dashboard'} id="thedashboardbutton" >Dashboard</Link>}
                         {!(isLoggedin) && <Link to={'/get-started'} id="getstartedbutton" style={{textDecoration: "none", padding:"20px"}}>Get Started</Link>}
                         &nbsp;&nbsp;&nbsp;
                         {!(isLoggedin) && <Link to={'/login'} id="theloginbutton" >Login</Link>}
                         {isLoggedin && <Link to={'/'} id="logoutbutton"
                                             onClick={ () => {Logout(); }} >Logout</Link>}
+
+
                         &nbsp;&nbsp;&nbsp;
 
                     </div>
