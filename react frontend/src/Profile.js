@@ -201,9 +201,9 @@ const NewProfile = () => {
         <>
 
 <div style={{ 
-        backgroundImage: !(isEditMode)? `url(${background})` :`url(${newBackground})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
+        backgroundImage:!(isEditMode)? `url(${background})` :`url(${newBackground})`,
+                backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
         background: "#DDEFFF"
         }}>
                     <Spacer />

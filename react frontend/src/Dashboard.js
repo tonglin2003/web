@@ -225,9 +225,9 @@ function Dashboard(){
         <>
             <Header />
             <div className="container-default w-100" >
-            <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
+            <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between", fontSize: "20px"}} className="font">
                     <Sidebar setIsDashboard={setIsDashboard} setIsAnalytics={setIsAnalytics} setIsAccount={setIsAccount} setIsProduct={setIsProduct} setIsConnect={setIsConnect}/>
-                    <div className="w-100 mx-5">
+             <div className="w-100 mx-5">
                         <Spacer />
                         {isDashboard && <DashHome/>}
                         {isAnalytics && <Analytics/>}
