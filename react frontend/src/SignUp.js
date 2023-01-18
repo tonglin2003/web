@@ -13,10 +13,19 @@ function SignUp(){
     //           VARIABLES
     //-----------------------------------------------------------------------
 
-    //Init user data from Backend
-    const [userData, setUserData] = useState([]);
-    const [LoggedUser, setLoggedUser] = useState(0);
+    //REDIRECT TO DASHBOARD IF ALREAD LOGGED IN---------------
+    const user = JSON.parse(localStorage.getItem('currentUser'));
 
+    useEffect(() => {
+        if(user && user !== -1){
+            navigateToDashboard();}    
+    }, []);
+    //REDIRECT TO DASHBOARD IF ALREAD LOGGED IN---------------
+
+    //Saved variables
+    const [userData, setUserData] = useState([]);
+    const [dataLength, setDataLength] = useState(userData.length)
+    const [LoggedUser, setLoggedUser] = useState(0);
 
     //User Input
     const [usernameInput, setUsernameInput] = useState("");
@@ -48,14 +57,13 @@ function SignUp(){
     //           FUNCTIONS
     //-----------------------------------------------------------------------
     //Disallow submit if error messages are showing. Else sign up
-    function validateSignUp(e){
-        e.preventDefault()
+    function validateSignUp(){
         if(invalidPasswordMessage ||invalidUsernameMessage ){
             return
         }
         else{
             uploadInfo()
-            Login()
+            setLoggedUser(1);
         }
     }
 
@@ -65,22 +73,22 @@ function SignUp(){
         })
     }
 
-    //Login new user and redirect to user dashboard
-    function Login (){
-        localStorage.setItem('currentUser', JSON.stringify(findUserByUsername(userData, usernameInput)))
-        setLoggedUser(1);
-    }
-
     //-----------------------------------------------------------------------
     //           EXECUTIONS
     //-----------------------------------------------------------------------
-    // Redirect back to DASHBOARD if logged in
+    // Redirect to DASHBOARD if logged in
     useEffect(() => {
-        console.log("about to redirect")
         if(LoggedUser === 1){
-            console.log("redirecting now")
-            navigateToDashboard();}
-    }, [LoggedUser])
+            if(userData.length > dataLength){
+                const loginUser = findUserByUsername(userData, usernameInput)
+                localStorage.setItem('currentUser', JSON.stringify(loginUser))
+                navigateToDashboard();
+            }
+        }
+        if(LoggedUser === 1){
+        }
+        setDataLength(userData.length)
+    }, [userData.length])
 
     //Retrieve user data from the backend ------------------------------------
     useEffect(() => {
@@ -89,8 +97,8 @@ function SignUp(){
         .then((userData) => {
             setUserData(userData);
             setLoading(false);
-        });
-    }, []);
+        })
+    });
 
     //check if username has been taken
     useEffect(() => {
@@ -127,10 +135,10 @@ function SignUp(){
     //DEBUG USER DATA (START)-----------------
     const [loading, setLoading] = useState(true);
 
-    if(loading && userData.length < 1){
+    if(loading && (!userData || userData.length < 1)){
         return <p>Loading...</p>;
     }
-    if(!loading && userData.length < 1){
+    if(!loading && (!userData || userData.length < 1)){
         return <p>Opps. Something went wrong</p>;
     }
     //DEBUG USER DATA (END)-----------------
@@ -145,7 +153,7 @@ function SignUp(){
             <Spacer />
             <div  style={{justifyContent: "center", display: "flex"}}>
            
-            <form onSubmit={(e)=> validateSignUp(e)} className='profile contain' style={{boxShadow: "5px 5px 5px #d8cf94"}}>
+            <form className='profile contain' style={{boxShadow: "5px 5px 5px #d8cf94"}}>
 
                 <h1 style={{textAlign: "center"}}>Get Started with Justworks.</h1>
                 <p style={{textAlign: "center"}}>Together, we'll build a program that works for your business. Already have an account? <Link to="/login" style={{textDecoration: "none"}}>Sign in</Link>.</p><br></br>
@@ -200,7 +208,7 @@ function SignUp(){
 
                 <br></br>
                 
-                <input type="submit" value="Sign Up"  style={{maxWidth: "400px"}} /><br></br><br></br>
+                <input onClick={(e)=> {e.preventDefault(); validateSignUp()}} type="button" value="Sign Up"  style={{maxWidth: "400px"}} /><br></br><br></br>
 
             </form>
             </div>

@@ -46,7 +46,7 @@ def add_new_product():
 # API Route
 @app.route('/api/userdata')
 def user_data():
-    with open(userDataDirectory) as f:
+    with open('static/userData.json') as f:
         return json.load(f)
 
 @app.route('/api/update_profile', methods=['POST', 'GET'])
@@ -59,7 +59,8 @@ def get_profile_update_from_react():
     email = request.json["newEmail"]
     website = request.json["newWebsite"]
     location = request.json["newLocation"]
-    updateUserData.updateProfile(id, name, image, bio, phone, email, website, location)
+    profile_background = request.json["newBackground"]
+    updateUserData.updateProfile(id, name, image, bio, phone, email, website, location, profile_background)
     return "Update success!"
 
 @app.route('/api/update_account', methods=['POST', 'GET'])
