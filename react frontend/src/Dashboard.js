@@ -12,6 +12,7 @@ import {
 } from 'cdbreact';
 import Analytics from './components/UserData/Analytics'
 import Account from "./components/UserData/Account";
+import MyProduct from "./components/UserData/MyProduct";
 import Spacer from './components/Spacer'
 import css from './css/styles.css'
 
@@ -19,22 +20,32 @@ import css from './css/styles.css'
 //           SIDEBAR COMPONENT
 //-----------------------------------------------------------------------
 
-const Sidebar = ({ setIsDashboard, setIsAnalytics, setIsAccount}) => {
+const Sidebar = ({ setIsDashboard, setIsAnalytics, setIsAccount, setIsProduct}) => {
 
     function LoadAnalytics(){
             setIsDashboard(false);
             setIsAccount(false);
             setIsAnalytics(true);
+            setIsProduct(false);
     }
     function LoadDashboard(){
             setIsAnalytics(false);
             setIsAccount(false);
             setIsDashboard(true);
+            setIsProduct(false);
     }
     function LoadAccount(){
         setIsDashboard(false);
         setIsAnalytics(false);
         setIsAccount(true);
+        setIsProduct(false);
+    }
+
+    function LoadProduct(){
+        setIsDashboard(false);
+        setIsAnalytics(false);
+        setIsAccount(false);
+        setIsProduct(true);
     }
 
     return (
@@ -48,23 +59,34 @@ const Sidebar = ({ setIsDashboard, setIsAnalytics, setIsAccount}) => {
 
                 <CDBSidebarContent className="sidebar-content">
                     <CDBSidebarMenu>
+                {/* ------- Dashboard -------- */}
                     <NavLink exact to="" activeClassName="activeClicked">
                         <div onClick={()=> LoadDashboard()}><CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem></div>
                     </NavLink>
+
+                {/* ------- My Account -------- */}
                     <NavLink exact to="" activeClassName="activeClicked">
                         <div onClick={()=> LoadAccount()}><CDBSidebarMenuItem icon="database">My Account</CDBSidebarMenuItem></div>
                     </NavLink>
-                    <NavLink exact to="/myproducts" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="shop" style={{marginLeft: "9px"}}>
+
+                {/* ------- My Product -------- */}
+                    <NavLink exact to="" activeClassName="activeClicked">
+                        <CDBSidebarMenuItem onClick={()=> LoadProduct()} icon="shop" style={{marginLeft: "9px"}}>
                             <span style={{marginLeft: "8px"}}>My Products</span></CDBSidebarMenuItem>
                     </NavLink>
+
+                {/* ------- Profile -------- */}
                     <NavLink exact to="/profile" activeClassName="activeClicked">
                         <CDBSidebarMenuItem icon="user">Profile</CDBSidebarMenuItem>
                     </NavLink>
+
+                {/* ------- Analytics -------- */}
                     <NavLink exact to="" activeClassName="activeClicked">
                         <div onClick={()=> LoadAnalytics()}><CDBSidebarMenuItem icon="chart-line">Analytics</CDBSidebarMenuItem></div>
                     </NavLink>
+
                     <br></br>
+                {/* ------- Upload Product -------- */}
                     <NavLink exact to="/post" activeClassName="activeClicked">
                         <CDBSidebarMenuItem icon="cloud-upload"> &nbsp; <strong>Upload Product</strong></CDBSidebarMenuItem>
                     </NavLink>
@@ -95,7 +117,9 @@ const DashHome = () => {
                         src="https://www.youtube.com/embed/3RHm_69c_4M"
                         title="Using Justworks: A Quick Demo"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen></iframe>
+                        allowFullScreen
+                        className="d-flex mx-auto"
+                ></iframe>
 
 
             <div className="container-tips">
@@ -153,6 +177,7 @@ function Dashboard(){
     const [isDashboard, setIsDashboard] = useState(true);
     const [isAnalytics, setIsAnalytics] = useState(false);
     const [isAccount, setIsAccount] = useState(false);
+    const [isProduct, setIsProduct] = useState(false)
 
 
     // Redirect back to LOGIN Page
@@ -183,14 +208,15 @@ function Dashboard(){
     return(
         <>
             <Header />
-            <div className="container-default" >
+            <div className="container-default w-100" >
             <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
-                    <Sidebar setIsDashboard={setIsDashboard} setIsAnalytics={setIsAnalytics} setIsAccount={setIsAccount}/>
-                    <div style={{width: "100%", paddingLeft: "50px", paddingRight: "50px"}}>
+                    <Sidebar setIsDashboard={setIsDashboard} setIsAnalytics={setIsAnalytics} setIsAccount={setIsAccount} setIsProduct={setIsProduct}/>
+                    <div className="w-100 mx-5">
                         <Spacer />
                         {isDashboard && <DashHome/>}
                         {isAnalytics && <Analytics/>}
                         {isAccount && <Account/>}
+                        {isProduct && <MyProduct />}
                         <Spacer />
                         <Spacer />
                     </div>

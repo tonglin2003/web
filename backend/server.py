@@ -51,7 +51,7 @@ def add_new_product():
 # API Route
 @app.route('/api/userdata')
 def user_data():
-    with open('static/userData.json') as f:
+    with open(userDataDirectory) as f:
         return json.load(f)
 
 @app.route('/api/update_profile', methods=['POST', 'GET'])
