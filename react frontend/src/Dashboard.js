@@ -11,6 +11,7 @@ import {
   CDBSidebarMenuItem,
 } from 'cdbreact';
 import Analytics from './components/UserData/Analytics'
+import Connect from "./components/UserData/Connect";
 import Account from "./components/UserData/Account";
 import MyProduct from "./components/UserData/MyProduct";
 import Spacer from './components/Spacer'
@@ -20,32 +21,44 @@ import css from './css/styles.css'
 //           SIDEBAR COMPONENT
 //-----------------------------------------------------------------------
 
-const Sidebar = ({ setIsDashboard, setIsAnalytics, setIsAccount, setIsProduct}) => {
+const Sidebar = ({ setIsDashboard, setIsAnalytics, setIsAccount, setIsProduct, setIsConnect}) => {
 
     function LoadAnalytics(){
             setIsDashboard(false);
             setIsAccount(false);
-            setIsAnalytics(true);
+            setIsConnect(false);
             setIsProduct(false);
+            setIsAnalytics(true);
     }
     function LoadDashboard(){
             setIsAnalytics(false);
             setIsAccount(false);
-            setIsDashboard(true);
+            setIsConnect(false);
             setIsProduct(false);
+            setIsDashboard(true);
     }
     function LoadAccount(){
         setIsDashboard(false);
         setIsAnalytics(false);
-        setIsAccount(true);
+        setIsConnect(false);
         setIsProduct(false);
+        setIsAccount(true);
     }
 
     function LoadProduct(){
         setIsDashboard(false);
         setIsAnalytics(false);
         setIsAccount(false);
+        setIsConnect(false);
         setIsProduct(true);
+    }
+
+    function LoadConnect(){
+        setIsDashboard(false);
+        setIsAnalytics(false);
+        setIsAccount(false);
+        setIsProduct(false);
+        setIsConnect(true);
     }
 
     return (
@@ -84,7 +97,9 @@ const Sidebar = ({ setIsDashboard, setIsAnalytics, setIsAccount, setIsProduct}) 
                     <NavLink exact to="" activeClassName="activeClicked">
                         <div onClick={()=> LoadAnalytics()}><CDBSidebarMenuItem icon="chart-line">Analytics</CDBSidebarMenuItem></div>
                     </NavLink>
-
+                    <NavLink exact to="" activeClassName="activeClicked">
+                        <div onClick={()=> LoadConnect()}><CDBSidebarMenuItem style={{marginLeft: "9px"}} icon="comments"><span style={{marginLeft: "8px"}}>Connect</span></CDBSidebarMenuItem></div>
+                    </NavLink>
                     <br></br>
                 {/* ------- Upload Product -------- */}
                     <NavLink exact to="/post" activeClassName="activeClicked">
@@ -178,6 +193,7 @@ function Dashboard(){
     const [isAnalytics, setIsAnalytics] = useState(false);
     const [isAccount, setIsAccount] = useState(false);
     const [isProduct, setIsProduct] = useState(false)
+    const [isConnect, setIsConnect] = useState(false);
 
 
     // Redirect back to LOGIN Page
@@ -210,19 +226,19 @@ function Dashboard(){
             <Header />
             <div className="container-default w-100" >
             <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
-                    <Sidebar setIsDashboard={setIsDashboard} setIsAnalytics={setIsAnalytics} setIsAccount={setIsAccount} setIsProduct={setIsProduct}/>
+                    <Sidebar setIsDashboard={setIsDashboard} setIsAnalytics={setIsAnalytics} setIsAccount={setIsAccount} setIsProduct={setIsProduct} setIsConnect={setIsConnect}/>
                     <div className="w-100 mx-5">
                         <Spacer />
                         {isDashboard && <DashHome/>}
                         {isAnalytics && <Analytics/>}
                         {isAccount && <Account/>}
                         {isProduct && <MyProduct />}
+                        {isConnect && <Connect />}
                         <Spacer />
                         <Spacer />
                     </div>
             </div>
-            </div>
-            
+            </div>          
             <Footer />
         </>
     )

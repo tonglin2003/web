@@ -57,9 +57,9 @@ footer{
     font-family: "Ariel", sans-serif;
     color: white;
 }
-form {
+/* form {
     padding: 20px 100px 20px 120px;
-}
+} */
 input[type=text], input[type=submit] {
   width: 100%;
   padding: 5px;
@@ -175,6 +175,28 @@ footer .content .link-boxes{
 }
 
 /* -------------------------- Naomi --------------------------------- */
+
+.connectcard{
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #00446b;
+  box-shadow: 5px 5px #00446b;
+}
+
+.connectimage{
+  max-width: 300px;
+  object-fit: contain;
+  display: flex;
+}
+
+.connectimagebox{
+  max-width: 300px;
+  display: flex;
+  object-fit: contain;
+}
 
 
 .card.medium{

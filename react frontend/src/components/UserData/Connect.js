@@ -1,6 +1,10 @@
 
 import React, {useState, useEffect} from 'react'
 import Spacer from '../Spacer';
+import '../../css/styles.css'
+import LinesEllipsis from 'react-lines-ellipsis'
+import { Link } from 'react-router-dom';
+
 
 const Connect = () => {
     //Initialize user data
@@ -14,7 +18,7 @@ const Connect = () => {
         fetch("/api/userdata")
         .then((res) => res.json())
         .then((userData) => {
-            setUserData(findUserByUsername(userData, user.username))
+            setUserData(userData)
             setLoading(false);
         });
     }, []); 
@@ -31,41 +35,26 @@ const Connect = () => {
 
     return(
         <>
-        <h1>My Account</h1><br></br>
-        <h4>Update your account information here.</h4><br></br>
+        <h1>Connect</h1><br></br>
+        <h4>Find your people. Browse businesses just like you.</h4><br></br>
 
-            <form onSubmit={handleUserUpdate}>
-
-                <label>USERNAME</label><br></br>
-                <input type="text" value={accountUser.username} disabled/><br></br><br></br>
-
-                <label>OLD PASSWORD</label><br></br>
-                <input type="password" /><br></br><br></br>
-
-                <label>NEW PASSWORD</label><br></br>
-                <input type="password" onChange={(e) => setNewPassword(e.target.value)} /><br></br><br></br>
-
-                <label>CONFIRM NEW PASSWORD</label><br></br>
-                <input type="password" onChange={(e) => setNewConfirmPassword(e.target.value)} /><br></br><br></br>
-
-                <hr></hr>
-
-                <label>COMPANY NAME</label><br></br>
-                <input type="text" value={newName} onChange={(e) => setNewName(e.target.value)}/><br></br><br></br>
-
-                <label>PHONE NUMBER</label><br></br>
-                <input type="text" value={newPhone} onChange={(e) => setNewPhone(e.target.value)}/><br></br><br></br>
-
-                <label>EMAIL ADDRESS</label><br></br>
-                <input type="text" value={newEmail} onChange={(e) => setNewEmail(e.target.value)}/><br></br><br></br>
-                
-                {invalidUpdateMessage && <p style={{color: "red"}}>{invalidUpdateMessage}</p>}
-                {validUpdateMessage && <p style={{color: "green"}}>{validUpdateMessage}</p>}
-                <input type="submit" value="Update" />
-
-
-            </form>
-                
+        <div className='row' style={{maxWidth: "60rem"}}>
+        {userData.map((user,i) => (
+            <div className="col connectcard">
+            <div className="connectimagebox"><img className="connectimage" src={user.image} alt="Card image"/></div>
+            <div className="card-body">
+                <h4 className="card-title">{user.name}</h4>
+                <LinesEllipsis
+                    text={user.bio}
+                    maxLine='3'
+                    ellipsis='...'
+                    trimRight
+                    basedOn='letters'
+                    />  <Link to={"/profile/user/" + user.id}>Profile</Link>
+            </div>
+            </div>
+            ))}
+        </div>    
         </>
     )
 }

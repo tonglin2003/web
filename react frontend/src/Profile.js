@@ -207,7 +207,7 @@ const NewProfile = () => {
         background: "#DDEFFF"
         }}>
                     <Spacer />
-            <form method='post' className="profile center font" style={{ width: "100%",}}
+            <form method='post' className="profile center font" style={{ width: "100%", justifyContent: "center"}}
                     onSubmit={(e) =>{
                         setIsEditMode(!isEditMode);
                         setName(newName);
