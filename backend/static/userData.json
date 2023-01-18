@@ -11,7 +11,7 @@
         "email": "support@janedoe.com",
         "website": "janedoe.com",
         "location": " New York, USA",
-        "products": [],
+        "products": [1,2,3,4,5],
         "revenue": [
             10,
             24,
@@ -39,7 +39,7 @@
         "email": "info@sprintership.com",
         "website": "sprintership.com",
         "location": "New York, USA",
-        "products": [],
+        "products": [1,2,3,4,5],
         "revenue": [
             30,
             44,

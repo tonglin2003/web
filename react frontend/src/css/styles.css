@@ -6,7 +6,6 @@
     font-size: 4.5vw;
    
 }
-
 .font {
     font-family: "Source Sans Pro", serif ;
     color: #0b2d3b;
@@ -15,11 +14,9 @@
 .new_btn {
     background: #3295e5 !important;
 }
-
 #home_head {
     background: #00446b;
 }
-
 
 /* -----------------------------  ------------------------------ */
 
@@ -28,12 +25,10 @@
 .btn {
     margin: 2px;
 }
-
 .btn.signup {
     color: white;
     background-color: #ff8d47;
 }
-
 .container-logo{
     justify-content: right;
     padding: 20px;
@@ -44,8 +39,6 @@
 .collapse .navbar-collapse {
     justify-content: space-between;
 }
-
-
 /* ----------------------------------------------------------- */
 
 /* footer css start */
@@ -53,76 +46,30 @@ html, body {
   height: 100%;
   width: 100%;
 }
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background: #ffffff;
-}
 footer{
-    /*position: absolute;*/
-    bottom: 0;
-    left: 0;
-    right: 0;
     background: #3971cb;
-    height: auto;
     font-family: "Ariel", sans-serif;
     padding-top: 30px;
 }
-
-.footer-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
 .footer-content h4{
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 400;
-    text-transform: capitalize;
     font-family: "Ariel", sans-serif;
     color: white;
-    line-height: 3rem;
 }
-
-/* sub code start */
-
-/* Style the form element  */
 form {
- /* border: 20px solid #0a3c8c;*/
-    width: 500px;
-    align-items: center;
-    justify-content: center;
     padding: 20px 100px 20px 120px;
-}.toprad{
-  border-radius: 10px 10px 0 0;
 }
-.container-botrad{
-  border-radius: 0 0 10px 10px;
-}
-/* Add some padding and a grey background color to containers */
-.subButton-container{
-  padding: 15px;
-  background-color: #ffffff;
-}
-/* Style the input elements and the submit button */
 input[type=text], input[type=submit] {
   width: 100%;
   padding: 5px;
   margin: 5px 0;
   border: 1px solid #ccc;
-  box-sizing: border-box;
 }
-/* Add margins to the checkbox */
 input[type=checkbox] {
     margin-bottom: 3px;
     margin-top: 12px;
 }
-/* Style the submit button */
 input[type=submit] {
   background-color: #3946b6;
   color: white;
@@ -131,19 +78,15 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #0d1557;
 }
-/* sub code end */
-
 .socials{
     list-style: none;
     display: flex;
-    /*align-items: center;*/
     justify-content: center;
     margin: 1rem 0 1rem 0;
 }
 .socials li{
     margin: 0 10px;
 }
-/*socials are white*/
 .socials a{
     text-decoration: none;
     color: #fff;
@@ -156,28 +99,22 @@ input[type=submit]:hover {
     color: #5edef7;
 }
 
-/*Footer content stuff */
-/*flex!*/
+
 footer .content .link-boxes{
-  width: 100%;
   display: flex;
   justify-content: space-around;
 }
-/*css for category thing*/
 .content .link-boxes .box .link_name{
   color: #fff;
     font-weight: bold;
   font-size: 18px;
   margin-top: 5px;
   margin-bottom: 10px;
-  position: relative;
 }
-/*removes stupid bullets*/
 .content .link-boxes .box li{
   margin: 6px 0;
   list-style: none;
 }
-/*css for links*/
 .content .link-boxes .box li a{
   color: #fff;
   font-size: 14px;
@@ -353,14 +290,11 @@ footer .content .link-boxes{
 /* -------------------------- Hafeefa --------------------------------- */
 #thedashboardbutton{
     border-radius: 8%;
-    padding:19px;
-    padding-left:15px;
-    padding-right:15px;
+    padding: 19px 15px;
     background:rgb(255,99,71);
     color:white;
     font-weight: 600;
     text-decoration:none;
-    font-weight: 600;
 }
 #thedashboardbutton:hover{
     background:red;
@@ -384,9 +318,7 @@ footer .content .link-boxes{
 #logoutbutton{
     border: solid;
     border-radius: 8%;
-    padding:17.5px;
-    padding-left:20px;
-    padding-right:20px;
+    padding: 18px 20px;
     border-block-color:black;
     background:white;
     color:black;
@@ -416,11 +348,9 @@ footer .content .link-boxes{
 #getstartedbutton {
     background: rgb(255,99,71);
     border-radius: 8%;
-    padding: 15px;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 800;
-    padding-right: 18px;
-    padding-left: 19px;
+    padding: 15px 18px 15px 19px;
     color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
@@ -434,9 +364,7 @@ footer .content .link-boxes{
 #theloginbutton{
     border: solid;
     border-radius: 8%;
-    padding:19px;
-    padding-left:30px;
-    padding-right:30px;
+    padding: 19px 30px;
     border-block-color:black;
     background:white;
     color:black;
@@ -461,7 +389,7 @@ footer .content .link-boxes{
 }
 #diff {
     padding-left: 2px;
-    font-family: Helvetica Neue;
+    font-family: Helvetica Neue, serif;
     font-size: 20px;
 }
 #theBack{
@@ -479,10 +407,8 @@ footer .content .link-boxes{
 }
 #costofbracelet{
     font-size: 25px;
-    padding: 10px;
-    padding-top:25px;
     font-weight:bold;
-    padding-bottom: 15px;
+    padding: 25px 10px 15px;
 }
 #addtobag{
 
@@ -596,7 +522,7 @@ footer .content .link-boxes{
 }
 
 .clientbiofont {
-font-family:'Oswald'
+    font-family: 'Oswald', serif
 }
 
 /* The hero image */
