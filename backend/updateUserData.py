@@ -24,12 +24,12 @@ def newUser(newData):
         data.append(newData)
         saveData(data)
 
-#Update one user in json file
+#Update one item in json file
 def updateData(userID, key, newValue):
     data[userID][key] = newValue
     saveData(data)
 
-def updateProfile(userID, name, image, bio, phone, email, website, location):
+def updateProfile(userID, name, image, bio, phone, email, website, location, profile_background):
         updateData(userID, 'name', name)
         updateData(userID, 'image', image)
         updateData(userID, 'bio', bio)
@@ -37,6 +37,7 @@ def updateProfile(userID, name, image, bio, phone, email, website, location):
         updateData(userID, 'email', email)
         updateData(userID, 'website', website)
         updateData(userID, 'location', location)
+        updateData(userID, 'profile_background', profile_background)
 
 def updateAccount(userID, name, phone, email):
         updateData(userID, 'name', name)

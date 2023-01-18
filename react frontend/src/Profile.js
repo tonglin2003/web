@@ -5,75 +5,9 @@ import { Link } from 'react-router-dom'
 import Header from './components/WebHeaderAndFooter/Header'
 import Footer from './components/WebHeaderAndFooter/Footer'
 import Spacer from './components/Spacer'
-import WideCards from './components/CardsComponent/WideCards'
 import UpdateUserData from './components/UserData/UpdateUserData'
 import css from './css/styles.css'
-// import ...
-import Analytics from './components/UserData/Analytics'
-import Account from "./components/UserData/Account";
-import {CDBSidebar, CDBSidebarContent, CDBSidebarHeader, CDBSidebarMenu, CDBSidebarMenuItem} from "cdbreact";
-const Sidebar = ({ setIsDashboard, setIsAnalytics, setIsAccount}) => {
 
-    function LoadAnalytics(){
-            setIsDashboard(false);
-            setIsAccount(false);
-            setIsAnalytics(true);
-    }
-    function LoadDashboard(){
-            setIsAnalytics(false);
-            setIsAccount(false);
-            setIsDashboard(true);
-    }
-    function LoadAccount(){
-        setIsDashboard(false);
-        setIsAnalytics(false);
-        setIsAccount(true);
-    }
-
-    return (
-        <div style={{ display: 'flex', overflow: 'scroll initial' }}>
-
-            <CDBSidebar textColor="#fff" backgroundColor="#333">
-
-                <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
-                    <div style={{marginLeft: "5px", marginTop: "23px"}}>Menu</div>
-                </CDBSidebarHeader>
-
-                <CDBSidebarContent className="sidebar-content">
-                    <CDBSidebarMenu>
-
-                    <NavLink exact to="" activeClassName="activeClicked">
-                        <div onClick={()=> LoadDashboard()}><CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem></div>
-                    </NavLink>
-
-                    <NavLink exact to="" activeClassName="activeClicked">
-                        <div onClick={()=> LoadAccount()}><CDBSidebarMenuItem icon="database">My Account</CDBSidebarMenuItem></div>
-                    </NavLink>
-
-                    <NavLink exact to="/myproducts" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="shop" style={{marginLeft: "9px"}}>
-                            <span style={{marginLeft: "8px"}}>My Products</span></CDBSidebarMenuItem>
-                    </NavLink>
-
-                    <NavLink exact to="/profile" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="user">Profile</CDBSidebarMenuItem>
-                    </NavLink>
-
-                    <NavLink exact to="" activeClassName="activeClicked">
-                        <div onClick={()=> LoadAnalytics()}><CDBSidebarMenuItem icon="chart-line">Analytics</CDBSidebarMenuItem></div>
-                    </NavLink>
-
-                    <br></br>
-                    <NavLink exact to="/post" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="cloud-upload"> &nbsp; <strong>Upload Product</strong></CDBSidebarMenuItem>
-                    </NavLink>
-
-                    </CDBSidebarMenu>
-                </CDBSidebarContent>
-            </CDBSidebar>
-        </div>
-    )
-}
 
 function Profile() {
     //-----------------------------------------------------------------------
@@ -85,6 +19,7 @@ function Profile() {
     // Get the user id from the page---------------------------------------------------
     const {userID} = useParams()
     const id = Number(userID)
+
 
     // Redirect back to LOGIN Page
     const navigate = useNavigate()
@@ -116,12 +51,7 @@ function Profile() {
     return (
         <>
             <Header />
-                <div className='profile background'>
-                    <Spacer />
-                    
-                        <NewProfile />
-                    <Spacer />
-                </div>
+                <NewProfile />
             <Footer />
         </>
     )
@@ -149,6 +79,7 @@ const NewProfile = () => {
     //saved variables --------------------------------------------------
     const [name, setName] = useState(" ")
     const [image, setImage] = useState(" ")
+    const [background, setBackground] = useState(" ")
     const [bio, setBio] = useState(" ")
     const [phone, setPhone] = useState(" ")
     const [email, setEmail] = useState(" ")
@@ -158,6 +89,7 @@ const NewProfile = () => {
     //variables during Edit Mode --------------------------------------------------
     const [newName, setNewName] = useState(name)
     const [newImage, setNewImage] = useState(image)
+    const [newBackground, setNewBackground] = useState(background)
     const [newBio, setNewBio] = useState(bio)
     const [newPhone, setNewPhone] = useState(phone)
     const [newEmail, setNewEmail] = useState(email)
@@ -184,13 +116,17 @@ const NewProfile = () => {
     }
 
     //uploads image to website --------------------------------------------------
-    function handleImageChange(e) {
+    function handleAvatarChange(e) {
         setNewImage(URL.createObjectURL(e.target.files[0]))
+    }
+
+    function handleBackgroundChange(e) {
+        setNewBackground(URL.createObjectURL(e.target.files[0]))
     }
 
 
     const updatedInfo = ()=>{
-        UpdateUserData.UpdateProfile({id, newName, newImage, newBio, newPhone, newEmail, newWebsite, newLocation})
+        UpdateUserData.UpdateProfile({id, newName, newImage, newBio, newPhone, newEmail, newWebsite, newLocation, newBackground})
         .then((response) =>  {return response})
         .catch(error => console.log('error',error))
       }
@@ -229,6 +165,7 @@ const NewProfile = () => {
         setEmail(profileUser.email)
         setWebsite(profileUser.website)
         setLocation(profileUser.location)
+        setBackground(profileUser.profile_background)
         //variables during edit mode
         setNewName(profileUser.name)
         setNewImage(profileUser.image)
@@ -237,6 +174,7 @@ const NewProfile = () => {
         setNewEmail(profileUser.email)
         setNewWebsite(profileUser.website)
         setNewLocation(profileUser.location)
+        setNewBackground(profileUser.profile_background)
     }, [profileUser])
 
     //Retrieve product data
@@ -245,11 +183,9 @@ const NewProfile = () => {
             setIsCurrentUser(true)
         }
     }, [currentUser, id])
-
    
     
     //DEBUG USER DATA (START)-----------------
-
     if(loading && profileUser ===-1 && !profileUser){
         return <p className="font">Loading...</p>
     }
@@ -263,6 +199,14 @@ const NewProfile = () => {
     //-----------------------------------------------------------------------
     return(
         <>
+
+<div style={{ 
+        backgroundImage: !(isEditMode)? `url(${background})` :`url(${newBackground})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        background: "#DDEFFF"
+        }}>
+                    <Spacer />
             <form method='post' className="profile center font" style={{ width: "100%",}}
                     onSubmit={(e) =>{
                         setIsEditMode(!isEditMode);
@@ -273,17 +217,28 @@ const NewProfile = () => {
                         setEmail(newEmail);
                         setWebsite(newWebsite);
                         setLocation(newLocation);
+                        setBackground(newBackground);
                         handleUserUpdate(e);
 
                         }}>
                 <fieldset style={{ maxWidth: "800px", width: "800px", paddingTop: "30px" }} className=" profile contain">
 
                     {/* EDIT MODE button --------------------------------------------------*/}
-                    { isCurrentUser ? !(isEditMode) && <p onClick={() => setIsEditMode(!isEditMode)}
-                        type="button"
-                        className="font"
-                        style={{ color: "#3295e5" }}>
-                        Edit Profile</p>: <p></p>}<p></p>
+                    <div className='row'>
+                        <div className='col'>
+                        { isCurrentUser ? <Link to="/dashboard"
+                            className="font"
+                            style={{ textDecoration: "none", color: "#3295e5" }}>
+                            ←Return to Dashboard</Link>: <p></p>}
+                        </div>
+                        <div className='col'>
+                        { isCurrentUser ? !(isEditMode) && <p onClick={() => setIsEditMode(!isEditMode)}
+                            type="button"
+                            className="font"
+                            style={{ color: "#3295e5", textAlign: "right" }}>
+                            Edit Profile</p>: <p></p>}
+                        </div>
+                    </div><p></p>
 
                     {/* NAME field --------------------------------------------------*/}
                     {!(isEditMode) && <h1 className="title_font">{name}</h1>}
@@ -298,18 +253,25 @@ const NewProfile = () => {
                     {/* IMAGE field -------------------------------------------------- */}
                     {!(isEditMode) && <p><img src={image} style={{ maxHeight: "300px", maxWidth: "100%" }} className="profile center" /></p>}
                     {isEditMode && <><p><img src={newImage} style={{ maxHeight: "300px", maxWidth: "100%" }} className="profile center" /></p>
-                        <label>Edit Image</label>
+                        <label>Edit Profile Image URL</label>
                         <br></br>
                         <input
-                            type="file"
+                            type="text"
                             className="font"
-                            onChange={handleImageChange}
-                            accept="image/*" />  </>}<br></br><br></br>
+                            value={newImage}
+                            onChange={(e)=> {setNewImage(e.target.value); handleAvatarChange()}}/><br></br>  </>}<br></br>
 
+                     {/* BACKGROUND IMAGE field --------------------------------------------------*/}
+                    {isEditMode && <label>Edit Background Image URL</label>}
+                    {isEditMode && <><input
+                            type="text"
+                            className="font"
+                            value={newBackground}
+                            onChange={(e) => {setNewBackground(e.target.value); handleBackgroundChange()}}/><br></br></> }<br></br>
 
                     {/* BIO field --------------------------------------------------*/}
                     {!(isEditMode) && <p className="font" style={{ whiteSpace: "pre-wrap" }}>{bio}</p>}
-                    {isEditMode && <label className="font">Bio</label>}
+                    {isEditMode && <label className="font">Edit Bio</label>}
                     {/*<br></br>*/}
                     {isEditMode && <textarea
                         type="text"
@@ -415,6 +377,9 @@ const NewProfile = () => {
                     </div>
                 </fieldset>
             </form>
+
+            <Spacer />
+                </div>
         </>
     )
 }
