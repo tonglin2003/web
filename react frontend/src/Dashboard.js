@@ -120,13 +120,13 @@ const DashHome = () => {
 
     return(
         <div>
-            <h1 style={{textAlign: "center", marginBottom : "50px"}}>Welcome back, {user.name}!</h1>
-            <p style={{textAlign: "center", marginBottom: "30px"}}>
+            <h1 style={{textAlign: "center", marginBottom : "40px"}}> <strong>Welcome back, {user.name}! </strong></h1>
+            <p style={{textAlign: "center", marginBottom: "35px", paddingBottom:"30px", margin:"25px"}}>
                 Our mission is to help entrepreneurs and businesses grow with confidence.
                 We do this with a simple and friendly platform, expert support from real
                 people when it’s needed, and access to corporate-level benefits that
-                ensure people feel secure and valued.</p>
-
+                ensure people feel secure and valued.
+            </p>
 
                 <iframe width="634" height="357" frameBorder="0" align="center"
                         src="https://www.youtube.com/embed/3RHm_69c_4M"
@@ -137,7 +137,7 @@ const DashHome = () => {
                 ></iframe>
 
 
-            <div className="container-tips">
+            <div className="container-tips" style={{paddingTop:"20px"}}>
                 <div className="row">
                     <div className="col-sm">
                 <i className="fa-solid fa-tag" id="iconz"></i>
@@ -150,8 +150,8 @@ const DashHome = () => {
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-sm" id="boldDash"> Great Value </div>
+                <div className="row">
+                    <div className="col-sm" id="boldDash"> Great Value </div>
                     <div className="col-sm" id="boldDash"> Powerful Tools </div>
                     <div className="col-sm" id="boldDash"> Support and Education </div>
                 </div>
