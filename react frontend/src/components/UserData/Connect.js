@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const Connect = () => {
     //Initialize user data
-    const user = JSON.parse(localStorage.getItem('currentUser'));
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
     //Init user data from Backend
     const [userData, setUserData] = useState("");
@@ -39,18 +39,21 @@ const Connect = () => {
         <h4>Find your people. Browse businesses just like you.</h4><br></br>
 
         <div className='row' style={{maxWidth: "60rem"}}>
-        {userData.map((user,i) => (
+        {userData.map((user,i) => ( i === currentUser.id ? <></>:
+            
             <div className="col connectcard">
-            <div className="connectimagebox"><img className="connectimage" src={user.image} alt="Card image"/></div>
-            <div className="card-body">
-                <h4 className="card-title">{user.name}</h4>
+            <Link to={"/profile/user/" + user.id}><div className="connectimagebox"><img className="connectimage" src={user.image} alt="Card image"/></div></Link>
+            <div className="card-body" style={{position: "relative"}}>
+                <h2 style={{marginTop: "10px"}}>{user.name}</h2>
                 <LinesEllipsis
                     text={user.bio}
-                    maxLine='3'
+                    maxLine='4'
                     ellipsis='...'
                     trimRight
                     basedOn='letters'
-                    />  <Link to={"/profile/user/" + user.id}>Profile</Link>
+                    />  
+                    <div id="spacer" style={{width: "200px", height: "50px", marginRight:"0px"}}></div>
+                    <Link style={{width: "200px", position: "absolute", bottom: "0"}} to={"/profile/user/" + user.id}>View Profile</Link>
             </div>
             </div>
             ))}

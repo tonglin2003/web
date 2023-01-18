@@ -177,25 +177,31 @@ footer .content .link-boxes{
 /* -------------------------- Naomi --------------------------------- */
 
 .connectcard{
-  max-width: 300px;
+  max-width: 300px !important;
   display: flex;
   flex-direction: column;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
   border: 1px solid #00446b;
   box-shadow: 5px 5px #00446b;
 }
 
 .connectimage{
-  max-width: 300px;
-  object-fit: contain;
+  right: 13px;
+  position: relative;
+
+  max-width: 298px;
+  /* max-height: 200px; */
+  object-fit: cover;
   display: flex;
 }
 
 .connectimagebox{
-  max-width: 300px;
+  min-width: 300px;
+  height: 200px;
   display: flex;
   object-fit: contain;
+  justify-content: center;
 }
 
 

@@ -200,14 +200,13 @@ const NewProfile = () => {
     return(
         <>
 
-<div style={{ 
-        backgroundImage:!(isEditMode)? `url(${background})` :`url(${newBackground})`,
-                backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat',
-        background: "#DDEFFF"
+<div style={{ backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                background: "#DDEFFF",
+        backgroundImage:!(isEditMode)? `url(${background})` :`url(${newBackground})`     
         }}>
                     <Spacer />
-            <form method='post' className="profile center font" style={{ width: "100%", justifyContent: "center"}}
+            <form method='post' className="profile center font" style={{ width: "100%", justifyContent: "center", padding: "0px !important"}}
                     onSubmit={(e) =>{
                         setIsEditMode(!isEditMode);
                         setName(newName);
