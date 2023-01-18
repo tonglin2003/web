@@ -22,20 +22,30 @@ import css from './css/styles.css'
 const Sidebar = ({ setIsDashboard, setIsAnalytics, setIsAccount}) => {
 
     function LoadAnalytics(){
-            setIsDashboard(false);
-            setIsAccount(false);
-            setIsAnalytics(true);
+        setIsDashboard(false);
+        setIsAccount(false);
+        // setIsConnect(false);
+        setIsAnalytics(true);
     }
     function LoadDashboard(){
-            setIsAnalytics(false);
-            setIsAccount(false);
-            setIsDashboard(true);
+        setIsAnalytics(false);
+        setIsAccount(false);
+        // setIsConnect(false);
+        setIsDashboard(true);
     }
     function LoadAccount(){
         setIsDashboard(false);
         setIsAnalytics(false);
+        // setIsConnect(false);
         setIsAccount(true);
     }
+
+    function LoadConnect(){
+        setIsDashboard(false);
+        setIsAccount(false);
+        setIsAnalytics(false);
+        // setIsConnect(true);
+}
 
     return (
         <div style={{ display: 'flex', overflow: 'scroll initial' }}>
