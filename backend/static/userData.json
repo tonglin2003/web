@@ -6,7 +6,12 @@
         "name": "Jane Doe",
         "image": "https://www.thesprucepets.com/thmb/-XLfNuh236Qshwr61OmcXVzb_7o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/cute-teacup-dog-breeds-4587847-hero-4e1112e93c68438eb0e22f505f739b74.jpg",
         "profile_background": "https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/Zugpsitze_mountain.jpg?crop=0%2C176%2C3008%2C1654&wid=4000&hei=2200&scl=0.752",
+        "shop_banner": "https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/Zugpsitze_mountain.jpg?crop=0%2C176%2C3008%2C1654&wid=4000&hei=2200&scl=0.752",
         "bio": "Marketing specialist from the Apple. Helping businesses thrive since 2002. Have experience in analyzing information to identify new markets and customers, demand for products and services, and efficacy of existing marketing campaigns and strategies. Conducted market research, sales forecasting, and strategic planning to assess and ensure the sale and profitability of products. Also have experience in coding with python, css, html, javascript, and much more. Prices for bootcamps may vary.",
+        "history": [
+            "Founded in 2022",
+            "Their slogan etc. Orci a scelerisque purus semper eget. Non sodales neque sodales ut. Tellus at urna condimentum mattis pellentesque id nibh tortor. Tellus mauris a diam maecenas. Phasellus vestibulum lorem sed risus ultricies tristique. Sit amet porttitor eget dolor morbi non arcu risus quis. Volutpat est velit egestas dui. Non nisi est sit amet facilisis magna etiam tempor orci. Mauris a diam maecenas sed enim ut sem viverra. Nec nam aliquam sem et tortor consequat id. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Et malesuada fames ac turpis egestas integer. In est ante in nibh mauris. Adipiscing at in tellus integer feugiat. Gravida rutrum quisque non tellus orci ac auctor."
+        ],
         "phone": "212-123-4567",
         "email": "support@janedoe.com",
         "website": "janedoe.com",
@@ -17,6 +22,25 @@
             3,
             4,
             5
+        ],
+        "staff_photos": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "testimonials": [
+            "https://i.ibb.co/Wsr9wjX/Pexels-photo-1681010.jpg",
+            "Testimonials",
+            "Volutpat est velit egestas dui. Non nisi est sit amet facilisis magna etiam tempor orci. Mauris a diam maecenas sed enim ut sem viverra. Nec nam aliquam sem et tortor consequat id. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Et malesuada fames ac turpis egestas integer. In est ante in nibh mauris. Adipiscing at in tellus integer feugiat. Gravida rutrum quisque non tellus orci ac auctor. In eu mi bibendum neque egestas congue quisque. Neque aliquam vestibulum morbi blandit cursus risus at ultrices.",
+            "https://i.ibb.co/7SxWmpX/Pexels-photo-14917591.jpg",
+            "Testimonials",
+            "Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Et malesuada fames ac turpis egestas integer. In est ante in nibh mauris. Adipiscing at in tellus integer feugiat. Gravida rutrum quisque non tellus orci ac auctor. In eu mi bibendum neque egestas congue quisque. Neque aliquam vestibulum morbi blandit cursus risus at ultrices."
         ],
         "revenue": [
             10,
@@ -40,17 +64,40 @@
         "name": "The Sprinterns",
         "image": "https://media.istockphoto.com/id/1269803554/photo/banner-five-happy-dogs-smiling-on-colored-blue-backgorund-with-closed-eyes-and-smile.jpg?s=612x612&w=0&k=20&c=us3uw2ZD9nFnhUiW8HaWYkuf-Bs8Nwdfks-21yE3pnk=",
         "profile_background": "https://www.bsr.org/images/heroes/bsr-focus-nature-hero.jpg",
+        "shop_banner": "https://www.securicon.com/wp-content/uploads/2018/01/tech-image.jpg",
         "bio": "Interns at JustWorks for the Winter of 2023.",
+        "history": [
+            "Founded in 2022",
+            "Their slogan etc. Orci a scelerisque purus semper eget. Non sodales neque sodales ut. Tellus at urna condimentum mattis pellentesque id nibh tortor. Tellus mauris a diam maecenas. Phasellus vestibulum lorem sed risus ultricies tristique. Sit amet porttitor eget dolor morbi non arcu risus quis. Volutpat est velit egestas dui. Non nisi est sit amet facilisis magna etiam tempor orci. Mauris a diam maecenas sed enim ut sem viverra. Nec nam aliquam sem et tortor consequat id. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Et malesuada fames ac turpis egestas integer. In est ante in nibh mauris. Adipiscing at in tellus integer feugiat. Gravida rutrum quisque non tellus orci ac auctor."
+        ],
         "phone": "603-999-7273",
         "email": "info@sprintership.com",
         "website": "sprintership.com",
         "location": "New York, USA",
         "products": [
-            1,
-            2,
-            3,
-            4,
-            5
+            6,
+            7,
+            8,
+            9
+        ],
+        "staff_photos": [
+            "https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/13976092/pexels-photo-13976092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/3767392/pexels-photo-3767392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/3474629/pexels-photo-3474629.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/3799717/pexels-photo-3799717.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        ],
+        "testimonials": [
+            "https://i.ibb.co/Wsr9wjX/Pexels-photo-1681010.jpg",
+            "Testimonials",
+            "Volutpat est velit egestas dui. Non nisi est sit amet facilisis magna etiam tempor orci. Mauris a diam maecenas sed enim ut sem viverra. Nec nam aliquam sem et tortor consequat id. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Et malesuada fames ac turpis egestas integer. In est ante in nibh mauris. Adipiscing at in tellus integer feugiat. Gravida rutrum quisque non tellus orci ac auctor. In eu mi bibendum neque egestas congue quisque. Neque aliquam vestibulum morbi blandit cursus risus at ultrices.",
+            "https://i.ibb.co/7SxWmpX/Pexels-photo-14917591.jpg",
+            "Testimonials",
+            "Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Et malesuada fames ac turpis egestas integer. In est ante in nibh mauris. Adipiscing at in tellus integer feugiat. Gravida rutrum quisque non tellus orci ac auctor. In eu mi bibendum neque egestas congue quisque. Neque aliquam vestibulum morbi blandit cursus risus at ultrices."
         ],
         "revenue": [
             30,
@@ -74,12 +121,40 @@
         "name": "Justworks",
         "image": "https://theme.zdassets.com/theme_assets/2120794/4e4dd31257d6eade90587c528c527cfda95702b7.png",
         "profile_background": "https://officesnapshots.com/wp-content/uploads/2021/07/justworks-offices-new-york-city-9.jpg",
+        "shop_banner": "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         "bio": "Our mission is to help entrepreneurs and businesses grow with confidence.\n\nAt Justworks, we\u2019re making it easier to run a business, and helping teams lead happy and healthy lives. We do this with a simple and friendly platform, expert support from real people when it\u2019s needed, and access to corporate-level bene\ufb01ts that ensure people feel secure and valued.\n\nJustworks handles the nitty-gritty of payroll, benefits, compliance, and HR, so you have more time to learn, grow, and seek something worthwhile. Work fearlessly, pursue your passion, and do more of what matters. We\u2019ve got your back.\n",
+        "history": [
+            "Founded in 2022",
+            "Their slogan etc. Orci a scelerisque purus semper eget. Non sodales neque sodales ut. Tellus at urna condimentum mattis pellentesque id nibh tortor. Tellus mauris a diam maecenas. Phasellus vestibulum lorem sed risus ultricies tristique. Sit amet porttitor eget dolor morbi non arcu risus quis. Volutpat est velit egestas dui. Non nisi est sit amet facilisis magna etiam tempor orci. Mauris a diam maecenas sed enim ut sem viverra. Nec nam aliquam sem et tortor consequat id. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Et malesuada fames ac turpis egestas integer. In est ante in nibh mauris. Adipiscing at in tellus integer feugiat. Gravida rutrum quisque non tellus orci ac auctor."
+        ],
         "phone": "212-300-9000",
         "email": "hello@justworks.com",
         "website": "",
         "location": "",
-        "products": [],
+        "products": [
+            10,
+            11,
+            12
+        ],
+        "staff_photos": [
+            "https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/13976092/pexels-photo-13976092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/3767392/pexels-photo-3767392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/3474629/pexels-photo-3474629.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/3799717/pexels-photo-3799717.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        ],
+        "testimonials": [
+            "https://i.ibb.co/Wsr9wjX/Pexels-photo-1681010.jpg",
+            "Testimonials",
+            "Volutpat est velit egestas dui. Non nisi est sit amet facilisis magna etiam tempor orci. Mauris a diam maecenas sed enim ut sem viverra. Nec nam aliquam sem et tortor consequat id. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Et malesuada fames ac turpis egestas integer. In est ante in nibh mauris. Adipiscing at in tellus integer feugiat. Gravida rutrum quisque non tellus orci ac auctor. In eu mi bibendum neque egestas congue quisque. Neque aliquam vestibulum morbi blandit cursus risus at ultrices.",
+            "https://i.ibb.co/7SxWmpX/Pexels-photo-14917591.jpg",
+            "Testimonials",
+            "Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Et malesuada fames ac turpis egestas integer. In est ante in nibh mauris. Adipiscing at in tellus integer feugiat. Gravida rutrum quisque non tellus orci ac auctor. In eu mi bibendum neque egestas congue quisque. Neque aliquam vestibulum morbi blandit cursus risus at ultrices."
+        ],
         "revenue": [
             0,
             0,
@@ -102,12 +177,36 @@
         "name": "Lollipop Land",
         "image": "https://www.mashed.com/img/gallery/the-real-reason-lollipop-sticks-are-hollow/l-intro-1649520921.jpg",
         "profile_background": "https://milkandcardamom.com/wp-content/uploads/2022/01/FRANGIPANE-TARTS-7-960x1358.jpg",
+        "shop_banner": "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         "bio": "A lollipop is a type of sugar candy usually consisting of hard candy mounted on a stick and intended for sucking or licking.[1] Different informal terms are used in different places, including lolly, sucker, sticky-pop, etc.[2][3] Lollipops are available in many flavors and shapes.",
+        "history": [
+            "Founded in 2022",
+            "Their slogan etc. Orci a scelerisque purus semper eget. Non sodales neque sodales ut. Tellus at urna condimentum mattis pellentesque id nibh tortor. Tellus mauris a diam maecenas. Phasellus vestibulum lorem sed risus ultricies tristique. Sit amet porttitor eget dolor morbi non arcu risus quis. Volutpat est velit egestas dui. Non nisi est sit amet facilisis magna etiam tempor orci. Mauris a diam maecenas sed enim ut sem viverra. Nec nam aliquam sem et tortor consequat id. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Et malesuada fames ac turpis egestas integer. In est ante in nibh mauris. Adipiscing at in tellus integer feugiat. Gravida rutrum quisque non tellus orci ac auctor."
+        ],
         "phone": "555-343-2323",
         "email": "lollipop@gmail.com",
         "website": "lollipopland.com",
         "location": "Sydney, Australia",
         "products": [],
+        "staff_photos": [
+            "https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/13976092/pexels-photo-13976092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/3767392/pexels-photo-3767392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/3474629/pexels-photo-3474629.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/3799717/pexels-photo-3799717.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        ],
+        "testimonials": [
+            "https://i.ibb.co/Wsr9wjX/Pexels-photo-1681010.jpg",
+            "Testimonials",
+            "Volutpat est velit egestas dui. Non nisi est sit amet facilisis magna etiam tempor orci. Mauris a diam maecenas sed enim ut sem viverra. Nec nam aliquam sem et tortor consequat id. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Et malesuada fames ac turpis egestas integer. In est ante in nibh mauris. Adipiscing at in tellus integer feugiat. Gravida rutrum quisque non tellus orci ac auctor. In eu mi bibendum neque egestas congue quisque. Neque aliquam vestibulum morbi blandit cursus risus at ultrices.",
+            "https://i.ibb.co/7SxWmpX/Pexels-photo-14917591.jpg",
+            "Testimonials",
+            "Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Et malesuada fames ac turpis egestas integer. In est ante in nibh mauris. Adipiscing at in tellus integer feugiat. Gravida rutrum quisque non tellus orci ac auctor. In eu mi bibendum neque egestas congue quisque. Neque aliquam vestibulum morbi blandit cursus risus at ultrices."
+        ],
         "revenue": [
             0,
             0,
@@ -130,12 +229,36 @@
         "name": "Popcorn Paradise",
         "image": "https://media.istockphoto.com/id/1226342522/vector/popcorn-sweet-and-crunchy-vector.jpg?b=1&s=612x612&w=0&k=20&c=GcdbOrV-k1H45VilclaqfG4X2Ac065mr7h3edFQUjZs=",
         "profile_background": "https://cdn.britannica.com/61/118661-050-6CAD9A11/Popcorn.jpg",
+        "shop_banner": "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         "bio": "Popcorn (also called popped corn, popcorns or pop-corn) is a variety of corn kernel which expands and puffs up when heated; the same names also refer to the foodstuff produced by the expansion.\n\nA popcorn kernel's strong hull contains the seed's hard, starchy shell endosperm with 14\u201320% moisture, which turns to steam as the kernel is heated. Pressure from the steam continues to build until the hull ruptures, allowing the kernel to forcefully expand, to 20 to 50 times its original size, and then cool.[1]\n\nSome strains of corn (taxonomized as Zea mays) are cultivated specifically as popping corns. The Zea mays variety everta, a special kind of flint corn, is the most common of these.\n\nPopcorn is one of six major types of corn, which includes dent corn, flint corn, pod corn, flour corn, and sweet corn.[2]",
+        "history": [
+            "Founded in 2022",
+            "Their slogan etc. Orci a scelerisque purus semper eget. Non sodales neque sodales ut. Tellus at urna condimentum mattis pellentesque id nibh tortor. Tellus mauris a diam maecenas. Phasellus vestibulum lorem sed risus ultricies tristique. Sit amet porttitor eget dolor morbi non arcu risus quis. Volutpat est velit egestas dui. Non nisi est sit amet facilisis magna etiam tempor orci. Mauris a diam maecenas sed enim ut sem viverra. Nec nam aliquam sem et tortor consequat id. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Et malesuada fames ac turpis egestas integer. In est ante in nibh mauris. Adipiscing at in tellus integer feugiat. Gravida rutrum quisque non tellus orci ac auctor."
+        ],
         "phone": "888-343-2392",
         "email": "popcorn@outlook.com",
         "website": "popcorn.com",
         "location": "New Jersey, USA",
         "products": [],
+        "staff_photos": [
+            "https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/13976092/pexels-photo-13976092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/3767392/pexels-photo-3767392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/3474629/pexels-photo-3474629.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/3799717/pexels-photo-3799717.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        ],
+        "testimonials": [
+            "https://i.ibb.co/Wsr9wjX/Pexels-photo-1681010.jpg",
+            "Testimonials",
+            "Volutpat est velit egestas dui. Non nisi est sit amet facilisis magna etiam tempor orci. Mauris a diam maecenas sed enim ut sem viverra. Nec nam aliquam sem et tortor consequat id. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Et malesuada fames ac turpis egestas integer. In est ante in nibh mauris. Adipiscing at in tellus integer feugiat. Gravida rutrum quisque non tellus orci ac auctor. In eu mi bibendum neque egestas congue quisque. Neque aliquam vestibulum morbi blandit cursus risus at ultrices.",
+            "https://i.ibb.co/7SxWmpX/Pexels-photo-14917591.jpg",
+            "Testimonials",
+            "Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Et malesuada fames ac turpis egestas integer. In est ante in nibh mauris. Adipiscing at in tellus integer feugiat. Gravida rutrum quisque non tellus orci ac auctor. In eu mi bibendum neque egestas congue quisque. Neque aliquam vestibulum morbi blandit cursus risus at ultrices."
+        ],
         "revenue": [
             0,
             0,

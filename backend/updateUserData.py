@@ -39,6 +39,15 @@ def updateProfile(userID, name, image, bio, phone, email, website, location, pro
         updateData(userID, 'location', location)
         updateData(userID, 'profile_background', profile_background)
 
+def updateShop(userID, name, image, bio, history, testimonials, staff_photos, shop_banner):
+        updateData(userID, 'name', name)
+        updateData(userID, 'image', image)
+        updateData(userID, 'bio', bio)
+        updateData(userID, 'history', history)
+        updateData(userID, 'testimonials', testimonials)
+        updateData(userID, 'staff_photos', staff_photos)
+        updateData(userID, 'shop_banner', shop_banner)
+
 def updateAccount(userID, name, phone, email):
         updateData(userID, 'name', name)
         updateData(userID, 'phone', phone)

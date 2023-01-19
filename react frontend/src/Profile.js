@@ -177,7 +177,7 @@ const NewProfile = () => {
         setNewBackground(profileUser.profile_background)
     }, [profileUser])
 
-    //Retrieve product data
+    //Check if current user is profile user
     useEffect(() =>{
         if(currentUser.id > -1 && currentUser.id === id){
             setIsCurrentUser(true)
@@ -271,7 +271,6 @@ const NewProfile = () => {
                     {/* BIO field --------------------------------------------------*/}
                     {!(isEditMode) && <p className="font" style={{ whiteSpace: "pre-wrap" }}>{bio}</p>}
                     {isEditMode && <label className="font">Edit Bio</label>}
-                    {/*<br></br>*/}
                     {isEditMode && <textarea
                         type="text"
                         className="font"
@@ -368,9 +367,7 @@ const NewProfile = () => {
                             {isEditMode && <input type='submit'
                                 value="Save"
                                 className="button-6"
-                                // onClick={() => {
-                                    
-                                // }} 
+                
                                 />}
                         </div>
                     </div>
